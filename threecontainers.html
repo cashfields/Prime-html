@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Three Container Layout</title>
+
+<!-- <link href="style.css" rel="stylesheet">    -->
+     <link rel="icon" href="./images/cash.ico" type="image/x-icon">
+
+
+
+  <style>
+    /* Reset default spacing */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      padding: 2px;
+      background-color: #f4f4f9;
+    }
+
+    /* Parent layout container */
+    .parent-container {
+      display: flex;
+      gap: 2px; /* Space between the containers */
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto; /* Centers the whole layout on the page */
+    }
+
+    /* Individual container styling */
+    .box {
+      flex: 1; /* Gives all three containers equal width */
+      background-color: #ffffff;
+      padding: 2px;
+      border-radius: 8px;
+<!--       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); -->
+<!--       border-top: 5px solid #3498db; /* Visual accent line */ -->
+    }
+
+    /* Responsive Design for Mobile Screens */
+    @media (max-width: 768px) {
+      .parent-container {
+        flex-direction: column; /* Stacks containers vertically on mobile */
+      }
+    }
+
+
+.parent-container {
+  display: flex;
+  width: 100%;
+}
+
+.boxL {
+  width: 36%;
+  background-color: black;
+}
+
+.boxM {
+  width: 28%;
+  background-color: black;
+  display: flex;
+   text-align: center;  /* Centers horizontally */
+}
+
+.boxR {
+  width: 36%;
+  background-color: black;
+}
+
+
+
+/* full screen button */
+        /* Optional basic styling for the button */
+        .fullscreen-btn {
+            padding: 2px 2px;
+            font-size: 14px;
+            cursor: pointer;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+                        /* shrink the button */
+                         transform: scale(.8);
+        }
+        .fullscreen-btn:hover {
+            background-color: #0056b3;
+        }
+
+
+
+/* #0000FF #E2FFFF */
+body {
+  font-family: "Lucida Console";
+      font-size: 12px;
+ background-color: black;
+}
+
+
+
+.containerM {
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center;     /* Centers vertically */
+  height: 100px;           /* Gives the container height to see vertical centering */
+}
+
+
+
+
+        /* Define the flashing speed and loop */
+        .flash-opacity {
+            animation: flashTime 1s infinite;
+        }
+
+ @keyframes flash-anim {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  
+  
+
+
+
+  </style>
+
+
+</head>
+
+
+<body>
+
+00B<span style="white-space: pre-wrap; background-color: black; color: yellow ; margin:0;"> Press F11 for full screen , enter up to a 10 digit number. </span><br>
+01B<span style="white-space: pre-wrap; background-color: black; color: yellow ; margin:0;"> Then click the Reload button to calculate. </span><input  onfocus="this.select()" style="text-align: center ; width: 68px ; height: 20px ; font-size: 11px;"  type="tel" maxlength="10"  id="new_g" placeholder="Enter (g)">
+        <button class="fullscreen-btn" type="button" onclick="location.reload()">Reload</button>  <button class="fullscreen-btn" onclick="window.close()">Close</button>
+
+
+
+<script>
+<!--  -->
+<!-- How to reload the current page without losing any form data with HTML? -->
+<!-- https://www.tutorialspoint.com/article/how-to-reload-the-current-page-without-losing-any-form-data-with-html -->
+
+
+window.onbeforeunload = function() {
+localStorage.setItem('name', document.getElementById('new_g').value);
+<!-- alert("name1 " + name ) -->
+ }
+
+window.onload = function() {
+var name = localStorage.getItem('name');
+<!-- alert("name2 " + name ); -->
+
+
+if (name !== null) document.getElementById('new_g').value = name;
+
+
+<!-- alert("name3 " + name ) -->
+
+let gvalue = name;
+
+<!-- alert("var1 " + name); -->
+document.getElementById("string000m").innerHTML = gvalue;
+
+  let oddpoint = ((2*gvalue) + 1)
+                let midpoint = (((2*gvalue) + 1)) * 15;
+                string1 = ( "odd is: (2 * " + gvalue + ") + 1 = " + ((2*gvalue) + 1));
+document.getElementById("string1").innerHTML = string1;
+
+                string2 = ("midpoint is: " + oddpoint + " * 15 = " + midpoint  );
+                string3 = ("*fam06==cnt6");
+document.getElementById("string2").innerHTML = string2;
+document.getElementById("string3").innerHTML = string3;
+
+
+                string4r = ("Right: *fam06 + 1 and KEY");
+                string4l = ("Left: *fam06 - 1 and KEY");
+                string4rv = (gvalue);
+                string4lv = (gvalue);
+<!-- document.getElementById("string4r").innerHTML = '<u>'+string4r+'</u>'; // get the text heading -->
+<!-- document.getElementById("string4l").innerHTML = '<u>'+string4l+'</u>'; -->
+
+
+
+string0  = (gvalue);
+string000m  = (gvalue);
+string000r  = (gvalue);
+string000l  = (gvalue);
+string001r  = (gvalue);
+string001l  = (gvalue);
+string002r  = (gvalue);
+string002l  = (gvalue);
+string003r  = (gvalue);
+string003l  = (gvalue);
+string004r  = (gvalue);
+string004l  = (gvalue);
+string005r  = (gvalue);
+string005l  = (gvalue);
+string006r  = (gvalue);
+string006l  = (gvalue);
+string007r  = (gvalue);
+string007l  = (gvalue);
+string008r  = (gvalue);
+string008l  = (gvalue);
+string009r  = (gvalue);
+string009l  = (gvalue);
+string010r  = (gvalue);
+string010l  = (gvalue);
+string011r  = (gvalue);
+string011l  = (gvalue);
+string012r  = (gvalue);
+string012l  = (gvalue);
+string013r  = (gvalue);
+string013l  = (gvalue);
+string014r  = (gvalue);
+string014l  = (gvalue);
+string015r  = (gvalue);
+string015l  = (gvalue);
+string016r  = (gvalue);
+string016l  = (gvalue);
+string017r  = (gvalue);
+string017l  = (gvalue);
+string018r  = (gvalue);
+string018l  = (gvalue);
+string019r  = (gvalue);
+string019l  = (gvalue);
+string020r  = (gvalue);
+string020l  = (gvalue);
+string021r  = (gvalue);
+string021l  = (gvalue);
+string022r  = (gvalue);
+string022l  = (gvalue);
+string023r  = (gvalue);
+string023l  = (gvalue);
+string024r  = (gvalue);
+string024l  = (gvalue);
+string025r  = (gvalue);
+string025l  = (gvalue);
+string026r  = (gvalue);
+string026l  = (gvalue);
+string027r  = (gvalue);
+string027l  = (gvalue);
+string028r  = (gvalue);
+string028l  = (gvalue);
+string029r  = (gvalue);
+string029l  = (gvalue);
+string030r  = (gvalue);
+string030l  = (gvalue);
+
+
+document.getElementById("string000m").innerHTML = string000m;
+
+
+//document.getElementById("string000l").innerHTML = string000l;
+document.getElementById("string000r").innerHTML = string000r;
+
+//document.getElementById("string001l").innerHTML = string001l;
+document.getElementById("string001r").innerHTML = string001r;
+
+//document.getElementById("string002l").innerHTML = string002l;
+document.getElementById("string002r").innerHTML = string002r;
+
+//document.getElementById("string003l").innerHTML = string003l;
+document.getElementById("string003r").innerHTML = string003r;
+
+//document.getElementById("string004l").innerHTML = string004l;
+document.getElementById("string004r").innerHTML = string004r;
+
+//document.getElementById("string005l").innerHTML = string005l;
+document.getElementById("string005r").innerHTML = string005r;
+
+//document.getElementById("string006l").innerHTML = string006l;
+document.getElementById("string006r").innerHTML = string006r;
+
+//document.getElementById("string007l").innerHTML = string007l;
+document.getElementById("string007r").innerHTML = string007r;
+
+//document.getElementById("string008l").innerHTML = string008l;
+document.getElementById("string008r").innerHTML = string008r;
+
+//document.getElementById("string009l").innerHTML = string009l;
+document.getElementById("string009r").innerHTML = string009r;
+
+//document.getElementById("string010l").innerHTML = string010l;
+document.getElementById("string010r").innerHTML = string010r;
+
+document.getElementById("string011l").innerHTML = string011l;
+document.getElementById("string011r").innerHTML = string011r;
+
+document.getElementById("string012l").innerHTML = string012l;
+document.getElementById("string012r").innerHTML = string012r;
+
+document.getElementById("string013l").innerHTML = string013l;
+document.getElementById("string013r").innerHTML = string013r;
+
+document.getElementById("string014l").innerHTML = string014l;
+document.getElementById("string014r").innerHTML = string014r;
+
+document.getElementById("string015l").innerHTML = string015l;
+document.getElementById("string015r").innerHTML = string015r;
+
+document.getElementById("string016l").innerHTML = string016l;
+document.getElementById("string016r").innerHTML = string016r;
+
+document.getElementById("string017l").innerHTML = string017l;
+document.getElementById("string017r").innerHTML = string017r;
+
+document.getElementById("string018l").innerHTML = string018l;
+document.getElementById("string018r").innerHTML = string018r;
+
+document.getElementById("string019l").innerHTML = string019l;
+document.getElementById("string019r").innerHTML = string019r;
+
+document.getElementById("string020l").innerHTML = string020l;
+//document.getElementById("string020r").innerHTML = string020r;
+
+document.getElementById("string021l").innerHTML = string021l;
+//document.getElementById("string021r").innerHTML = string021r;
+
+document.getElementById("string022l").innerHTML = string022l;
+//document.getElementById("string022r").innerHTML = string022r;
+
+document.getElementById("string023l").innerHTML = string023l;
+//document.getElementById("string023r").innerHTML = string023r;
+
+document.getElementById("string024l").innerHTML = string024l;
+//document.getElementById("string024r").innerHTML = string024r;
+
+document.getElementById("string025l").innerHTML = string025l;
+//document.getElementById("string025r").innerHTML = string025r;
+
+document.getElementById("string026l").innerHTML = string026l;
+//document.getElementById("string026r").innerHTML = string026r;
+
+document.getElementById("string027l").innerHTML = string027l;
+//document.getElementById("string027r").innerHTML = string027r;
+
+document.getElementById("string028l").innerHTML = string028l;
+//document.getElementById("string028r").innerHTML = string028r;
+
+document.getElementById("string029l").innerHTML = string029l;
+//document.getElementById("string029r").innerHTML = string029r;
+
+document.getElementById("string030l").innerHTML = string030l;
+//document.getElementById("string030r").innerHTML = string030r;
+
+
+string000lv = (((2 *  gvalue ) + 1 ) * 3 * 5 ) - 15   ;
+string000rv = (((2 *  gvalue ) + 1 ) * 3 * 5 ) - 15   ;
+string001lv = (((2 *  gvalue ) + 1 ) * 3 * 5 ) - 14   ;
+string001rv = (((2 *  gvalue ) + 1 ) * 3 * 5 ) - 14   ;
+string002lv = (((2 *  gvalue ) + 1 ) * 3 * 5 ) - 13   ;
+string002rv = (((2 *  gvalue ) + 1 ) * 3 * 5 ) - 13   ;
+string003lv = (((2 *  gvalue ) + 1 ) * 3 * 5 ) - 12   ;
+string003rv = (((2 *  gvalue ) + 1 ) * 3 * 5 ) - 12   ;
+string004lv = (((2 *  gvalue ) + 1 ) * 3 * 5 ) - 11   ;
+string004rv = (((2 *  gvalue ) + 1 ) * 3 * 5 ) - 11   ;
+string005lv = (((2 *  gvalue ) + 1 ) * 3 * 5 ) - 10   ;
+string005rv = (((2 *  gvalue ) + 1 ) * 3 * 5 ) - 10   ;
+string006lv = (((2 *  gvalue ) + 1 ) * 3 * 5 ) - 09   ;
+string006rv = (((2 *  gvalue ) + 1 ) * 3 * 5 ) - 09   ;
+string007lv = (((2 *  gvalue ) + 1 ) * 3 * 5 ) - 08   ;
+string007rv = (((2 *  gvalue ) + 1 ) * 3 * 5 ) - 08   ;
+string008lv = (((2 *  gvalue ) + 1 ) * 3 * 5 ) - 07   ;
+string008rv = (((2 *  gvalue ) + 1 ) * 3 * 5 ) - 07   ;
+string009lv = (((2 *  gvalue ) + 1 ) * 3 * 5 ) - 06   ;
+string009rv = (((2 *  gvalue ) + 1 ) * 3 * 5 ) - 06   ;
+string010lv = (((2 *  gvalue ) + 1 ) * 3 * 5 ) - 05   ;
+string010rv = (((2 *  gvalue ) + 1 ) * 3 * 5 ) - 05   ;
+string011lv = (((2 *  gvalue ) + 1 ) * 3 * 5 ) - 04   ;
+string011rv = (((2 *  gvalue ) + 1 ) * 3 * 5 ) - 04   ;
+string012lv = (((2 *  gvalue ) + 1 ) * 3 * 5 ) - 03   ;
+string012rv = (((2 *  gvalue ) + 1 ) * 3 * 5 ) - 03   ;
+string013lv = (((2 *  gvalue ) + 1 ) * 3 * 5 ) - 02   ;
+string013rv = (((2 *  gvalue ) + 1 ) * 3 * 5 ) - 02   ;
+string014lv = (((2 *  gvalue ) + 1 ) * 3 * 5 ) - 01   ;
+string014rv = (((2 *  gvalue ) + 1 ) * 3 * 5 ) - 01   ;
+string015lv = (((2 *  gvalue ) + 1 ) * 3 * 5 ) - 00   ;
+string015rv = (((2 *  gvalue ) + 1 ) * 3 * 5 ) + 00   ;
+string016lv = (((2 *  gvalue ) + 1 ) * 3 * 5 ) + 01   ;
+string016rv = (((2 *  gvalue ) + 1 ) * 3 * 5 ) + 01   ;
+string017lv = (((2 *  gvalue ) + 1 ) * 3 * 5 ) + 02   ;
+string017rv = (((2 *  gvalue ) + 1 ) * 3 * 5 ) + 02   ;
+string018lv = (((2 *  gvalue ) + 1 ) * 3 * 5 ) + 03   ;
+string018rv = (((2 *  gvalue ) + 1 ) * 3 * 5 ) + 03   ;
+string019lv = (((2 *  gvalue ) + 1 ) * 3 * 5 ) + 04   ;
+string019rv = (((2 *  gvalue ) + 1 ) * 3 * 5 ) + 04   ;
+string020lv = (((2 *  gvalue ) + 1 ) * 3 * 5 ) + 05   ;
+string020rv = (((2 *  gvalue ) + 1 ) * 3 * 5 ) + 05   ;
+string021lv = (((2 *  gvalue ) + 1 ) * 3 * 5 ) + 06   ;
+string021rv = (((2 *  gvalue ) + 1 ) * 3 * 5 ) + 06   ;
+string022lv = (((2 *  gvalue ) + 1 ) * 3 * 5 ) + 07   ;
+string022rv = (((2 *  gvalue ) + 1 ) * 3 * 5 ) + 07   ;
+string023lv = (((2 *  gvalue ) + 1 ) * 3 * 5 ) + 08   ;
+string023rv = (((2 *  gvalue ) + 1 ) * 3 * 5 ) + 08   ;
+string024lv = (((2 *  gvalue ) + 1 ) * 3 * 5 ) + 09   ;
+string024rv = (((2 *  gvalue ) + 1 ) * 3 * 5 ) + 09   ;
+string025lv = (((2 *  gvalue ) + 1 ) * 3 * 5 ) + 10   ;
+string025rv = (((2 *  gvalue ) + 1 ) * 3 * 5 ) + 10   ;
+string026lv = (((2 *  gvalue ) + 1 ) * 3 * 5 ) + 11   ;
+string026rv = (((2 *  gvalue ) + 1 ) * 3 * 5 ) + 11   ;
+string027lv = (((2 *  gvalue ) + 1 ) * 3 * 5 ) + 12   ;
+string027rv = (((2 *  gvalue ) + 1 ) * 3 * 5 ) + 12   ;
+string028lv = (((2 *  gvalue ) + 1 ) * 3 * 5 ) + 13   ;
+string028rv = (((2 *  gvalue ) + 1 ) * 3 * 5 ) + 13   ;
+string029lv = (((2 *  gvalue ) + 1 ) * 3 * 5 ) + 14   ;
+string029rv = (((2 *  gvalue ) + 1 ) * 3 * 5 ) + 14   ;
+string030lv = (((2 *  gvalue ) + 1 ) * 3 * 5 ) + 15   ;
+string030rv = (((2 *  gvalue ) + 1 ) * 3 * 5 ) + 15   ;
+
+
+
+
+//document.getElementById("string000lv").innerHTML = string000lv;
+document.getElementById("string000rv").innerHTML = string000rv;
+
+//document.getElementById("string001lv").innerHTML = string001lv;
+document.getElementById("string001rv").innerHTML = string001rv;
+
+//document.getElementById("string002lv").innerHTML = string002lv;
+document.getElementById("string002rv").innerHTML = string002rv;
+
+//document.getElementById("string003lv").innerHTML = string003lv;
+document.getElementById("string003rv").innerHTML = string003rv;
+
+//document.getElementById("string004lv").innerHTML = string004lv;
+document.getElementById("string004rv").innerHTML = string004rv;
+
+//document.getElementById("string005lv").innerHTML = string005lv;
+document.getElementById("string005rv").innerHTML = string005rv;
+
+//document.getElementById("string006lv").innerHTML = string006lv;
+document.getElementById("string006rv").innerHTML = string006rv;
+
+//document.getElementById("string007lv").innerHTML = string007lv;
+document.getElementById("string007rv").innerHTML = string007rv;
+
+//document.getElementById("string008lv").innerHTML = string008lv;
+document.getElementById("string008rv").innerHTML = string008rv;
+
+//document.getElementById("string009lv").innerHTML = string009lv;
+document.getElementById("string009rv").innerHTML = string009rv;
+
+//document.getElementById("string010lv").innerHTML = string010lv;
+document.getElementById("string010rv").innerHTML = string010rv;
+
+document.getElementById("string011lv").innerHTML = string011lv;
+document.getElementById("string011rv").innerHTML = string011rv;
+
+document.getElementById("string012lv").innerHTML = string012lv;
+document.getElementById("string012rv").innerHTML = string012rv;
+
+document.getElementById("string013lv").innerHTML = string013lv;
+document.getElementById("string013rv").innerHTML = string013rv;
+
+document.getElementById("string014lv").innerHTML = string014lv;
+document.getElementById("string014rv").innerHTML = string014rv;
+
+document.getElementById("string015lv").innerHTML = string015lv;
+document.getElementById("string015rv").innerHTML = string015rv;
+
+document.getElementById("string016lv").innerHTML = string016lv;
+document.getElementById("string016rv").innerHTML = string016rv;
+
+document.getElementById("string017lv").innerHTML = string017lv;
+document.getElementById("string017rv").innerHTML = string017rv;
+
+document.getElementById("string018lv").innerHTML = string018lv;
+document.getElementById("string018rv").innerHTML = string018rv;
+
+document.getElementById("string019lv").innerHTML = string019lv;
+document.getElementById("string019rv").innerHTML = string019rv;
+
+document.getElementById("string020lv").innerHTML = string020lv;
+//document.getElementById("string020rv").innerHTML = string020rv;
+
+document.getElementById("string021lv").innerHTML = string021lv;
+//document.getElementById("string021rv").innerHTML = string021rv;
+
+document.getElementById("string022lv").innerHTML = string022lv;
+//document.getElementById("string022rv").innerHTML = string022rv;
+
+document.getElementById("string023lv").innerHTML = string023lv;
+//document.getElementById("string023rv").innerHTML = string023rv;
+
+document.getElementById("string024lv").innerHTML = string024lv;
+//document.getElementById("string024rv").innerHTML = string024rv;
+
+document.getElementById("string025lv").innerHTML = string025lv;
+//document.getElementById("string025rv").innerHTML = string025rv;
+
+document.getElementById("string026lv").innerHTML = string026lv;
+//document.getElementById("string026rv").innerHTML = string026rv;
+
+document.getElementById("string027lv").innerHTML = string027lv;
+//document.getElementById("string027rv").innerHTML = string027rv;
+
+document.getElementById("string028lv").innerHTML = string028lv;
+//document.getElementById("string028rv").innerHTML = string028rv;
+
+document.getElementById("string029lv").innerHTML = string029lv;
+//document.getElementById("string029rv").innerHTML = string029rv;
+
+document.getElementById("string030lv").innerHTML = string030lv;
+//document.getElementById("string030rv").innerHTML = string030rv;
+
+
+// string001rv
+fam01_fam06  = (string001rv - 1 );
+fam01_cnt  = (string001rv - 1 ) / 6;
+fam01_out = fam01_fam06  +"=="+ fam01_cnt ;
+//alert(fam01_out );
+
+// string007rv
+fam07_fam06  = (string007rv - 1 );
+fam07_cnt  = (string007rv - 1 ) / 6;
+fam07_out = fam07_fam06 + "==" + fam07_cnt ;
+//alert(fam07_out );
+
+// string011lv
+fam11_fam06  = (string011lv +1 );
+fam11_cnt  = (string011lv + 1 ) / 6;
+fam11_out = fam11_fam06 + "==" + fam11_cnt ;
+//alert(fam11_out );
+
+// string013rv
+fam13_fam06  = (string013rv - 1 );
+fam13_cnt  = (string013rv - 1 ) / 6;
+fam13_out = fam13_fam06 + "==" + fam13_cnt ;
+//alert(fam13_out );
+
+// string017lv
+fam17_fam06  = (string017lv + 1 );
+fam17_cnt  = (string017lv + 1 ) / 6;
+fam17_out = fam17_fam06 + "==" + fam17_cnt ;
+//alert(fam17_out );
+
+// string019rv
+fam19_fam06  = (string019rv - 1 );
+fam19_cnt  = (string019rv - 1 ) / 6;
+fam19_out = fam19_fam06 + "==" + fam19_cnt ;
+//alert(fam19_out );
+
+// string023lv
+fam23_fam06  = (string023lv + 1 );
+fam23_cnt  = (string023lv + 1 ) / 6;
+fam23_out = fam23_fam06 + "==" + fam23_cnt ;
+//alert(fam23_out );
+
+// string029lv
+fam29_fam06  = (string029lv + 1 );
+fam29_cnt  = (string029lv + 1 ) / 6;
+fam29_out = fam29_fam06 + "==" + fam29_cnt ;
+//alert(fam29_out );
+
+document.getElementById("fam01_out").innerHTML = fam01_out;
+document.getElementById("fam07_out").innerHTML = fam07_out;
+document.getElementById("fam11_out").innerHTML = fam11_out;
+document.getElementById("fam13_out").innerHTML = fam13_out;
+document.getElementById("fam17_out").innerHTML = fam17_out;
+document.getElementById("fam19_out").innerHTML = fam19_out;
+document.getElementById("fam23_out").innerHTML = fam23_out;
+document.getElementById("fam29_out").innerHTML = fam29_out;
+
+
+
+// ###############################################################
+size = (fam29_out.length);
+
+// this for line 15 the midpoint
+inflate = "";
+// add enough characters
+for (let i = 0; i < size ; i++) {
+inflate = inflate + "=";
+}
+document.getElementById("inflate").innerHTML = inflate;
+
+
+
+
+// ################################################################ //
+// calc if p or np (prime or not prime flags)
+
+const fam01flag = isPrimeR(string001rv);
+//alert("fam01flag " +fam01flag)
+document.getElementById("fam01flag").innerHTML = fam01flag;
+if (fam01flag == "= NP") {
+//alert("yes 01");
+  let shouldFlash01 = true;
+  const textElement = document.getElementById("flash01");
+  // Apply inline CSS animation based on the variable value
+  if (shouldFlash01) {
+    textElement.style.animation = "flash-anim 1.0s infinite";
+  } else {
+    textElement.style.animation = "none";
+  } 
+}
+
+// ################################################################ //
+const fam07flag = isPrimeR(string007rv);
+//alert("fam07flag " + fam07flag)
+document.getElementById("fam07flag").innerHTML = fam07flag;
+if (fam07flag == "= NP") {
+//alert("yes 07");
+  let shouldFlash07 = true;
+  const textElement = document.getElementById("flash07");
+  // Apply inline CSS animation based on the variable value
+  if (shouldFlash07) {
+    textElement.style.animation = "flash-anim 1.0s infinite";
+  } else {
+    textElement.style.animation = "none";
+  } 
+}
+
+// ################################################################ //
+const fam11flag = isPrimeL(string011rv);
+//alert("fam11flag " + fam11flag)
+document.getElementById("fam11flag").innerHTML = fam11flag;
+if (fam11flag == "= NP") {
+//alert("yes 11");
+  let shouldFlash11 = true;
+  const textElement = document.getElementById("flash11");
+  // Apply inline CSS animation based on the variable value
+  if (shouldFlash11) {
+    textElement.style.animation = "flash-anim 1.0s infinite";
+  } else {
+    textElement.style.animation = "none";
+  } 
+}
+
+// ################################################################ //
+const fam13flag = isPrimeR(string013rv);
+//alert("fam13flag " + fam13flag)
+document.getElementById("fam13flag").innerHTML = fam13flag;
+if (fam13flag == "= NP") {
+//alert("yes 13");
+  let shouldFlash13 = true;
+  const textElement = document.getElementById("flash13");
+  // Apply inline CSS animation based on the variable value
+  if (shouldFlash13) {
+    textElement.style.animation = "flash-anim 1.0s infinite";
+  } else {
+    textElement.style.animation = "none";
+  } 
+}
+
+// ################################################################ //
+const fam17flag = isPrimeL(string017rv);
+//alert("fam17flag " + fam17flag)
+document.getElementById("fam17flag").innerHTML = fam17flag;
+if (fam17flag == "= NP") {
+//alert("yes 17");
+  let shouldFlash17 = true;
+  const textElement = document.getElementById("flash17");
+  // Apply inline CSS animation based on the variable value
+  if (shouldFlash17) {
+    textElement.style.animation = "flash-anim 1.0s infinite";
+  } else {
+    textElement.style.animation = "none";
+  } 
+}
+
+// ################################################################ //
+const fam19flag = isPrimeR(string019rv);
+//alert("fam19flag " + fam19flag)
+document.getElementById("fam19flag").innerHTML = fam19flag;
+if (fam19flag == "= NP") {
+//alert("yes");
+  let shouldFlash19 = true;
+  const textElement = document.getElementById("flash19");
+  // Apply inline CSS animation based on the variable value
+  if (shouldFlash19) {
+    textElement.style.animation = "flash-anim 1.0s infinite";
+  } else {
+    textElement.style.animation = "none";
+  } 
+}
+
+// ################################################################ //
+const fam23flag = isPrimeL(string023lv);
+//alert("fam23flag " + fam23flag)
+document.getElementById("fam23flag").innerHTML = fam23flag;
+if (fam23flag == "= NP") {
+//alert("yes 23");
+  let shouldFlash23 = true;
+  const textElement = document.getElementById("flash23");
+  // Apply inline CSS animation based on the variable value
+  if (shouldFlash23) {
+    textElement.style.animation = "flash-anim 1.0s infinite";
+  } else {
+    textElement.style.animation = "none";
+  } 
+}
+
+// ################################################################ //
+const fam29flag = isPrimeL(string029lv);
+//alert("fam29flag " + fam29flag)
+document.getElementById("fam29flag").innerHTML = fam29flag;
+if (fam29flag == "= NP") {
+//alert("yes 29");
+  let shouldFlash29 = true;
+  const textElement = document.getElementById("flash29");
+  // Apply inline CSS animation based on the variable value
+  if (shouldFlash29) {
+    textElement.style.animation = "flash-anim 1.0s infinite";
+  } else {
+    textElement.style.animation = "none";
+  } 
+}
+
+
+
+
+
+// ################################################################ //
+}
+// ################################################################ //
+
+// ################################################################ //
+function isPrimeR(num) {
+  if (num <= 0) return false; // - 0 fix -  and negative numbers are not prime
+  if (num === 2) return true;  // 2 is the only even prime
+  if (num % 2 === 0) return false; // Exclude all other even numbers
+
+  // Check odd factors up to the square root of the number
+  const boundary = Math.sqrt(num);
+  for (let i = 3; i <= boundary; i += 2) {
+    if (num % i === 0) return "= NP";
+  }
+  return "= P ";
+}
+
+function isPrimeL(num) {
+  if (num <= 0) return false; // - 0 fix -  and negative numbers are not prime
+  if (num === 2) return true;  // 2 is the only even prime
+  if (num % 2 === 0) return false; // Exclude all other even numbers
+
+  // Check odd factors up to the square root of the number
+  const boundary = Math.sqrt(num);
+  for (let i = 3; i <= boundary; i += 2) {
+    if (num % i === 0) return "= NP";
+  }
+  return "= P ";
+}
+
+
+// ################################################################ //
+    </script>
+
+
+ <!-- ################################################################  -->
+ <!-- ################################################################  -->
+ <!-- ################################################################  -->
+ <!-- ################################################################  -->
+	
+  <!-- The main wrapper holding your content -->
+  <!-- <main class="parent-container"> -->
+ <!-- ################################################################  -->
+<!-- perserve the blank lines to space the data out up and down                             -->
+<!-- the <pre> and </pre> tags set the text up to be fixed text                                  --> 
+
+<div class="parent-container">
+
+    <!-- Container 1 -->
+<div class="boxL" class="box">
+<pre>
+
+
+
+
+<span style="white-space: pre-wrap;background-color: black; color: yellow ; margin:0;"><span style="text-decoration: underline;"> Key and Left </span></span>
+
+
+
+
+
+
+
+
+
+
+
+<span style="white-space: pre-wrap;background-color: green  ; color: yellow ; margin:0;"> 11  <span id="string011lv"></span> =  [(2 * <span id="string011l"></span>) + 1 ) * 3 * 5 ] - 04 <span id ="flash11"><span id="fam11flag"></span></span></span>
+<span style="white-space: pre-wrap;background-color: black  ; color: yellow ; margin:0;"> 12  <span id="string012lv"></span> =  [(2 * <span id="string012l"></span>) + 1 ) * 3 * 5 ] - 03</span>
+<span style="white-space: pre-wrap;background-color: black  ; color: yellow ; margin:0;"> 13  <span id="string013lv"></span> =  [(2 * <span id="string013l"></span>) + 1 ) * 3 * 5 ] - 02</span>
+<span style="white-space: pre-wrap;background-color: black  ; color: yellow ; margin:0;"> 14  <span id="string014lv"></span> =  [(2 * <span id="string014l"></span>) + 1 ) * 3 * 5 ] - 01</span>
+<span style="white-space: pre-wrap;background-color: aqua   ; color: black  ; margin:0;"> 15  <span id="string015lv"></span> =  [(2 * <span id="string015l"></span>) + 1 ) * 3 * 5 ] - 00</span>
+<span style="white-space: pre-wrap;background-color: black  ; color: yellow ; margin:0;"> 16  <span id="string016lv"></span> =  [(2 * <span id="string016l"></span>) + 1 ) * 3 * 5 ] + 01</span>
+<span style="white-space: pre-wrap;background-color: yellow ; color: black  ; margin:0;"> 17  <span id="string017lv"></span> =  [(2 * <span id="string017l"></span>) + 1 ) * 3 * 5 ] + 02 <span id ="flash17"><span id="fam17flag"></span></span></span>
+<span style="white-space: pre-wrap;background-color: black  ; color: yellow ; margin:0;"> 18  <span id="string018lv"></span> =  [(2 * <span id="string018l"></span>) + 1 ) * 3 * 5 ] + 03</span>
+<span style="white-space: pre-wrap;background-color: black  ; color: yellow ; margin:0;"> 19  <span id="string019lv"></span> =  [(2 * <span id="string019l"></span>) + 1 ) * 3 * 5 ] + 04</span>
+<span style="white-space: pre-wrap;background-color: black  ; color: yellow ; margin:0;"> 20  <span id="string020lv"></span> =  [(2 * <span id="string020l"></span>) + 1 ) * 3 * 5 ] + 05</span>
+<span style="white-space: pre-wrap;background-color: black  ; color: yellow ; margin:0;"> 21  <span id="string021lv"></span> =  [(2 * <span id="string021l"></span>) + 1 ) * 3 * 5 ] + 06</span>
+<span style="white-space: pre-wrap;background-color: black  ; color: yellow ; margin:0;"> 22  <span id="string022lv"></span> =  [(2 * <span id="string022l"></span>) + 1 ) * 3 * 5 ] + 07</span>
+<span style="white-space: pre-wrap;background-color: red     ; color: white   ; margin:0;"> 23  <span id="string023lv"></span> =  [(2 * <span id="string023l"></span>) + 1 ) * 3 * 5 ] + 08 <span id ="flash23"><span id="fam23flag"></span></span></span>
+<span style="white-space: pre-wrap;background-color: black  ; color: yellow ; margin:0;"> 24  <span id="string024lv"></span> =  [(2 * <span id="string024l"></span>) + 1 ) * 3 * 5 ] + 09</span>
+<span style="white-space: pre-wrap;background-color: black  ; color: yellow ; margin:0;"> 25  <span id="string025lv"></span> =  [(2 * <span id="string025l"></span>) + 1 ) * 3 * 5 ] + 10</span>
+<span style="white-space: pre-wrap;background-color: black  ; color: yellow ; margin:0;"> 26  <span id="string026lv"></span> =  [(2 * <span id="string026l"></span>) + 1 ) * 3 * 5 ] + 11</span>
+<span style="white-space: pre-wrap;background-color: black  ; color: yellow ; margin:0;"> 27  <span id="string027lv"></span> =  [(2 * <span id="string027l"></span>) + 1 ) * 3 * 5 ] + 12</span>
+<span style="white-space: pre-wrap;background-color: black  ; color: yellow ; margin:0;"> 28  <span id="string028lv"></span> =  [(2 * <span id="string028l"></span>) + 1 ) * 3 * 5 ] + 13</span>
+<span style="white-space: pre-wrap;background-color: blue   ; color: white  ; margin:0;"> 29  <span id="string029lv"></span> =  [(2 * <span id="string029l"></span>) + 1 ) * 3 * 5 ] + 14 <span id ="flash29"><span id="fam29flag"></span></span></span>
+<span style="white-space: pre-wrap;background-color: black  ; color: yellow ; margin:0;"> 30  <span id="string030lv"></span> =  [(2 * <span id="string030l"></span>) + 1 ) * 3 * 5 ] + 15</span>
+
+</pre>
+</div>
+
+    <!-- Container 2 -->
+<div class="boxM" >
+<!--    <span id="inflate00"></span> -->
+<!--       <h5> </h5> -->
+<pre>
+
+<span style="white-space: pre-wrap;background-color: black; color: yellow ; margin:0;">(g) = (g)<span id="string000m"></span></span>
+<span style="white-space: pre-wrap;background-color: black; color: yellow ; margin:0;"><span id="string1"></span></span>
+<span style="white-space: pre-wrap;background-color: aqua ; color: black ; margin:0;"><span id="string2"></span></span></span>
+<span style="white-space: pre-wrap;background-color: black; color: black ; margin:0;"></span><span style="white-space: pre-wrap;background-color: black; color: yellow ; margin:0;"><span style="text-decoration: underline;"> <span id="string3">  </span></span></span></span>
+
+<span style="white-space: pre-wrap;background-color: blue; color: yellow ; margin:0;"><span id = "fam01_out"></span></span></span>
+
+
+
+
+
+<span style="white-space: pre-wrap;background-color: red ; color: white ; margin:0;"><span id = "fam07_out"></span>
+
+
+
+<span style="white-space: pre-wrap;background-color: green ; color: white ; margin:0;"><span id = "fam11_out"></span>
+
+<span style="white-space: pre-wrap;background-color: yellow ; color: black ; margin:0;"><span id = "fam13_out"></span>
+
+<span style="white-space: pre-wrap;background-color: aqua ; color: black ; margin:0;"><span id="inflate"></span></span>
+
+<span style="white-space: pre-wrap;background-color: yellow ; color: black ; margin:0;"><span id = "fam17_out"></span>
+
+<span style="white-space: pre-wrap;background-color: green ; color: white ; margin:0;"><span id = "fam19_out"></span>
+
+
+
+<span style="white-space: pre-wrap;background-color: red ; color: white ; margin:0;"><span id = "fam23_out"></span>
+
+
+
+
+
+<span style="white-space: pre-wrap;background-color: blue ; color: white ; margin:0;"><span id = "fam29_out"></span>
+</pre>
+        </div>
+
+    <!-- Container 3 -->
+    <div class="boxR" >
+<pre>
+
+
+
+
+<span style="white-space: pre-wrap;background-color: black  ; color: yellow ; margin:0;"><span style="text-decoration: underline;"> Key and Right </span></span>
+<span style="white-space: pre-wrap;background-color: black  ; color: yellow ; margin:0;"> 00   <span id="string000rv"></span> = [(2 * <span id="string000r"></span>) + 1 ) * 3 * 5 ] - 15</span>
+<span style="white-space: pre-wrap;background-color: blue   ; color: yellow ; margin:0;"> 01   <span id="string001rv"></span> = [(2 * <span id="string001r"></span>) + 1 ) * 3 * 5 ] - 14 <span id ="flash01"><span id="fam01flag"></span></span></span>
+<span style="white-space: pre-wrap;background-color: black  ; color: yellow ; margin:0;"> 02   <span id="string002rv"></span> = [(2 * <span id="string002r"></span>) + 1 ) * 3 * 5 ] - 13</span>
+<span style="white-space: pre-wrap;background-color: black  ; color: yellow ; margin:0;"> 03   <span id="string003rv"></span> = [(2 * <span id="string003r"></span>) + 1 ) * 3 * 5 ] - 12</span>
+<span style="white-space: pre-wrap;background-color: black  ; color: yellow ; margin:0;"> 04   <span id="string004rv"></span> = [(2 * <span id="string004r"></span>) + 1 ) * 3 * 5 ] - 11</span>
+<span style="white-space: pre-wrap;background-color: black  ; color: yellow ; margin:0;"> 05   <span id="string005rv"></span> = [(2 * <span id="string005r"></span>) + 1 ) * 3 * 5 ] - 10</span>
+<span style="white-space: pre-wrap;background-color: black  ; color: yellow ; margin:0;"> 06   <span id="string006rv"></span> = [(2 * <span id="string006r"></span>) + 1 ) * 3 * 5 ] - 09</span>
+<span style="white-space: pre-wrap;background-color: red    ; color: yellow ; margin:0;"> 07   <span id="string007rv"></span> = [(2 * <span id="string007r"></span>) + 1 ) * 3 * 5 ] - 08 <span id ="flash07"><span id="fam07flag"></span></span></span>
+<span style="white-space: pre-wrap;background-color: black  ; color: yellow ; margin:0;"> 08   <span id="string008rv"></span> = [(2 * <span id="string008r"></span>) + 1 ) * 3 * 5 ] - 07</span>
+<span style="white-space: pre-wrap;background-color: black  ; color: yellow ; margin:0;"> 09   <span id="string009rv"></span> = [(2 * <span id="string009r"></span>) + 1 ) * 3 * 5 ] - 06</span>
+<span style="white-space: pre-wrap;background-color: black  ; color: yellow ; margin:0;"> 10   <span id="string010rv"></span> = [(2 * <span id="string010r"></span>) + 1 ) * 3 * 5 ] - 05</span>
+<span style="white-space: pre-wrap;background-color: black  ; color: yellow ; margin:0;"> 11   <span id="string011rv"></span> = [(2 * <span id="string011r"></span>) + 1 ) * 3 * 5 ] - 04 </span>
+<span style="white-space: pre-wrap;background-color: black  ; color: yellow ; margin:0;"> 12   <span id="string012rv"></span> = [(2 * <span id="string012r"></span>) + 1 ) * 3 * 5 ] - 03</span>
+<span style="white-space: pre-wrap;background-color: yellow ; color: black  ; margin:0;"> 13   <span id="string013rv"></span> = [(2 * <span id="string013r"></span>) + 1 ) * 3 * 5 ] - 02 <span id ="flash13"><span id="fam13flag"></span></span></span>
+<span style="white-space: pre-wrap;background-color: black  ; color: yellow ; margin:0;"> 14   <span id="string014rv"></span> = [(2 * <span id="string014r"></span>) + 1 ) * 3 * 5 ] - 01</span>
+<span style="white-space: pre-wrap;background-color: aqua   ; color: black  ; margin:0;"> 15   <span id="string015rv"></span> = [(2 * <span id="string015r"></span>) + 1 ) * 3 * 5 ] + 00</span>
+<span style="white-space: pre-wrap;background-color: black  ; color: yellow ; margin:0;"> 16   <span id="string016rv"></span> = [(2 * <span id="string016r"></span>) + 1 ) * 3 * 5 ] + 01</span>
+<span style="white-space: pre-wrap;background-color: black  ; color: yellow ; margin:0;"> 17   <span id="string017rv"></span> = [(2 * <span id="string017r"></span>) + 1 ) * 3 * 5 ] + 02</span>
+<span style="white-space: pre-wrap;background-color: black  ; color: yellow ; margin:0;"> 18   <span id="string018rv"></span> = [(2 * <span id="string018r"></span>) + 1 ) * 3 * 5 ] + 03</span>
+<span style="white-space: pre-wrap;background-color: green  ; color: yellow ; margin:0;"> 19   <span id="string019rv"></span> = [(2 * <span id="string019r"></span>) + 1 ) * 3 * 5 ] + 04 <span id ="flash19"><span id="fam19flag"></span></span></span>
+</pre>
+        </div>
+
+
+
+
+
+</body>
+</html>
