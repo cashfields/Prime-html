@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Image Viewer</title>
+</head>
+<body>
+
+    <!-- This is where the image will appear -->
+    <img id="displayed-image" alt="Passed PNG Image">
+
+    <script>
+        // Get the URL parameters
+        const params = new URLSearchParams(window.location.search);
+        
+        // Find the value of the 'image' parameter
+        const imageName = params.get('image');
+
+        // If an image name exists, set it as the image source
+        if (imageName) {
+            document.getElementById('displayed-image').src = imageName;
+        } else {
+            document.getElementById('displayed-image').alt = "No image specified.";
+        }
+    </script>
+
+</body>
+</html>
