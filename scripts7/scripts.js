@@ -175,7 +175,7 @@ function decrement() {
 "./images7/skip2.png",                                            //47
 "./images7/Blue Thatch.bmp",                                      //48
 "./images7/Black Thatch.bmp",                                     //49
-"./images7/Black Magic.png",                                      //50
+"./images7/i0217.png",                                      //50
 
         ];
 
