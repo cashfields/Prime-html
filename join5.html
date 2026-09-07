@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href= "./images2/cash.ico" type="image/x-icon" >
+   <script src="./scripts/scripts.js" async></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <title>join5 The first ps - long</title>
+
+<style>
+
+</style>
+
+
+
+
+</head>
+<body>
+
+
+
+
+
+
+ looking first
+
+    <div class="controls">
+
+  <button class="icon-buttonL" id="prev-btn" >
+  <img src="./images2/L.png" alt="Icon" class="button-img" onclick="decrement() , prevImage()">
+  <span></span>
+  </button>
+
+        <div id="counter"></div>
+
+  <button class="icon-buttonR" id="next-btn">
+  <img src="./images2/R.png"  alt="Icon" class="button-img" onclick="increment()  , nextImage()">
+  <span></span>
+  </button>
+
+
+       <button class="fullscreen-btn" id="toggleScript">Full On</button>
+           <button class="fullscreen-btn" onclick="window.close()">Close</button>
+<!--
+
+<input type="text" id="goto" name="goto" placeholder="Goto">
+ -->
+ <!-- <label for="goto" style="max-height: 20px; height: 100%;">Goto</label> -->
+<input type="text"  style="max-height: 20px; height: 100%;"   placeholder="Goto" id="goto" name="goto"  inputmode="numeric" pattern="[0-9]{3}"  maxlength="3"   size="1">
+
+<!-- <input type="text" id="goto" placeholder="goto"> -->
+<button id="submitBtn" class="fullscreen-btn" >goto</button>
+
+
+<button onclick="viewbig()" class="fullscreen-btn" id="toggleScript">View big</button>
+
+
+        </div>
+
+
+
+
+
+
+
+<div class="container">
+   <div id="image-container" style="overflow: auto">
+    <img id="walkthrough-img" src="" alt="Walkthrough Step">
+    </div>
+
+  <div class="text-section scroll-container" >
+
+   <!-- ####################################################################-->
+   <!-- ####################################################################-->
+   <p class="step" id="step-1">
+                      "step-1"<br>
+* wildcard numbers , no matter how large a number is it can only end with the digits 0 to 9.
+<br><br>
+Call these *wildcard , this is similar to the star (*) in regular expression.
+<br><br>
+   </p>
+
+   <p class="step" id="step-2" style="display: none;">
+                      "step-2"<br>
+There are eight number that make the first group of primes.
+<br><br>
+A number is a ps (prime suspect) until verified.
+<br><br>
+These are a subset of *wildcard ; call them *famXX.
+<br><br>
+*fam01 any number that ends with *1 and satisfies the formula:
+<br>
+*fam01 = (ps - 01)/30 is an integer.
+<br><br>
+*fam07 = (ps - 07)/30 is an integer.
+<br><br>
+*fam11 = (ps - 11)/30 is an integer.
+<br><br>
+*fam13 = (ps - 13)/30 is an integer.
+<br><br>
+<br><br>
+*fam17 = (ps - 17)/30 is an integer.
+<br><br>
+*fam19 = (ps - 19)/30 is an integer.
+<br><br>
+*fam23 = (ps - 23)/30 is an integer.
+<br><br>
+*fam29 = (ps - 29)/30 is an integer.
+
+<br><br>
+
+
+   </p>
+
+   <p class="step" id="step-3" style="display: none;">
+                      "step-3"<br>
+This chart shows the difference between two planes. The numbers are separated by 10.
+<br><br>
+The one plane will have a name of R (right) for { 1 , 7 , 13 , 19 }.
+<br><br>
+The other plane will have a name of L (left) for { 11 , 17 , 23 , 29 }.
+<br><br>
+This is not an arbitrary name as will be show , later.
+<br><br>
+The ps (prime suspects) only end in four digits: { 1 , 3 , 7 , 9 }
+<br><br>
+   </p>
+
+
+   <p class="step" id="step-4" style="display: none;">
+                      "step-4"<br><br>
+<br><br>
+There is a common value that internally separates the values: 6.
+<br><br>
+1 to 7 is 6 ; 7 to 13 is 6 ; 13 to 19 is 6.
+<br><br>
+11 to 17 is 6 ; 17 to 23 is 6 ; 23 to 29 is 6.
+<br><br>
+There are two values 10 and 6 that drive ps (prime suspects).
+<br><br>
+   </p>
+
+   <p class="step" id="step-5" style="display: none;">
+                      "step-5"<br><br>
+<br><br>
+Listing the values from 0 to 30 as a group ; the first group.
+<br><br>
+The name of a group will be given the symbol (g) [group]
+<br><br>
+This is designated as (g)0 in the upper left corner.
+<br><br>
+Inside the chart are the formulas for R & L.
+<br><br>
+This chart is balanced , it starts with a 0 and ends with a 0.
+<br><br>
+The midpoint is 15 ; there are 31 things an odd number.
+<br><br>
+All the ps numbers for a given (g) are balanced by there location on the chart. They are equal distant from the ends and the midpoint.
+<br><br>
+01 + 29 =30
+<br><br>
+07 + 23=30
+<br><br>
+11 + 19=30
+<br><br>
+13 + 17=30
+<br><br>
+Since the next possible ps is 30 away from the prior for any *fam.
+<br><br>
+*fam01 is the series:
+<br> { 1 , 31 , 61 , 91 , . . . }
+<br><br>
+*fam07 is the series:
+<br> { 7 , 37 , 67 , 97 , . . . }
+<br><br>
+*fam11 is the series:
+<br> { 11 , 41 , 71 , 101 , . . . }
+<br><br>
+This is the same for all *fam numbers.
+
+
+<br><br>
+   </p>
+
+
+   <p class="step" id="step-6" style="display: none;">
+                      "step-6"
+<br><br>
+This chart shows by arrows and color the pairs to make 30.
+
+<br><br>
+   </p>
+
+
+   <p class="step" id="step-7" style="display: none;">
+                      "step-7"
+<br><br>
+The balance is also between R & L and between the two planes.
+<br><br>
+The midpoint of 15 is the center point from left to right and top to bottom.
+<br><br>
+   </p>
+
+
+   <p class="step" id="step-8" style="display: none;">
+                      "step-8"
+<br><br>
+In the chart are the eight formulas to solve each of *fam.
+<br><br>
+As (g) increases from 0 to 1 the formulas will simultaneous solve all equations , this is matrix math.
+<br><br>
+(g)n:  *fam + (n)(3)(10) = ps
+<br><br>
+Just looking at one *fam ; *fam07.
+<br>
+(g)0 : 7 + (0)(3)(10) = 7
+<br>
+(g)1 : 7 + (1)(3)(10) = 37
+<br>
+(g)2 : 7 + (2)(3)(10) = 97
+<br>
+(g)3 : 7 + (3)(3)(10) = 127
+<br><br>
+
+
+<br><br>
+   </p>
+
+
+   <p class="step" id="step-9" style="display: none;">
+                      "step-9"
+<br><br>
+The reverse calculation can be applied to any ps to find what (g) it belongs to.
+<br><br>
+Pick a number ending in 1 , 3 , 7 , 9.
+<br><br>
+Example: 143
+<br><br>
+There are two possible *fam associated , either *fam13 or *fam23.
+<br><br>
+Take 143 - 13 = 130 ; divide by 30 = 4.3333 - it is not an integer
+<br><br>
+Next 143 - 23 = 120 ; divide by 30 = 4 - it is an integer.
+<br><br>
+The answer is (g)4.
+<br><br>
+If neither equation solves to an integer the number is divisible by 3 and therefore not a ps.
+<br><br>
+<br><br>
+   </p>
+
+
+   <p class="step" id="step-10" style="display: none;">
+                      "step-10"
+<br><br>
+This chart uses *fam06 to find ps.
+<br><br>
+The top half is *fam06 + 1 - moving right on the number line.
+<br><br>
+The bottom half is *fam06 - 1 - moving left on the number line.
+<br><br>
+The R has values of { 0 ,1 , 2 , 3}.
+<br><br>
+The L has values of { 2 , 3 , 4 , 5 }
+
+<br><br>
+
+<br><br>
+   </p>
+
+   <p class="step" id="step-11" style="display: none;">
+                      "step-11"
+<br><br>
+Next is looking for ps using odd numbers. The (2n + 1) in each formula is an odd number.
+<br><br>
+The (3 * 5) portion is is the midpoint of the (g).
+<br><br>
+The last portion of the equations is the value added or subtracted from the midpoint.
+<br><br>
+The values { 14 , 8 , 2 , 4 } balance from R to L.
+<br><br>
+Next , see the + and - signs flip at the midpoint. Balanced again.
+<br><br>
+<br><br>
+   </p>
+
+   <p class="step" id="step-12" style="display: none;">
+                      "step-12"
+<br><br>
+Using an odd number times 15 and a difference of 10 (-5 to +5) shows an additional set of equations.
+<br><br>
+The odd number times 15 is always the midpoint of a (g).
+<br><br>
+Since *1 (*wildcard1) is 6 away from *7 (*wildcard7) within a (g) ; the second element -9 and -3 are 6 away.
+<br><br>
+Since *3 (*wildcard3) is 6 away from *9 (*wildcard9) within a (g) ; the second element +3 and +9 are 6 away.
+<br><br>
+This is just a different view with different formulas to look for ps.
+<br><br>
+<br><br>
+<br><br>
+   </p>
+
+   <p class="step" id="step-13" style="display: none;">
+                      "step-13"
+<br><br>
+Placing the equations in *fam order , notice how the digits and signs are balanced symmetrically.
+<br><br>
+   </p>
+
+
+   <p class="step" id="step-14" style="display: none;">
+                      "step-14"
+<br><br>
+Moving into (g)1 here is a recap of the prior formulas.
+<br><br>
+Note that 49 is Xed  out as it is not prime (np).
+<br><br>
+<br><br>
+   </p>
+
+
+   <p class="step" id="step-15" style="display: none;">
+                      "step-15"
+<br><br>
+Moving into (g)2 here is a recap of the prior formulas.
+<br><br>
+Note that 77 is Xed  out as it is not prime (np).
+<br><br>
+<br><br>
+
+
+   </p>
+
+
+   <p class="step" id="step-16" style="display: none;">
+                      "step-16"
+<br><br>
+Moving into (g)3 here is a recap of the prior formulas.
+<br><br>
+Note that 91 and 119  are Xed out as they are not prime (np).
+<br><br>
+<br><br>
+
+
+   </p>
+
+
+   <p class="step" id="step-17" style="display: none;">
+                      "step-17"
+<br><br>
+See ling at the bottom to calculate your own (g).
+<br><br>
+All of the prior formulas lead up to this chart. This is where R and L are clearly shown.
+<br><br>
+First is the input field "(g) or PSL" as data is entered the matrix recalculates and displays new data.
+<br><br>
+The colored bars are matched pairs.
+<br>
+blue: &nbsp;&nbsp;*fam01 and *fam29.
+<br>
+red: &nbsp;&nbsp;&nbsp;&nbsp;*fam07 and *fam23.
+<br>
+green: *fam11 and *fam19.
+<br>
+gold: &nbsp;&nbsp;*fam13  and *fam17.
+<br><br>
+The right is some *fam06 +1.
+<br>
+The left is some *fam06 -1.
+<br>
+Think in terms of a number line:
+<br>R (right) is plus ; L (left) is minus.
+<br><br>
+Each ps on the R or L is separated by 6.
+<br><br>
+The midpoint 15 is color code yellow.
+<br><br>
+The center column labeled as "*fam06 == cnt6" tells what value of *fam06 and the count (cnt6) to display the value.
+<br><br>
+The two columns to the left and right of that column are just a counter , a ruler to show the (g).
+<br><br>
+Outside of those columns is the actual calculation of all the values in the (g). The title boxes are labeled "left" and "right".
+<br><br>
+There are (g)0 , (g)1 , (g)2 and (g)3 over this and the next three screens.
+<br><br>
+There is a flag field on the outer edge that prints "Prime" or "Not Prime" (in a lighter color font).
+
+<br><br>
+<br><br>
+<a href="file:///J:/convert/threecontainers.html" target="_blank" rel="noopener noreferrer">Load (g)</a>
+<br><br>	
+<br><br>	
+
+   </p>
+
+   <p class="step" id="step-18" style="display: none;">
+                      "step-18"
+<br><br>
+This is (g)1 ; the calculated values run from 30 to 60.
+<br><br>
+Look for the bottom right green bar - 49 - and the flag is "Not prime" in a lighter font color.
+<br><br>
+<br><br>
+<a href="file:///J:/convert/threecontainers.html" target="_blank" rel="noopener noreferrer">Load (g)</a>
+<br><br>	
+<br><br>	
+
+   </p>
+
+
+   <p class="step" id="step-19" style="display: none;">
+                      "step-19"
+<br><br>
+This is (g)2 ; the calculated values run from 60 to 90.
+<br><br>
+Look for the left gold bar - 77 - and the flag is "Not prime" in a lighter font color.
+ <br><br>
+<br><br>
+<a href="file:///J:/convert/threecontainers.html" target="_blank" rel="noopener noreferrer">Load (g)</a>
+<br><br>	
+<br><br>	
+
+  </p>
+
+
+   <p class="step" id="step-20" style="display: none;">
+                      "step-20"
+<br><br>
+This is (g)3 ; the calculated values run from 90 to 120.
+<br><br>
+Look at the two R and L blue bars.
+<br>R = 91 and L = 119 , both are "Not prime"
+ <br><br>
+<br><br>
+<a href="file:///J:/convert/threecontainers.html" target="_blank" rel="noopener noreferrer">Load (g)</a>
+<br><br>	
+<br><br>	
+   </p>
+
+   <p class="step" id="step-21" style="display: none;">
+                      "step-21"
+<br><br>
+This is a map of a (g). The top black line is just a counter , a ruler.
+<br><br>
+The next line - "(g)" - is a list of numbers with the *fam06 numbers color coded.
+<br><br>
+The next line - "offset - key" - color codes in gray the offset from the midpoint where the ps numbers are located.
+These line up with the edges of the next four boxes.
+<br><br>
+The next four lines show the range of ten for each *wildcard ( *1 , *7 , *3  *9 ). The middle of the box has the *wildcard number.
+ Note how these *wildcard numbers line up with -9 , -3 , 3 , and 9 on the "offset - key" line.
+<br><br>
+The edges of the box are the *fam numbers , with the middle marked with the gray hash below.
+<br><br>
+<br><br>
+<br><br>
+   </p>
+   <p class="step" id="step-22" style="display: none;">
+                      "step-22"
+<br><br>
+This is a very wide document follow these steps to view in a new tab.
+<br>
+1) Left click on time om the image.
+<br>
+2) Right click to show a sub menu.
+<br>
+3) Left click on "Open image in a new tab".
+<br>
+4) Use ctrl-shift-+ (control and shift and plus sign) or ctrl-shift-- (control and shift and minus sign) to adjust the size.
+<br><br>
+This is a map of all the prior formulas joined together to show the interrelation from one to the next.
+<br><br>
+The next six charts show this chart broken into smaller pieces.
+<br><br>
+   </p>
+
+
+   <p class="step" id="step-23" style="display: none;">
+                      "step-23"
+<br><br>
+This is the 1st portion of the prior chart.
+<br><br>
+<br><br>
+<br><br>
+   </p>
+
+
+   <p class="step" id="step-24" style="display: none;">
+                      "step-24"
+<br><br>
+This is the 2nd portion of the main chart.
+<br><br>
+<br><br>
+<br><br>
+   </p>
+   <p class="step" id="step-25" style="display: none;">
+                      "step-25"
+<br><br>
+This is the 3rd portion of the main chart.
+<br><br>
+<br><br>
+<br><br>
+   </p>
+
+
+   <p class="step" id="step-26" style="display: none;">
+                      "step-26"
+<br><br>
+This is the 4th portion of the main chart.
+<br><br>
+<br><br>
+<br><br>
+
+   </p>
+
+
+   <p class="step" id="step-27" style="display: none;">
+                      "step-27"
+<br><br>
+This is the 5th and final portion of the main chart.
+<br><br>
+<br><br>
+<br><br>
+
+   </p>
+
+
+   <p class="step" id="step-28" style="display: none;">
+                      "step-28"
+<br><br>
+Looking at several (g)s values for R and L , a simple series appears.
+<br><br>
+The differences between the numbers are: { +6 , +6 , +6 , +6 , +12 }.
+<br><br>
+The 12 is the gap between ps from one (g) to the next.
+<br><br>
+Later on it will discovered that the missing numbers are *5 (*wildcard5).
+<br><br>
+<br><br>
+
+   </p>
+
+
+   <p class="step" id="step-29" style="display: none;">
+                      "step-29"
+   </p>
+   <p class="step" id="step-30" style="display: none;">
+                      "step-30"
+   </p>
+   <p class="step" id="step-31" style="display: none;">
+                      "step-31"
+   </p>
+   <p class="step" id="step-32" style="display: none;">
+                      "step-32"
+   </p>
+   <p class="step" id="step-33" style="display: none;">
+                      "step-33"
+   </p>
+
+   <p class="step" id="step-34" style="display: none;">
+                      "step-34"
+   </p>
+   <p class="step" id="step-35" style="display: none;">
+                      "step-35"
+   </p>
+   <p class="step" id="step-36" style="display: none;">
+                      "step-36"
+   </p>
+   <p class="step" id="step-37" style="display: none;">
+                      "step-37"
+   </p>
+   <p class="step" id="step-38" style="display: none;">
+                      "step-38"
+   </p>
+   <p class="step" id="step-39" style="display: none;">
+                      "step-39"
+   </p>
+   <p class="step" id="step-40" style="display: none;">
+                      "step-40"
+   </p>
+
+   <p class="step" id="step-41" style="display: none;">
+                      "step-41"
+   </p>
+   <p class="step" id="step-42" style="display: none;">
+                      "step-42"
+   </p>
+   <p class="step" id="step-43" style="display: none;">
+                      "step-43"
+   </p>
+   <p class="step" id="step-44" style="display: none;">
+                      "step-44"
+   </p>
+   <p class="step" id="step-45" style="display: none;">
+                      "step-45"
+   </p>
+
+   <p class="step" id="step-46" style="display: none;">
+                      "step-46"
+   </p>
+
+   <p class="step" id="step-47" style="display: none;">
+                      "step-47"
+   </p>
+   <p class="step" id="step-48" style="display: none;">
+                      "step-48"
+   </p>
+   <p class="step" id="step-49" style="display: none;">
+                      "step-49"
+   </p>
+   <p class="step" id="step-50" style="display: none;">
+                      "step-50"
+   </p>
+   <p class="step" id="step-51" style="display: none;">
+                      "step-51"
+   </p>
+   <p class="step" id="step-52" style="display: none;">
+                      "step-52"
+   </p>
+   <p class="step" id="step-53" style="display: none;">
+                      "step-53"
+   </p>
+   <p class="step" id="step-54" style="display: none;">
+                      "step-54"
+   </p>
+   <p class="step" id="step-55" style="display: none;">
+                      "step-55"
+   </p>
+
+   <p class="step" id="step-56" style="display: none;">
+                      "step-56"
+   </p>
+   <p class="step" id="step-57" style="display: none;">
+                      "step-57"
+   </p>
+   <p class="step" id="step-58" style="display: none;">
+                      "step-58"
+   </p>
+   <p class="step" id="step-59" style="display: none;">
+                      "step-59"
+   </p>
+   <p class="step" id="step-60" style="display: none;">
+                      "step-60"
+   </p>
+   <p class="step" id="step-61" style="display: none;">
+                      "step-61"
+   </p>
+   <p class="step" id="step-62" style="display: none;">
+                      "step-62"
+   </p>
+   <p class="step" id="step-63" style="display: none;">
+                      "step-63"
+   </p>
+   <p class="step" id="step-64" style="display: none;">
+                      "step-64"
+   </p>
+   <p class="step" id="step-65" style="display: none;">
+                      "step-65"
+   </p>
+   <p class="step" id="step-66" style="display: none;">
+                      "step-66"
+   </p>
+   <p class="step" id="step-67" style="display: none;">
+                      "step-67"
+   </p>
+   <p class="step" id="step-68" style="display: none;">
+                      "step-68"
+   </p>
+   <p class="step" id="step-69" style="display: none;">
+                      "step-69"
+   </p>
+   <p class="step" id="step-70" style="display: none;">
+                      "step-70"
+   </p>
+   <p class="step" id="step-71" style="display: none;">
+                      "step-71"
+   </p>
+
+   <!-- ####################################################################-->
+   <!-- ####################################################################-->
+   <p class="step" id="step-72" style="display: none;">
+                      "step-72"
+   </p>
+   <p class="step" id="step-73" style="display: none;">
+                      "step-73"
+   </p>
+   <p class="step" id="step-74" style="display: none;">
+                      "step-74"
+   </p>
+   <p class="step" id="step-75" style="display: none;">
+                      "step-75"
+   </p>
+   <p class="step" id="step-76" style="display: none;">
+                      "step-76"
+   </p>
+   <p class="step" id="step-77" style="display: none;">
+                      "step-77"
+   </p>
+   <p class="step" id="step-78" style="display: none;">
+                      "step-78"
+   </p>
+   <p class="step" id="step-79" style="display: none;">
+                      "step-79"
+   </p>
+   <p class="step" id="step-80" style="display: none;">
+                      "step-80"
+   </p>
+   <p class="step" id="step-81" style="display: none;">
+                      "step-81"
+   </p>
+
+   <p class="step" id="step-82" style="display: none;">
+                      "step-82"
+   </p>
+   <p class="step" id="step-83" style="display: none;">
+                      "step-83"
+   </p>
+   <p class="step" id="step-84" style="display: none;">
+                      "step-84"
+<br><br>
+<!-- <a href="file:///J:/VS_2015_WorkSpace/Projects/xyz/Intro.html">Intro</a> -->
+<a href="file:///J:/convert/threecontainers.html" target="_blank" rel="noopener noreferrer">Load (g)</a>
+<br><br>				
+   </p>
+
+
+   <!-- ####################################################################-->
+
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+</body>
+
+
+
+
+
+</html>
