@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="./css7/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href= "./images2/cash.ico" type="image/x-icon" >
+   <script src="./scripts7/scripts.js" async></script>
+
+    <title>join7 The next</title>
+
+
+</head>
+<body>
+
+<h5>join7 looking for 3</h5>
+
+    <div class="controls">
+
+  <button class="icon-buttonL" id="prev-btn" >
+  <img src="./images2/L.png" alt="Icon" class="button-img" onclick="decrement() , prevImage()">
+  <span></span>
+  </button>
+
+        <div id="counter"></div>
+
+  <button class="icon-buttonR" id="next-btn">
+  <img src="./images2/R.png"  alt="Icon" class="button-img" onclick="increment()  , nextImage()">
+  <span></span>
+  </button>
+
+
+   <button class="fullscreen-btn" id="toggleScript">Full</button>
+   <button class="fullscreen-btn" onclick="window.close()">Close</button>
+
+
+<input type="text"  style="max-height: 20px; height: 100%;"   placeholder="Goto" id="goto" name="goto"  inputmode="numeric" pattern="[0-9]{2}"  maxlength="2"   size="1">
+<button id="submitBtn" class="fullscreen-btn" >goto</button>
+
+
+<button onclick="viewbig()" class="fullscreen-btn" id="toggleScript">View big</button>
+
+
+
+        </div>
+
+
+
+
+
+
+
+<div class="container">
+   <div id="image-container">
+    <img id="walkthrough-img" src="" alt="Walkthrough Step">
+    </div>
+
+  <div class="text-section" class="".scroll-container >
+
+   <!-- ####################################################################-->
+   <p class="step" id="step-1">
+<!--    "./images/01 ps.png", -->
+   This chart shows the R (right) and L (left)
+   planes that ps (Prime Suspects) are associated with. <br><br> Each number on
+   the respective plane is separated by 6. Each plane is separated by 10. These
+   are the base numbers for all possible primes.
+   <br><br>Subsequent ps are just 30 further down the number line.
+      <br><br>1 goes to 31 then 61 and on ...
+   <br><br>7 goes to 37 then 67 and on ...
+   <br><br>13 goes to 43 then 73 and on ...
+   <br><br>19 goes to 49 then 79 and on ...
+   <br><br>
+   <br><br>11 goes to 41 then 71 and on ...
+   <br><br>17 goes to 47 then 77 and on ...
+   <br><br>23 goes to 53 then 83 and on ...
+   <br><br>29 goes to 59 then 89 and on ...
+   <br><br>
+   <br><br>Each next group of 30 is labeled as a (g) ; or (g)0 ; g(1) to
+   designate the level.
+   <br><br>
+   </p>
+
+   <!-- ####################################################################-->
+   <p class="step" id="step-2" style="display: none;">
+<!-- "./images/02 ps by 4.png", -->
+   This second chart shows a set formulas associated with each ps.
+   <br><br> So , it is some number times 4 ; and the addition of +1 or -1 to
+   generate the ps.
+   <br><br> 
+   Note that the sign ( + or - ) alternates with in the plane , and the sign is opposite from R to L. 
+   </p>
+
+
+   <!-- ####################################################################-->
+   <p class="step" id="step-3" style="display: none;">
+<!-- "./images/03 ps by 4 with 5 00.png", -->
+   This third chart completes the series by the addition of two elements.
+   <br><br>
+   Each element is 6 away from the start or end of R or L. Each is a distance of 6.
+   The number 19 is the last element of R ; 6 more makes 25.
+   The number 11 is the starting element of L , 6 less makes 5
+
+   <br><br>
+   The series of both R & L ps less the 5 & 25 is a repeating  { 6 , 6 , 6 , 12}.
+   <br><br>
+R = { 1 , 7 , 13 , 19 , 31 ,37 , 43 , 49 , 61 , . . .}
+   <br><br>
+L  = { 11 , 17 , 23 , 29 , 41 , 47 , 53 , 59 , 71 , . . .}
+  </p>
+
+
+
+
+   <!-- ####################################################################-->
+
+   <!-- ####################################################################-->
+   <p class="step" id="step-4" style="display: none;">
+<!-- "./images/04 ps next 30 00.png" -->
+   Next add thirty to each ps to create the next (g) [group].
+   <br><br>
+   Shown are two (g)'s ; (g)0 and (g)1.
+   <br><br>
+   There are 8 formulas for a (g) ; as follows:
+<br>
+   for n = { 0 , 1 , 2 , 3 ... }
+   where n is really the (g).
+   <br><br>
+   The R is    
+   <span style="background-color: blue; color: white;" >blue</span>
+   and the L is 
+   <span style="background-color: red;color: white;">red</span>.
+   <br><br>
+   <span style="background-color: blue; color: white;" >
+   &nbsp;&nbsp;1 + ( n * 30 ) = fam01
+   </span>
+   <br>
+   <span style="background-color: blue; color: white;" >
+   &nbsp;&nbsp;7 + ( n * 30 ) = fam07
+   </span>
+   <br>
+   <span style="background-color: red;color: white;">
+   11 + ( n * 30 ) = fam11
+   </span>
+   <br>
+     <span style="background-color: blue; color: white;" >
+   13 + ( n * 30 ) = fam13
+   </span>
+   <br>
+   <span style="background-color: red;color: white;">
+   17 + ( n * 30 ) = fam17
+   </span>
+   <br>
+     <span style="background-color: blue; color: white;" >
+   19 + ( n * 30 ) = fam19
+   </span>
+   <br>
+   <span style="background-color: red;color: white;">
+   23 + ( n * 30 ) = fam23
+   </span>
+   <br>
+   <span style="background-color: red;color: white;">
+   29 + ( n * 30 ) = fam29
+   </span>
+   <br><br>
+
+   </p>
+
+
+   <!-- ####################################################################-->
+   <p class="step" id="step-5" style="display: none;">
+<!-- "./images/05 ps next 30 formulas 00.png", -->
+   Calculate the formulas for (g)1.
+   <br><br>
+   Notice the gentle patterns that are emerging from the formulas.
+   <br><br>
+   First , for both R and L ; note the + / - signs alternate within a (g). Follow by the flipping of
+   the signs between (g)0 and (g)1. Even versus odd numbered (g)'s.
+   <br><br>
+   Second , note the difference between the factors.
+   <br><br>
+   For the R:
+   <br>
+   Between &nbsp;1 and 31 the factor difference is 8 ( 8 - 0 ).
+   <br><br>
+   Between &nbsp;7 and 37 the factor difference is 7 ( 9 - 2 ).
+   <br><br>
+   Between 13 and 43 the factor difference is 8 ( 11 - 3 ).
+   <br><br>
+   Between 19 and 49 the factor difference is 7 ( 12 - 5 ).
+
+   <br><br>
+
+   Similar for the L:
+   <br><br>
+   Between 11 and 41 the factor difference is 7 ( 10 - 3 )
+   <br><br>
+   Between 17 and 47 the factor difference is 8 ( 12 - 4 )
+   <br><br>
+   Between 23 and 53 the factor difference is 7 ( 13 - 6 )
+   <br><br>
+   Between 29 and 59 the factor difference is 8 ( 15 - 7 )
+   <br><br><br>
+<!--    But , the 7's and 8's are flipped between R & L for the ps.
+   Including the numbers that end in 5. 
+<br> -->
+Positionally the 7's and 8's are equal between the R & L top to bottom.
+<br><br>
+ The first position difference is 8 on both planes of R & L. 
+ Look at (31 and 1) and (35 and 5)  factors.
+<br><br>
+ The second position difference is 7 on both planes of R & L.
+Look at (37 and 7) and (41 and 11) factors. 
+<br><br>
+<br><br>
+   </p>
+
+
+
+   <!-- ####################################################################-->
+   <p class="step" id="step-6" style="display: none;">
+<!-- "./images/06 ps pattern 00.png", -->
+   Breaking the formula into three different parts ; offset , factor and the
+   result are shown.
+   <br><br>
+   Offset: R in row 7 and L in row 15. Either +1 or -1.
+   <br> <br>
+   Factor: R in row 9 and L in row 17. The 2nd factor times 4
+   <br> <br>
+   Result: R in row 10 and L in row 18. The product of the two factors.
+   <br><br> <br>
+   Adding additional rows clearly shows the patterns.
+   </p>
+
+
+   <!-- ####################################################################-->
+   <p class="step" id="step-7" style="display: none;">
+<!-- "./images/06 ps pattern 01.png", -->
+    This next chart shows moving to the right on the number line , it compares (g)1 versus (g)2.
+   <br><br>
+   Some additional patterns are revealed.
+   <br>
+   Row 9 and row 17 (2nd factor) are always 1 apart from top to bottom.
+   <br><br>
+   Row 9 and row 17 (2nd factor) only the numbers divisible by 3 repeat , all other numbers are only present once.
+   <br><br>
+   The values { 9 , 12 , 15 , . . . }  divisible by 3 repeat twice.
+   <br>
+   The L is the leading edge of the repeating numbers. It occurs first , followed by the R for the next higher value.
+   <br><br>
+   Finally , there are missing values in the factor rows.
+
+   </p>
+
+
+
+
+   <!-- ####################################################################-->
+   <p class="step" id="step-8" style="display: none;">
+<!-- "./images/08 ps pattern delta 01.png", -->
+   Adding an additional row for both R & L in rows 8 and 16 shows the delta
+   value for each *fam.
+   <br><br>
+   For *fam01 ( 1 , 31 , 61) , the change is 8 then 7.
+   <br><br>
+   There is no delta for (g)0 since it is the base.
+   <br><br>
+
+   </p>
+
+
+
+
+
+   <!-- ####################################################################-->
+   <p class="step" id="step-9" style="display: none;">
+<!-- "./images/08 ps pattern delta 00.png", -->
+   This next chart shows moving to the right on the number line , it compares
+   (g)1 versus (g)2.
+   <br><br>
+   Several more patterns appear.
+   <br><br>
+   Just like the +1 and -1 ; the 7's and the 8's alternate.
+   <br><br>
+   The -1 is tied to the 8.
+   <br>
+   The +1 is tied to the 7.
+   <br><br>
+   For an odd (g) ; the leading offset is -1 ; the delta from previous is 8
+   <br><br>
+   For an even (g) ; the leading offset is +1 ; the delta from previous is 7
+
+   </p>
+
+
+   <!-- ####################################################################-->
+   <p class="step" id="step-10" style="display: none;">
+<!-- "./images/09 what is missing 00.png", -->
+   This chart highlights the missing factors.
+   <br><br>
+   Why are there missing factors ?
+   <br><br>
+   In (g)0 the R is missing 1,4,7.
+   <br>
+   In (g)0 the L is missing 2,5,8.
+   <br><br>
+   In (g)1 the R is missing 10,13.
+   <br>
+   In (g)1 the L is missing 11,14.
+   <br><br>
+   First , the difference between R { 1 , 4 , 7 , 10 , 13 , ... } is 3.
+   <br><br>
+   Second , the difference between L { 2 , 5 , 8 , 11 , 14 , ... } is 3.
+   <br><br>
+   The difference is 3 internally for a (g) ; or to the next (g).
+   </p>
+
+
+
+
+   <!-- ####################################################################-->
+   <p class="step" id="step-11" style="display: none;">
+<!-- "./images/10 longer 00.png", -->
+   This chart is the first of several as the images move from left to right
+   further up the number line.
+   <br><br>
+   The np (not prime) numbers are highlighted and designated with red color. Look at 49.
+   <br><br>
+   Next the the sum of the factor for a (g) is listed.
+   <br><br>
+   The boxes by (g) are painted with colors to designate even versus odd.
+   <br><br>
+   The difference from the prior (g) can only by 38 or 37.
+   <br>
+   If (g) is odd then the difference is 38 ; if (g) is even the difference is 37.
+   <br>
+   The difference between R (top) and L (bottom) is always 5
+
+   <br><br>
+
+
+   <!-- ####################################################################-->
+   <p class="step" id="step-12" style="display: none;">
+<!-- "./images/10 longer 01.png", -->
+This compares (g)1 and (g)2</p>
+
+   <!-- ####################################################################-->
+   <p class="step" id="step-13" style="display: none;">
+<!-- "./images/10 longer 02.png", -->
+This compares (g)2 and (g)3
+ <br><br>
+ Look at rows 10 and 18.
+ <br><br>
+ In the first box  (g)2 - even:
+ <br>(3 * 7) + (2 *8) = 37
+ <br><br>
+In the second colored box (g)3 - odd:
+<br>(3 * 8) + (2 * 7) = 38
+ <br><br>
+ In row 11 is the sum of the factors : 54 , 91 , 129. Same for row 19.
+<br><br>
+54 + 37 = 91  - (old sum of factors) plus (sum of difference) equals (new sum of factors) ???
+
+</p>
+
+   <!-- ####################################################################-->
+   <p class="step" id="step-14" style="display: none;">
+<!-- "./images/10 longer 03.png", -->
+This compares (g)3 and (g)4</p>
+
+   <!-- ####################################################################-->
+   <p class="step" id="step-15" style="display: none;">
+<!-- "./images/10 longer 04.png", -->
+This compares (g)4 and (g)5</p>
+
+   <!-- ####################################################################-->
+   <p class="step" id="step-16" style="display: none;">
+<!-- "./images/10 longer 05.png", -->
+This compares (g)5 and (g)6</p>
+
+   <!-- ####################################################################-->
+   <p class="step" id="step-17" style="display: none;">
+<!--    "./images/10 longer 06.png", -->
+This compares (g)6 and (g)7</p>
+
+   <!-- ####################################################################-->
+   <p class="step" id="step-18" style="display: none;">
+<!-- "./images/10 longer 07.png", -->
+This compares (g)7 and (g)8</p>
+
+   <!-- ####################################################################-->
+   <p class="step" id="step-19" style="display: none;">
+<!-- "./images/11 detail diff delta next box 00.png", -->
+   This chart is a close up of how delta 7 or 8 are added to the prior factor to make the next factor.
+   <br><br>
+   To make 61 ps follow the 
+   <span style="background-color: red; color: white;" >red</span> arrows:
+   <br>
+   Take the last factor 8  ; its delta was 8.
+   <br>
+   Flip the delta to 7 ; since 7 use add +1 offset.
+   <br> <br>
+   8 + 7 = 15  ; 15 * 4 = 60 ; +1 makes 61
+   <br><br>
+   To make 67 ps follow the 
+   <span style="background-color: blue; color: white;" >blue</span> arrows:
+   <br>
+   Take the last factor 9  ; its delta was 7.
+   <br>
+   Flip the delta to 8 ; since 8 add -1 offset.
+   <br><br>
+   9 + 8 = 17  ; 17 * 4 = 68 ; -1 makes 67
+   <br><br>
+   This continues on and on up the number line.
+   </p>
+
+
+
+   <!-- ####################################################################-->
+   <p class="step" id="step-20" style="display: none;">
+<!-- "./images/12 what is missing 1 00.png", -->
+   Let's revisit the missing factors.
+   <br><br>
+   Here is (g)0 and the missing factors for R (top box) and L (bottom box).
+
+   </p>
+
+
+
+   <!-- ####################################################################-->
+   <p class="step" id="step-21" style="display: none;">
+<!-- "./images/13 what is missing 1a 00.png", -->
+   In the top two boxes the R is blue and the L is red ; this is all (g)0.
+   <br><br>
+   The missing factors are in red text.
+   <br><br>
+   The middle colored row is joining R and L to see the whole (g) in order of results.
+   <br><br>
+   All the known factors are in sequential order. Also , 3 and 6  are both listed twice.
+   <br><br>
+   The bottom two boxes are R & L with the missing factors inserted in the proper order.
+   <br><br>
+   Again the bottom (L) versus the top (R) is +1. The bottom factor is always 1 greater then the top.
+
+   </p>
+
+
+   <!-- ####################################################################-->
+   <p class="step" id="step-22" style="display: none;">
+<!-- "./images/14 what is missing 2 00.png", -->
+   This chart brings back in (g)1 and (g)2.
+   <br><br>
+   Along with there respective missing factors highlighted in red.
+
+   </p>
+
+
+   <!-- ####################################################################-->
+   <p class="step" id="step-23" style="display: none;">
+<!-- "./images/15 what is missing 2a 00.png", -->
+   Lining up are two (g)s and inserting the missing factors ; (g)0 and (g)1 shows the run of the factors and the offset.
+   <br><br>
+   The unique element is a factor divisible by 3 will not be in a white column.
+   <br><br>
+   There are many items listed on the chart that describe the details , read the words and trace back to the colored columns.
+
+   </p>
+
+
+   <!-- ####################################################################-->
+   <p class="step" id="step-24" style="display: none;">
+<!-- "./images/16 what is missing delta 3 00.png", -->
+   Some additional patterns on the white columns are listed below.
+   <br><br>
+   The values where row 9 and the white column intersect is the set
+   <br>
+   { 3 , 9 ,15 , 21 , 27 , 33 , . . .  }
+   <br>
+   This is the set of odd numbers times 3.
+   <br>
+   The values in row 9 are 6 apart.
+   <br><br>
+   Using the sign +/- as sub grouping ; the factors can separated again.
+   <br><br>
+   This gives the two sets:
+   <br>
+   <span style="monospace;">
+   <strong>
+   &nbsp;&nbsp;-<span style="margin-left:4px;">1 is { 1 , 4 , 7 , 10 , 13 }</span>
+   <br>
+   &nbsp;&nbsp;+1 is { 2 , 5 , 8 , 11 , 14 }
+   </strong>
+   </span>
+   <br><br>
+   The two subsets , the green and pink cells that are separated by 3.
+
+   </p>
+
+
+   <p class="step" id="step-25" style="display: none;">
+<!-- "./images/17 what is missing delta 3a 00.png", -->
+   Eliminating the the white columns leaves the following chart.
+   <br><br>
+   The 5's are still part of the display, note the numbers divisible by 3 still repeat.
+          <br> <br>
+        The two np (non-prime) numbers are flagged with an X.
+          <br> <br>
+         Note the +1's and -1's run in pairs. Also they flip between even and odd (g)'s. The 8's and 7's are the same.
+<br>
+  
+
+   </p>
+
+
+
+
+   <p class="step" id="step-26" style="display: none;">
+<!-- "./images/17 what is missing delta 3a 01.png", -->
+Factors that repeat are:
+<br>
+3n for n = { 1 , 2 , 3 , 4 , 5 , . . . }
+<br><br>
+After the initial 0 , factors that don't repeat are three apart.
+<br><br>
+Top row (row 33):
+<br>
+{ 2 , 5 , 8 , 11 , . . . }
+<br><br>
+Bottom row (row 34):
+<br>
+{ 1 , 4 , 7 , 10 , . . . }
+<br><br>
+Both rows including all numbers grow by the same sequence: 
+<br>
+{ 2 , 1 , 2 , 1 , 2 , 1 , . . . }
+
+</p>
+
+
+
+
+   <p class="step" id="step-27" style="display: none;">
+<!-- "./images/17 what is missing delta 3a 02.png", -->
+This chart is a reverse test to check the math and logic.
+<br><br>
+In rows 64 and 65 are the values with repeating 3n values.
+<br><br>
+Row 64 is the constant factor of 4.
+<br><br>
+Row 65 is the product by R and L. 
+<br><br>
+Row 67 is the offset of +1 or -1.
+<br><br>
+Row 68 is the ps (prime suspects) including *5 numbers.
+<br><br>
+Each (g) is labeled.
+<br><br>
+Again , the signs on the ones flip by (g).
+<br><br>
+<br><br>
+<br><br>
+</p>
+
+
+
+
+   <p class="step" id="step-28" style="display: none;">
+<!-- "./images/17 what is missing delta 3a 03.png", -->
+This line is 28
+by 12 , hilite pairs and count pairs
+ </p>
+   <p class="step" id="step-29" style="display: none;">
+<!-- "./images/18 what about the +1 -1 00.png", -->
+This line is 29</p>
+   <p class="step" id="step-30" style="display: none;">
+<!-- "./images/19 +1 -1 even odd1 00.png", -->
+This line is 30</p>
+   <p class="step" id="step-31" style="display: none;">
+<!-- "./images/20 where are the others 00.png", -->
+This line is 31</p>
+   <p class="step" id="step-32" style="display: none;">
+<!-- "./images/20 where are the others 01.png", -->
+This line is 32</p>
+   <p class="step" id="step-33" style="display: none;">
+<!-- "./images/21 where are the others 01.png", -->    
+This line is 33 </p>
+   <p class="step" id="step-34" style="display: none;">
+<!-- "./images/21 where are the others 02.png", -->   
+This line is 34 </p>
+   <p class="step" id="step-35" style="display: none;">
+<!-- "./images/22 where are the others 02.png", -->  
+Where do the np (non prime) numbers fall and where are there factors.
+<br><br>
+In the attached chart is a list of numbers from 0 to 37.
+<br><br>
+The red line and the (g) symbol show the breakpoint of the first group.
+ </p>
+   <p class="step" id="step-36" style="display: none;">
+<!-- "./images/22 where are the others 03.png", -->   
+This chart shows the ps (prime suspects) numbers, this includes the *5 at the beginning and ending of each R and L. 
+<br><br>
+For now 5 and 25 are included so start and stop of the ps are all 6 away from each other for R and L. 
+ </p>
+   <p class="step" id="step-37" style="display: none;">
+<!-- "./images/22 where are the others 04.png", --> 
+The chart now shows the 4 as the first constant factor.
+
+</p>
+   <p class="step" id="step-38" style="display: none;">
+<!-- "./images/22 where are the others 05.png", -->  
+The 2nd factor is brought in on line 9.
+<br><br>
+ </p>
+   <p class="step" id="step-39" style="display: none;">
+<!-- "./images/22 where are the others 06.png", -->   
+On line 10 is the product of lines 8 and 9.
+<br><br>
+</p>
+   <p class="step" id="step-40" style="display: none;">
+<!-- "./images/22 where are the others 07.png", -->      
+What is the difference from line 6 to 10?
+<br><br>
+<strong>
+<span style="font-size: 16px; font-family: 'Courier New', Courier, monospace;">
+a) 0 - 0 = &nbsp;0<br>
+b) 1 - 0 = &nbsp;1<br>
+c) 2 - 4 = -2<br>
+d) 3 - 4 = -1<br>
+e) 4 - 4 = &nbsp;0<br>
+f) 5 - 4 = &nbsp;1<br>
+g) 6 - 8 = -2<br>
+h) 7 - 8 = -1<br>
+</span>
+</strong>
+<br> <br> 
+And so the pattern repeats . . .
+</p>
+
+   <p class="step" id="step-41" style="display: none;">
+<!-- "./images/22 where are the others 08.png", -->       
+Next highlight the numbers in row 12 that are not part R and L series.
+<br><br> 
+The lengths are a repeating series of:
+<br>
+{ 1 , 3 , 1 , 3 , . . . } 
+</p>
+
+   <p class="step" id="step-42" style="display: none;">
+<!-- "./images/22 where are the others 09.png", -->        
+Add some sub lines and boxes to delineate groups of 4. </p>
+
+   <p class="step" id="step-43" style="display: none;">
+<!-- "./images/22 where are the others 10.png", -->  
+Show the values from line 11 on line 14 that are not part of R and L ; and paint the 0 green and the -2 as blue.
+<br><br>
+Notice any patterns ??
+</p>
+
+   <p class="step" id="step-44" style="display: none;">
+<!-- "./images/22 where are the others 11.png", -->  
+The pattern is repeating every 3 groups , each a length 4. 
+<br><br>
+The colors red , blue , gold highlight the pattern grouping.
+<br><br>
+The first is <u>red</u> ; 0 , space , -2 , -1
+<br><br>
+The second is <u>blue</u> ; 0 space , -2 , space
+<br><br>
+The third is <u>gold</u> ; 0 , 1 , -2 , space
+<br><br>
+The 0 and the -2 are the only values that show up in all three patterns.
+The 0 and -2 show up in the same positions in all three patterns. 
+
+</p>
+
+   <p class="step" id="step-45" style="display: none;">
+<!-- "./images/22 where are the others 10.png", -->
+Copy row 14 to row 5 ; to join the 
+<br>
+'seq +/- from the factor' and 'output' 
+
+</p>
+
+
+   <p class="step" id="step-46" style="display: none;">
+<!-- "./images/22 where are the others 10.png", -->
+Where are the rest of the numbers not part of ps (prime suspects) and *5.
+<br><br> 
+Row 11 shows a new series by counting occurrences  ;<br>
+{ 1 , skip , 3 , skip , 1 , skip , 3 , skip , . . . }
+ </p>
+
+
+
+
+
+   <p class="step" id="step-47" style="display: none;">
+<!-- "./images/22 where are the others 10.png", -->
+Next , there are five sub series.
+<br><br> 
+First , are values that are a length of one for 0 or -2. Stand alone values. 
+<br><br> 
+Next , are all the 0 or -2 no matter what length they are part of.  
+<br><br>
+Finally , any value of 1 ; whether +1 or -1.
+<br><br>The +1 / -1 are always the middle value of a group of three ; and are never a stand alone value.
+<br><br>
+The seq and the output are listed on top of each other ; then below is the math to make the output (result).
+<br><br>
+The math shows the series.
+<br><br>
+6n for n = { 0 , 2 , 4 , 6 , . . . }<br>(6 times even)
+<br><br>
+4n for n = { 0 , 1 , 2 , 3 , 4 , . . . }<br>(4 times all)
+<br><br>
+6n for n = { 1 , 3 , 5 , 7 , . . .}<br>(6 times odd)
+<br><br>
+2n for n = { 1 , 3 , 5 , 7 , . . . }<br>(2 times odd)
+<br><br>
+3n for n = { 1 , 3 ,  5 , 7 , . . . }<br>(3 times odd)
+<br><br>
+<br><br>
+</p>
+
+   <p class="step" id="step-48" style="display: none;">
+<!-- "./images/22 where are the others 11.png", -->       
+This line is 48 </p>
+
+   <p class="step" id="step-49" style="display: none;">
+<!-- "./images/22 where are the others 12 last.png", -->     
+This line is 49 </p>
+
+
+
+
+
+    <p class="step" id="step-50" style="display: none;">
+<!-- "./images/Black Magic.png", -->
+        This line is 50 Black Magic
+		<br>
+		       0 4 6 left over
+        <br>
+        why is 1 special ?
+   <br>
+        why is 2 special ?
+   <br>
+        why is 3 special ?
+   <br>
+        why is 4 special ?
+   <br>
+        why is 5 special ?
+   <br>
+        why is 6 special ?
+   <br>
+        why is 7 special ?
+   <br>
+        why is 8 special ?
+   <br>
+        why is 10 special ?
+   <br>
+        why is 11 special ?
+   <br>
+        why is 15 special ?
+   <br>
+        why is 25 special ?
+   <br>
+        why is 30 special ?
+   <br>
+
+   <br>
+
+        </p>
+
+
+
+</div>
+
+</div>
+
+</div>
+
+
+
+
+
+</body>
+
+
+
+
+
+</html>

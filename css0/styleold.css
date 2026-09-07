@@ -1,0 +1,539 @@
+/* Style the image dimensions directly */
+.button-img {
+  width: 40px;
+  height: 40px;
+  vertical-align: middle; /* Aligns the image nicely with the text */
+/* margin-right: 8px;       Adds space between the PNG and the text */
+
+}
+
+/* Ensure the button wraps the image cleanly */
+.icon-buttonL {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 2px;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+
+/* Ensure the button wraps the image cleanly */
+.icon-buttonR {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 2px;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+/* Remove default spacing and lock the canvas size */
+html,  {
+  margin: 0;
+  padding: 0;
+  width: 100vw;  /* 100% of viewport width */
+  height: 100vh; /* 100% of viewport height */
+  overflow: hidden; /* Prevents accidental scrollbars */
+}
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+                        /* move the screen to the left */
+            align-items: left;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 10px;
+                  // padding: 0;
+ width: 100vw;  /* 100% of viewport width */
+ height: 100vh; /* 100% of viewport height */
+//  overflow: hidden; /* Prevents accidental scrollbars */
+
+       }
+
+       h1 {
+            color: #333;
+        }
+        #image-container {
+            max-width: 800px;
+            width: 70%;
+            text-align: center;
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+        .controls {
+            margin-top: 20px;
+            display: flex;
+            gap: 15px;
+        }
+        button {
+                 background-image: url('J:\WEBSHOW\images2\R.png'); /* Paths your PNG file */
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            background-color: #007bff;
+            color: white;
+            border-radius: 5px;
+            transition: background-color 0.2s;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        #counter {
+            margin-top: 10px;
+            font-size: 16px;
+            color: #666;
+        }
+
+
+
+
+
+
+.container {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+}
+
+./image-section {
+  flex: 70%; /* Takes 70% of the space */
+  padding: 1px;
+}
+
+.text-section {
+  flex: 30%; /* Takes 30% of the space */
+  padding: 1px 20px;
+  font-size: 16px;
+/* make text area so it can scroll while the image is stationary */
+   /* 1. Set a fixed height or max-height to force containment */
+  height: 100%;
+    /* 2. Enable vertical scrolling */
+  overflow-y: auto;
+    /* 3. Disable horizontal scrolling (optional but recommended) */
+  overflow-x: hidden;
+    /* 4. Optional: Add breathing room between text and the scrollbar */
+  padding-right: 15px;
+}
+
+/* Ensure images don't overflow the container */
+./image-section img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* make the area top and bottom smaller around h5 - tighten up the top */
+h5 {
+  margin-top: 1px;
+  margin-bottom: 1px;
+}
+
+/* show the scroll bar clearly */
+body { scrollbar-gutter: stable; /* Keeps space reserved for the scrollbar */}
+
+/* freeze the body so it does not scroll */
+html, body {
+  overflow: hidden;
+  height 100%
+  ;
+
+
+/* Target element  - set the scroolbar width*/
+.scroll-container {
+  /* 1. Standard Property (Firefox, Chrome, Edge, Safari) */
+  scrollbar-width: auto; /* Options: auto | thin | none */
+ }
+
+
+
+/* full scree button */
+        /* Optional basic styling for the button */
+        .fullscreen-btn {
+            padding: 2px 2px;
+            font-size: 11px;
+            cursor: pointer;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+                       /* shrink the button */
+                        transform: scale(.8);
+       }
+        .fullscreen-btn:hover {
+            background-color: #0056b3;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* end   */
+/* ************************************************************** */
+/* ************************************************************** */
+/* ************************************************************** */
+/* ************************************************************** */
+
+
+
+
+/*
+/*
+/*
+/*  /*
+/*
+/*
+/*  /* #0000FF #E2FFFF */
+/*  body {
+/*         font-family: Arial, Verdana, sans-serif;
+/*             /* look here 1 */
+/*         background-image: url("./images/pool.jpg ");
+/*             background-repeat: no-repeat;
+/*  /*       background-color: #5FB2CE;  */
+/*         color: #15495E;
+/*  /* Make a specific image almost transparent */
+/*         opacity: .91;
+/*             /* added this to make the MAIN & BODY the same height */
+/*  background-size: auto  801px;
+/*  }
+/*
+/*  /* had to adjust the width from 80% to 90% to allow
+/*   for the length of the word "resources" */
+/*  /* added from book chapter 6 */
+/*  #wrapper { width: 97%;
+/*                  margin-left: auto;
+/*                  margin-right: auto;
+/*                      background-color: #EAEAEA;
+/*                      opacity: .81;
+/*                      background-position: right center ;
+/*                      background-size: 99900%  ;  }
+/*
+/*
+/*  /* look here */
+/*  /*      <!-- Removed this image - text was washed out  -->
+/*  /* .container {   */
+/*  /*      background: url("./images/pool.jpg") no-repeat ;  background-position: right center ;  background-size: 200%  ;
+/*    max-width: 1200px; /* Max width of content on large screens */
+/*  /*  margin: 0 auto;    /* Centers the container horizontally */
+/*  /*  padding: 0 10px;   /* Adds padding on the sides for smaller screens */
+/*
+/*  /*  background-color: #5FB2CE; /* Optional: content background */
+/*  /*  min-height: 230vh; /* Optional: ensures container takes up at least full viewport height */
+/*  /* }*/
+/*
+/*
+/*
+/*
+/*  #floatright { margin:  1px;  float: right;
+/*  }
+/*
+/*
+/*
+/*   h1 { background-color: #237B7B;
+/*       color: #E2FFFF;
+/*           opacity: 0.6;
+/*           line-height: 150%;
+/*           font-family: Georgia, "Times New Roman", serif;
+/*           text-indent: 1em;
+/*           text-shadow: 3px 3px 5px gold;
+/*       box-shadow: 5px 5px 5px red ;
+/*           }
+/*
+/*
+/*
+/*  h2 { background-color: #B0E6E6;
+/*       color: #237B7B;
+/*           font-family: Georgia, "Times New Roman", serif;
+/*       text-align: center ;
+/*       padding-bottom: 3px;
+/*     }
+/*
+/*  nav { font-weight: Bold;
+/*  /* changed font size here to get the text off the image */
+/*        font-size: 0.90em;
+/*            word-spacing: 1em;
+/*            float: left ;
+/*            width: 114px ;
+/*            background-color: lightblue;
+/*      }
+/*
+/*  nav a {display: block; /* Makes the link fill its container and accept vertical margins/padding */
+/*    padding: 5px 0; /* Adds 10px of space above and below the link */
+/*  }
+/*
+/*  /* margin 3px makes the link jump  */
+/*  a:hover {
+/*    color: red; /* Changes text color to tomato red */
+/*    text-decoration: none; /* Ensures the link is underlined */
+/*    margin: 3px;
+/*
+/*  }
+/*
+/*
+/*
+/*
+/*  p { font-size: .90em;
+/*          text-indent: 3em;
+/*          color: white ;
+/*          text-shadow: 5px 7px 5px black;
+/*          }
+/*
+/*  ul { font-weight: bold;  list-style-type: none;  }
+/*  /*################################################################### */
+/*  /* https://stackoverflow.com/questions/76564/change-the-color-of-a-bullet-in-a-html-list */
+/*  /* li::marker {   color: red;  /* bullet color */  /*} */
+/*
+/*
+/*
+/*  .list-icon {
+/*    width: 20px; /* Set your desired width */
+/*    height: 20px; /* Maintain aspect ratio */
+/*    vertical-align: middle;
+/*    margin-right: 0.5em;
+/*  }
+/*
+/*
+/*  ul {
+/*    /* Removes the default list-style (bullets, squares, etc.) */
+/*    list-style-type: none;
+/*    padding-left: 30px; /* Adds space on the left for the custom icon */
+/*  }
+/*
+/*  li {
+/*    position: relative; /* Essential for positioning the ::before element */
+/*    margin-bottom: 10px; /* Adds spacing between list items */
+/*  }
+/*
+/*
+/*
+/*  /*##################################################################### */
+/*
+/*
+/*  dt  {color: brown;
+/*   text-shadow: 5px 4px 3px tan;}
+/*  dd { color:white ;
+/*   text-shadow: 5px 5px 5px black;}
+/*
+/*
+/*  /* #FFD700 */
+/*  /*.feature { color: #C70000; } */
+/*  .feature { color: #FFD700; }
+/*
+/*  footer { color: #333333;
+/*           font-size: .75em;
+/*           font-style: italic;
+/*                   font-weight: bold;
+/*                   }
+/*
+/*  .company { font-weight: bold;
+/*             font-family: Georgia, "Times New Roman", serif;
+/*              font-size: 1.25em;
+/*  }
+/*
+/*
+/*
+/*
+/*  /*
+/*  4.8.1 The opacity PropertySF 4.8.1 The opacity Property
+/*
+/*  1704.8.1 The opacity PropertyThe CSS opacity property configures the transparency of an element.  Opacity values range from 0 (which is completely transparent) to 1 (which is completely opaque and has no transparency).  An important consideration when
+/*  using the property is that this property applies to both the text and the background.  If you configure a semi-transparent value for an element with the property, both the background and the text displayed will be semi-transparent.  See Figure 4.37 for an
+/*  example of using the property to configure a white background that is only 60% opaque.  If you look very closely at Figure 4.37 or view the actual web page (student files chapter4/4.14/index.html), you’ll see that both the white background and the black
+/*  text in the h1 element are semi-transparent.  The opacity property was applied to both the background color and to the text color.
+/*  */
+/*
+/*
+/*
+/*
+/*
+/*  #image-with-text {
+/*      /* Optional: Set a specific width for the container if needed */
+/*       width: 200px;
+/*      /* The default text alignment is usually left, but this ensures it */
+/*      text-align: left;
+/*  }
+/*
+/*
+/*
+/*
+/*  main { margin-left: 110px;
+/*         padding: 10px;
+/*             margin-right: 10px;
+/*         background-color: DeepSkyBlue;
+/*             /* set a common height to be equal on all pages */
+/*             /* make the footer the same place on all pages */
+/*          height: 670px;
+/*  }
+/*             /* https://www.quackit.com/css/css_color_codes.cfm */
+/*             /* CornflowerBlue */
+/*                     /* DodgerBlue */
+/*
+/*
+/*
+/*  table, td, th { border: 2px solid black; }
+/*
+/*  th { text-align: left;}
+/*
+/*
+/*  .four-by-four {
+/*      width: 100%; /* Make the table responsive to its container width */
+/*      margin: 0px 0;
+/*  }
+/*
+/*  .four-by-four th {
+/*      border: 2px solid black; /* Add a border to all cells and headers */
+/*      padding: 1px; /* Add space between text and border */
+/*      text-align: left; /* Center the text inside the cells */
+/*          color:black;
+/*          font-weight: 500        ;
+/*          font-family: "Arial";
+/*  }
+/*
+/*
+/*
+/*
+/*  .four-by-four td {
+/*      border: 2px solid black; /* Add a border to all cells and headers */
+/*      padding: 1px; /* Add space between text and border */
+/*      text-align: left; /* Center the text inside the cells */
+/*          color:black;
+/*          font-weight: 500;
+/*          font-family: "Arial";
+/*  }
+/*
+/*
+/*  .four-by-four tr:nth-child(even) {
+/*      background-color: #f2f2f2; /* Zebra-striping for better readability */
+/*  }
+/*
+/*  .four-by-four th {
+/*      background-color: #FF7F50;
+/*      color: black;
+/*  }
+/*
+/*  /* size the player and the box */
+/*  audio { width: 320px;
+/*                  height: 20px;
+/*                  }
+/*  .media-container {
+/*     /* position: fixed; 3/23/26 TW commented out- this is causing the fixed placement to the top right*/
+/*     /* right: 34px;
+/*      top: 10%; --more testing*/
+/*      display: flex;
+/*      flex-direction: column;
+/*      gap: 8px; /**TW may need create larger gap**/
+/*     /* Ensures it stays on top of other content */
+/*  }
+/*
+/*  video, audio {
+/*    margin-top: 1px; /* Spacing */
+/*  }
+/*
+/*
+/*  *
+/*    .audio-box {
+/*      border: 2px solid #333; /* Set border style, width, color */
+/*      padding: 1px;          /* Space inside the box */
+/*      border-radius: 21px;    /* Optional: Rounds the corners */
+/*      width: fit-content;     /* Box fits the size of the audio tag */
+/*      background-color: #f9f9f9; /* Optional: Adds a background color */
+/*          width: 322px;
+/*  /* position */
+/*  /*      position:relative;
+/*          float: right;
+/*      bottom:174px;
+/*      z-index: 1001; */  /* Ensures it stays on top */
+/*
+/*    }
+/*
+/*    /* used in audio box as class */
+/*   /* text box instructions - change para to more visible */
+/*  /* redefine <p> </p> for this page to be more readable */
+/*  .p1 {text-decoration: none;
+/*          font-weight: bold;
+/*          text-shadow: 0px 0px 0px white;
+/*          color: white;
+/*          font-size: 12px;
+/*          background-color: #556B2F;
+/*          text-align: left;
+/*          text-indent: 0;
+/*          text-indent: 4px;
+/*          }
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+/*   .video-box {
+/*      border: 2px solid #333; /* Set border style, width, color */
+/*      padding: 4px;          /* Space inside the box */
+/*      border-radius: 21px;    /* Optional: Rounds the corners */
+/*      width: fit-content;     /* Box fits the size of the audio tag */
+/*      background-color: #f9f9f9; /* Optional: Adds a background color */
+/*           width: 232px;
+/*  /* position */
+/*  /*      position:relative;
+/*          float: right;
+/*      bottom:350px;
+/*      z-index: 1000;  */  /* Ensures it stays on top */
+/*
+/*    }
+/*
+/*  /* 3/23/26 TW added.. this is an idea for flex partiton for
+/*                  the unordered list*/
+/*  .flex-partition {
+/*    display: flex;
+/*    align-items: flex-start; /* Align items at the top */
+/*    gap: 24px;               /* Space between columns */
+/*  }
+/*
+/*
+/*   */

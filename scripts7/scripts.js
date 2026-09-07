@@ -1,32 +1,26 @@
 
+
 /* <script> */
   // JavaScript
   const button = document.getElementById("submitBtn");
-
+  
   button.addEventListener("click", () => {
     const name = document.getElementById("goto").value;
     console.log(name); // Logs whatever the user typed
-        /* alert(name); */
-        currentStep=name-1; // text counter
+	/* alert(name); */
+	currentStep=name-1; // text counter
    currentIndex=name-1; // image counter
     /* alert( currentStep + 7); */
 
-        increment()  // update text
-        updateVisibility();
-         updateDisplay();
-
-        goto.value = "";
-
+	increment()  // update text
+	updateVisibility();
+ 	 updateDisplay();
+	
+	goto.value = "";
+	
   });
 
 /* </script> */
-
-
-
-
-
-
-
 
 
 
@@ -98,7 +92,7 @@ function decrement() {
                 // If not, request fullscreen on the entire document element (the whole page)
                 document.documentElement.requestFullscreen()
                     .then(() => {
-                        streamBtn.textContent = "Full Off";
+                        streamBtn.textContent = "Exit";
                     })
                     .catch((err) => {
                         alert(`Error attempting to enable fullscreen: ${err.message}`);
@@ -106,7 +100,7 @@ function decrement() {
             } else {
                 // If already in fullscreen, exit it
                 document.exitFullscreen();
-                streamBtn.textContent = "Full Off";
+                streamBtn.textContent = "Full";
 
             }
         });
@@ -114,7 +108,7 @@ function decrement() {
         /* Optional: Listen for the Esc key or external changes to update the button text */
         document.addEventListener('fullscreenchange', () => {
             if (!document.fullscreenElement) {
-                streamBtn.textContent = "Full On";
+                streamBtn.textContent = "Full";
 
             }
         });
@@ -132,34 +126,56 @@ function decrement() {
     /* <script> */
         // REPLACE THESE WITH YOUR EXACT PNG FILE NAMES
         const images = [
-
-
-"./images0/a0000 a.png",       // 001    01
-"./images0/a0000 b.png",       // 002    02
-"./images0/a0000 c.png",       // 003    03
-"./images0/a0000 d.png",       // 004    04
-"./images0/a0000 e.png",       // 005    05
-"./images0/a0000 f.png",       // 006    06
-"./images0/a0000 g.png",       // 007    07
-"./images0/a0000 h.png",       // 008    08
-"./images0/a0000 i.png",       // 009    09
-"./images0/a0001.png",         // 010    10
-"./images0/a0002.png",         // 011    11
-"./images0/a0003.png",         // 012    12
-"./images0/a0004.png",         // 013    13
-"./images0/a0005.png",         // 014    14
-"./images0/a0006.png",         // 015    15
-"./images0/a0007.png",         // 016    16
-"./images0/a0008.png",         // 017    17
-"./images0/a0009.png",         // 018    17
-"./images0/a0010.png",         // 019    17
-"./images0/a0011.png",         // 020    17
-"./images0/a0012.png",         // 021    17
-"./images0/a0013.png",         // 022    17
-"./images0/a0014.png",         // 023    17
-"./images0/a0015.png",         // 024    17
-
-
+"./images7/01 ps.png",                                            //01
+"./images7/02 ps by 4.png",                                       //02
+"./images7/03 ps by 4 with 5 00.png",                             //03
+"./images7/04 ps next 30 00.png",                                 //04
+"./images7/05 ps next 30 formulas 00.png",                        //05
+"./images7/06 ps pattern 00.png",                                 //06
+"./images7/06 ps pattern 01.png",                                 //07
+"./images7/08 ps pattern delta 00.png",                           //08
+"./images7/08 ps pattern delta 01.png",                           //09
+"./images7/09 what is missing 00.png",                            //10
+"./images7/10 longer 00.png",                                     //11
+"./images7/10 longer 01.png",                                     //12
+"./images7/10 longer 02.png",                                     //13
+"./images7/10 longer 03.png",                                     //14
+"./images7/10 longer 04.png",                                     //15
+"./images7/10 longer 05.png",                                     //16
+"./images7/10 longer 06.png",                                     //17
+"./images7/10 longer 07.png",                                     //18
+"./images7/11 detail diff delta next box 00.png",                 //19
+"./images7/12 what is missing 1 00.png",                          //20
+"./images7/13 what is missing 1a 00.png",                         //21
+"./images7/14 what is missing 2 00.png",                          //22
+"./images7/15 what is missing 2a 00.png",                         //23
+"./images7/16 what is missing delta 3 00.png",                    //24
+"./images7/17 what is missing delta 3a 00.png",                   //25
+"./images7/17 what is missing delta 3a 01.png",                   //26
+"./images7/17 what is missing delta 3a 02.png",                   //27
+"./images7/17 what is missing delta 3a 03.png",                   //28
+"./images7/18 what about the +1 -1 00.png",                       //29
+"./images7/19 +1 -1 even odd1 00.png",                            //30
+"./images7/20 where are the others 00.png",                       //31
+"./images7/20 where are the others 01.png",                       //32
+"./images7/21 where are the others 01.png",                       //33
+"./images7/21 where are the others 02.png",                       //34
+"./images7/22 where are the others 02.png",                       //35
+"./images7/22 where are the others 03.png",                       //36
+"./images7/22 where are the others 04.png",                       //37
+"./images7/22 where are the others 05.png",                       //38
+"./images7/22 where are the others 06.png",                       //39
+"./images7/22 where are the others 07.png",                       //40
+"./images7/22 where are the others 08.png",                       //41
+"./images7/22 where are the others 09.png",                       //42
+"./images7/22 where are the others 10.png",                       //43
+"./images7/22 where are the others 11.png",                       //44
+"./images7/22 where are the others 12 last.png",                  //45
+"./images7/skip.png",                                             //46
+"./images7/skip2.png",                                            //47
+"./images7/Blue Thatch.bmp",                                      //48
+"./images7/Black Thatch.bmp",                                     //49
+"./images7/Black Magic.png",                                      //50
 
         ];
 
@@ -184,8 +200,6 @@ function decrement() {
             // Handle button states
 //            prevBtn.disabled = currentIndex === 0;
 //            nextBtn.disabled = currentIndex === images.length - 1;
-
-//alert(document.getElementById('image-container').innerHTML)
         }
 
         function nextImage() {
@@ -241,62 +255,11 @@ function decrement() {
 
 
 
-
-//here
- // Example counter variable
-let counter = 0;
-
-function Counterheight() {
-
-
-        // Optional: Smoothly scroll down to show the new space
-        window.scrollBy({ top: 300, behavior: 'smooth' });
-    }
-
-
-
-
-
-
-
-/*     <script> */
-/*
-        function toggleFullscreen() {
-            // Check if the browser is already in fullscreen mode
-            if (!document.fullscreenElement) {
-                // Request fullscreen on the entire document element (the whole page)
-                document.documentElement.requestFullscreen()
-                    .then(() => {
-                        document.getElementById('fullscreenBtn').innerText = "Exit Fullscreen";
-                    })
-                    .catch(err => {
-                        alert(`Error attempting to enable full-screen mode: ${err.message}`);
-                    });
-            } else {
-                // Exit fullscreen mode
-                document.exitFullscreen();
-                document.getElementById('fullscreenBtn').innerText = "Go Fullscreen";
-            }
-        }
-
-        // Optional: Update button text if the user exits using the 'Esc' or 'F11' key
-        document.addEventListener('fullscreenchange', () => {
-            const btn = document.getElementById('fullscreenBtn');
-            if (document.fullscreenElement) {
-                btn.innerText = "Exit Fullscreen";
-            } else {
-                btn.innerText = "Go Fullscreen";
-            }
-        });
-/*     </script> */
-
-
-
   function viewbig() {
 /* alert("here " + viewmebig ) */
-window.open("viewbig.html?image="+viewmebig, "_blank" );
-  }
+window.open("viewbig.html?image="+viewmebig, "_blank");
 
+  }
   
   
   /* need to cycle the first screen up and down , with a pause */
