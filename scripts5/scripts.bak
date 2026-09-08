@@ -134,91 +134,91 @@ function decrement() {
         const images = [
 
 
-"./images5/i0001.png",         // 001    01    1
-"./images5/i0002.png",         // 002    02    2
-"./images5/i0003.png",         // 003    03    3
-"./images5/i0004.png",         // 004    04    4
-"./images5/i0005.png",         // 005    05    5
-"./images5/i0006.png",         // 006    06    6
-"./images5/i0007.png",         // 007    07    7
-"./images5/i0008.png",         // 008    08    8
-"./images5/i0009.png",         // 009    09    9
-"./images5/i0010.png",         // 010    10   10
-"./images5/i0011.png",         // 011    11   11
-"./images5/i0012.png",         // 012    12   12
-"./images5/i0013.png",         // 013    13   13
-"./images5/i0014.png",         // 014    14   14
-"./images5/i0015.png",         // 015    15   15
-"./images5/i0016.png",         // 016    16   16
-"./images5/i0017a.png",        // 017    17   17
-"./images5/i0017.png",         // 017    18   18
-"./images5/i0018.png",         // 018    19   19
-"./images5/i0019.png",         // 019    20   20
-"./images5/i0020.png",         // 020    21   21
-"./images5/i0021.png",         // 021    22   22
-"./images5/i0022.png",         // 022    23   23
-"./images5/i0023.png",         // 023    24   24
-"./images5/i0024.png",         // 024    25   25
-"./images5/i0025.png",         // 025    26   26
-"./images5/i0026.png",         // 026    27   27
-"./images5/i0027.png",         // 027    28   28
-"./images5/i0028.png",         // 028    29   29
-"./images5/I0044.png",         // 030    30   30
-"./images5/I0045.png",         // 031    31   31
-"./images5/I0047.png",         // 032    32   32
-"./images5/I0048.png",         // 033    33   33
-"./images5/I0050.png",         // 034    34   34
-"./images5/I0051.png",         // 035    35   35
-"./images5/I0052.png",         // 036    36   36
-"./images5/I0053.png",         // 037    37   37
-"./images5/I0054.png",         // 038    38   38
-"./images5/I0055.png",         // 039    39   39
-"./images5/I0056.png",         // 040    40   40
-"./images5/I0057.png",         // 041    41   41
-"./images5/I0058.png",         // 042    42   42
-"./images5/I0059.png",         // 043    43   43
-"./images5/I0060.png",         // 044    44   44
-"./images5/I0061.png",         // 045    45   45
-"./images5/I0062.png",         // 046    46   46
-"./images5/I0068.png",         // 048    47   47
-"./images5/I0069.png",         // 049    48   48
-"./images5/I0071.png",         // 050    49   49
-"./images5/I0072.png",         // 051    50   50
-"./images5/I0073.png",         // 052    51   51
-"./images5/I0074.png",         // 053    52   52
-"./images5/I0075.png",         // 054    53   53
-"./images5/I0076.png",         // 055    54   54
-"./images5/I0077.png",         // 056    54   55
-"./images5/I0078.png",         // 056    55   56
-"./images5/I0079.png",         // 058    56   57
-"./images5/I0080.png",         // 059    56   58
-"./images5/I0081.png",         // 059    57   59
-"./images5/I0082.png",         // 061    58   60
-"./images5/I0109.png",         // 062    59   61
-"./images5/I0113.png",         // 066    60   62
-"./images5/I0114.png",         // 067    61   63
-"./images5/I0115.png",         // 068    62   64
-"./images5/I0117.png",         // 070    63   65
-"./images5/I0118.png",         // 071    64   66
-"./images5/I0132.png",         // 085    65   67
-"./images5/I0134.png",         // 087    66   68
-"./images5/I0135.png",         // 088    67   69
-"./images5/I0136.png",         // 089    68   70
-"./images5/I0138.png",         // 091    69   71
-"./images5/I0139.png",         // 092    70   72
-"./images5/I0140.png",         // 093    71   73
-"./images5/I0142.png",         // 095    72   74
-"./images5/I0143.png",         // 096    73   75
-"./images5/I0144.png",         // 097    74   76
-"./images5/I0146.png",         // 099    75   77
-"./images5/I0147.png",         // 100    76   78
-"./images5/I0148.png",         // 101    77   79
-"./images5/I0150.png",         // 103    78   80
-"./images5/I0151.png",         // 104    79   81
-"./images5/I0152.png",         // 105    80   82
-"./images5/I0154.png",         // 107    81   83
-"./images5/I0155.png",         // 108    82   84
-"./images5/I0217.png",         // 112    83   85
+"./images5/i0001.png",         // 001    01
+"./images5/i0002.png",         // 002    02
+"./images5/i0003.png",         // 003    03
+"./images5/i0004.png",         // 004    04
+"./images5/i0005.png",         // 005    05
+"./images5/i0006.png",         // 006    06
+"./images5/i0007.png",         // 007    07
+"./images5/i0008.png",         // 008    08
+"./images5/i0009.png",         // 009    09
+"./images5/i0010.png",         // 010    10
+"./images5/i0011.png",         // 011    11
+"./images5/i0012.png",         // 012    12
+"./images5/i0013.png",         // 013    13
+"./images5/i0014.png",         // 014    14
+"./images5/i0015.png",         // 015    15
+"./images5/i0016.png",         // 016    16
+"./images5/i0017a.png",        // 017    17
+"./images5/i0017.png",         // 017    18
+"./images5/i0018.png",         // 018    19
+"./images5/i0019.png",         // 019    20
+"./images5/i0020.png",         // 020    21
+"./images5/i0021.png",         // 021    22
+"./images5/i0022.png",         // 022    23
+"./images5/i0023.png",         // 023    24
+"./images5/i0024.png",         // 024    25
+"./images5/i0025.png",         // 025    26
+"./images5/i0026.png",         // 026    27
+"./images5/i0027.png",         // 027    28
+"./images5/i0028.png",         // 028    29
+"./images5/I0044.png",         // 030    30
+"./images5/I0045.png",         // 031    31
+"./images5/I0047.png",         // 032    32
+"./images5/I0048.png",         // 033    33
+"./images5/I0050.png",         // 034    34
+"./images5/I0051.png",         // 035    35
+"./images5/I0052.png",         // 036    36
+"./images5/I0053.png",         // 037    37
+"./images5/I0054.png",         // 038    38
+"./images5/I0055.png",         // 039    39
+"./images5/I0056.png",         // 040    40
+"./images5/I0057.png",         // 041    41
+"./images5/I0058.png",         // 042    42
+"./images5/I0059.png",         // 043    43
+"./images5/I0060.png",         // 044    44
+"./images5/I0061.png",         // 045    45
+"./images5/I0062.png",         // 046    46
+"./images5/I0068.png",         // 048    47
+"./images5/I0069.png",         // 049    48
+"./images5/I0071.png",         // 050    49
+"./images5/I0072.png",         // 051    50
+"./images5/I0073.png",         // 052    51
+"./images5/I0074.png",         // 053    52
+"./images5/I0075.png",         // 054    53
+"./images5/I0076.png",         // 055    54
+"./images5/I0077.png",         // 056    54
+"./images5/I0078.png",         // 056    55
+"./images5/I0079.png",         // 058    56
+"./images5/I0080.png",         // 059    56
+"./images5/I0081.png",         // 059    57
+"./images5/I0082.png",         // 061    58
+"./images5/I0109.png",         // 062    59
+"./images5/I0113.png",         // 066    60
+"./images5/I0114.png",         // 067    61
+"./images5/I0115.png",         // 068    62
+"./images5/I0117.png",         // 070    63
+"./images5/I0118.png",         // 071    64
+"./images5/I0132.png",         // 085    65
+"./images5/I0134.png",         // 087    66
+"./images5/I0135.png",         // 088    67
+"./images5/I0136.png",         // 089    68
+"./images5/I0138.png",         // 091    69
+"./images5/I0139.png",         // 092    70
+"./images5/I0140.png",         // 093    71
+"./images5/I0142.png",         // 095    72
+"./images5/I0143.png",         // 096    73
+"./images5/I0144.png",         // 097    74
+"./images5/I0146.png",         // 099    75
+"./images5/I0147.png",         // 100    76
+"./images5/I0148.png",         // 101    77
+"./images5/I0150.png",         // 103    78
+"./images5/I0151.png",         // 104    79
+"./images5/I0152.png",         // 105    80
+"./images5/I0154.png",         // 107    81
+"./images5/I0155.png",         // 108    82
+"./images5/I0217.png",         // 112    83
 
 
 
