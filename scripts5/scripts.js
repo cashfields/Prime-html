@@ -134,35 +134,35 @@ function decrement() {
         const images = [
 
 
-"./images5/i0001.png",         // 001    01    1
-"./images5/i0002.png",         // 002    02    2
-"./images5/i0003.png",         // 003    03    3
-"./images5/i0004.png",         // 004    04    4
-"./images5/i0005.png",         // 005    05    5
-"./images5/i0006.png",         // 006    06    6
-"./images5/i0007.png",         // 007    07    7
-"./images5/i0008.png",         // 008    08    8
-"./images5/i0009.png",         // 009    09    9
-"./images5/i0010.png",         // 010    10   10
-"./images5/i0011.png",         // 011    11   11
-"./images5/i0012.png",         // 012    12   12
-"./images5/i0013.png",         // 013    13   13
-"./images5/i0014.png",         // 014    14   14
-"./images5/i0015.png",         // 015    15   15
-"./images5/i0016.png",         // 016    16   16
-"./images5/i0017a.png",        // 017    17   17
-"./images5/i0017.png",         // 017    18   18
-"./images5/i0018.png",         // 018    19   19
-"./images5/i0019.png",         // 019    20   20
-"./images5/i0020.png",         // 020    21   21
-"./images5/i0021.png",         // 021    22   22
-"./images5/i0022.png",         // 022    23   23
-"./images5/i0023.png",         // 023    24   24
-"./images5/i0024.png",         // 024    25   25
-"./images5/i0025.png",         // 025    26   26
-"./images5/i0026.png",         // 026    27   27
-"./images5/i0027.png",         // 027    28   28
-"./images5/i0028.png",         // 028    29   29
+"./images5/I0001.png",         // 001    01    1
+"./images5/I0002.png",         // 002    02    2
+"./images5/I0003.png",         // 003    03    3
+"./images5/I0004.png",         // 004    04    4
+"./images5/I0005.png",         // 005    05    5
+"./images5/I0006.png",         // 006    06    6
+"./images5/I0007.png",         // 007    07    7
+"./images5/I0008.png",         // 008    08    8
+"./images5/I0009.png",         // 009    09    9
+"./images5/I0010.png",         // 010    10   10
+"./images5/I0011.png",         // 011    11   11
+"./images5/I0012.png",         // 012    12   12
+"./images5/I0013.png",         // 013    13   13
+"./images5/I0014.png",         // 014    14   14
+"./images5/I0015.png",         // 015    15   15
+"./images5/I0016.png",         // 016    16   16
+"./images5/I0017a.png",        // 017    17   17
+"./images5/I0017.png",         // 017    18   18
+"./images5/I0018.png",         // 018    19   19
+"./images5/I0019.png",         // 019    20   20
+"./images5/I0020.png",         // 020    21   21
+"./images5/I0021.png",         // 021    22   22
+"./images5/I0022.png",         // 022    23   23
+"./images5/I0023.png",         // 023    24   24
+"./images5/I0024.png",         // 024    25   25
+"./images5/I0025.png",         // 025    26   26
+"./images5/I0026.png",         // 026    27   27
+"./images5/I0027.png",         // 027    28   28
+"./images5/I0028.png",         // 028    29   29
 "./images5/I0044.png",         // 030    30   30
 "./images5/I0045.png",         // 031    31   31
 "./images5/I0047.png",         // 032    32   32
@@ -221,7 +221,7 @@ function decrement() {
 "./images5/I0156.png",         // 108    82   85
 "./images5/I0157.png",         // 108    82   86
 "./images5/I0158.png",         // 108    82   87
-"./images5/I0217.png",         // 112    83   85
+"./images5/I0217.png",         // 112    83   88
 
 
 
