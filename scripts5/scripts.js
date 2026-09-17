@@ -218,6 +218,9 @@ function decrement() {
 "./images5/I0152.png",         // 105    80   82
 "./images5/I0154.png",         // 107    81   83
 "./images5/I0155.png",         // 108    82   84
+"./images5/I0156.png",         // 108    82   85
+"./images5/I0157.png",         // 108    82   86
+"./images5/I0158.png",         // 108    82   87
 "./images5/I0217.png",         // 112    83   85
 
 
