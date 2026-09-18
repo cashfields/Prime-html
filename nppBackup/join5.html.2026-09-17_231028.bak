@@ -1,0 +1,1200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href= "./images2/cash.ico" type="image/x-icon" >
+   <script src="./scripts5/scripts.js" async></script>
+    <link rel="stylesheet" href="./css5/style.css">
+    <title>join5 The first ps - long</title>
+
+<style>
+
+</style>
+
+
+
+
+</head>
+<body>
+
+
+
+
+
+
+join5 looking first
+
+    <div class="controls">
+
+  <button class="icon-buttonL" id="prev-btn" >
+  <img src="./images2/L.png" alt="Icon" class="button-img" onclick="decrement() , prevImage()">
+  <span></span>
+  </button>
+
+        <div id="counter"></div>
+
+  <button class="icon-buttonR" id="next-btn">
+  <img src="./images2/R.png"  alt="Icon" class="button-img" onclick="increment()  , nextImage()">
+  <span></span>
+  </button>
+
+
+       <button class="fullscreen-btn" id="toggleScript">Full On</button>
+          <!--  <button class="fullscreen-btn" onclick="window.close()">Close</button> -->
+<!--
+
+<input type="text" id="goto" name="goto" placeholder="Goto">
+ -->
+ <!-- <label for="goto" style="max-height: 20px; height: 100%;">Goto</label> -->
+<input type="text"  style="max-height: 20px; height: 100%;"   placeholder="Goto" id="goto" name="goto"  inputmode="numeric" pattern="[0-9]{3}"  maxlength="3"   size="1" autofocus >
+
+<!-- <input type="text" id="goto" placeholder="goto"> -->
+<button id="submitBtn" class="fullscreen-btn" >goto</button>
+
+
+<button onclick="viewbig()" class="fullscreen-btn" id="toggleScript">View big</button>
+
+
+        </div>
+
+
+
+
+
+
+
+<div class="container">
+   <div id="image-container" style="overflow: auto">
+    <img id="walkthrough-img" src="" alt="Walkthrough Step">
+    </div>
+
+  <div class="text-section scroll-container" >
+
+   <!-- ####################################################################-->
+   <!-- ####################################################################-->
+   <p class="step" id="step-1">
+                     <!--  "step-1"<br> -->
+* wildcard numbers , no matter how large a number is it can only end with the digits 0 to 9.
+<br><br>
+Call these *wildcard , this is similar to the star (*) in regular expressions.
+<br><br>
+All integer numbers end with one of the values from the top row.
+<br><br>
+Looking for prime numbers can be limited to a subset of all numbers ; after arbitrarily sorting out numbers divisible by 2's , 3's , 5's.
+<br><br>
+There is a subset of numbers that end with 1 , 3 , 7 , 9 ; these numbers create unique formulas to assist in the search for prime numbers.
+<br><br>
+Defining these symbols as *1 , *3 ,*7 , *9 , and calling them *wildcard numbers , several sorts and sub-sorts
+can be created and implemented to look for Prime Suspects (<u>ps</u>) (possible primes).
+<br><br>
+All the work that follows is a series of matrix math. Operating on several formulas and arrays simultaneously.
+<br><br>
+In the end it has become a study of integer values , and the subset of prime numbers.
+<br><br>
+The summation of all the work leads to two series ; a 'right' and 'left' where each series is +6 , +6 , +6 , +12. 
+<br><br>
+<br><br>
+<br><br>
+   </p>
+
+   <p class="step" id="step-2" style="display: none;">
+                      <!-- "step-2"<br> -->
+These are the first eight prime numbers that make up *fam.
+<br><br>
+2 , 3 , 5 and are eliminated from the initial search.
+<br><br>
+These *fam numbers are a subset of the *wildcard numbers.
+<br><br>
+There are eight numbers that make the first group of primes. The bottom row.
+<br><br>
+A number is a ps (prime suspect) until verified.
+<br><br>
+These are a subset of *wildcard ; call them *famXX.
+<br><br>
+*fam01 any number that ends with *1 and satisfies the formula:
+<br>
+*fam01 = (ps - 01)/30 is an integer.
+<br><br>
+*fam07 = (ps - 07)/30 is an integer.
+<br><br>
+*fam11 = (ps - 11)/30 is an integer.
+<br><br>
+*fam13 = (ps - 13)/30 is an integer.
+<br><br>
+*fam17 = (ps - 17)/30 is an integer.
+<br><br>
+*fam19 = (ps - 19)/30 is an integer.
+<br><br>
+*fam23 = (ps - 23)/30 is an integer.
+<br><br>
+*fam29 = (ps - 29)/30 is an integer.
+
+<br><br>
+
+
+   </p>
+
+   <p class="step" id="step-3" style="display: none;">
+                      <!-- "step-3"<br> -->
+This chart shows the difference between two planes. The numbers are separated by 10.
+<br><br>
+The one plane will have a name of R (right) for { 1 , 7 , 13 , 19 }.
+<br><br>
+The other plane will have a name of L (left) for { 11 , 17 , 23 , 29 }.
+<br><br>
+This is not an arbitrary name as will be show , later.
+<br><br>
+The ps (prime suspects) only end in four digits: { 1 , 3 , 7 , 9 }
+<br><br>
+<br><br>
+   </p>
+
+
+   <p class="step" id="step-4" style="display: none;">
+                      <!-- "step-4"<br><br> -->
+
+There is a common value that internally separates the values inside both R and L: 6.
+<br><br>
+1 to 7 is 6 ; 7 to 13 is 6 ; 13 to 19 is 6.
+<br><br>
+11 to 17 is 6 ; 17 to 23 is 6 ; 23 to 29 is 6.
+<br><br>
+There are two values 10 and 6 that drive ps (prime suspects).
+<br><br>
+   </p>
+
+   <p class="step" id="step-5" style="display: none;">
+                      <!-- "step-5"<br><br> -->
+
+Listing the values from 0 to 30 as a group ; the first group.
+<br><br>
+The name of a group will be given the symbol (g) [group]
+<br><br>
+This is designated as (g)0 in the upper left corner.
+<br><br>
+Inside the chart are the formulas for R & L.
+<br><br>
+This chart is balanced , it starts with a 0 and ends with a 0.
+<br><br>
+The midpoint is 15 ; there are 31 things , an odd number.
+<br><br>
+All the ps numbers for a given (g) are balanced by there location on the chart. They are equal distant from the ends and the midpoint.
+<br><br>
+01 + 29 =30
+<br><br>
+07 + 23=30
+<br><br>
+11 + 19=30
+<br><br>
+13 + 17=30
+<br><br>
+Since the next possible ps is 30 away from the prior for any *fam.
+<br><br>
+*fam01 is the series:
+<br> { 1 , 31 , 61 , 91 , . . . }
+<br><br>
+*fam07 is the series:
+<br> { 7 , 37 , 67 , 97 , . . . }
+<br><br>
+*fam11 is the series:
+<br> { 11 , 41 , 71 , 101 , . . . }
+<br><br>
+This is the same for all *fam numbers.
+<br><br>
+Top row is the following formula:
+<br>
+(6 * ?) + 1	for ? = { 0 , 1 , 2 , 3 }
+<br>
+The difference in the signs R is: + 1
+<br>
+1	=	(6 * 0) + 1
+<br>
+7	=	(6 * 1) + 1
+<br>
+13	=	(6 * 2) + 1
+<br>
+19	=	(6 * 3) + 1
+<br>
+Name this as the 'right' or 'R'
+
+<br><br>
+Bottom row is the following formula:
+<br>
+(6 * ?) - 1	for ? = { 2 , 3 , 4 , 5 }
+<br>
+The difference in the signs L is: - 1
+<br>
+11	=	(6 * 2) - 1
+<br>
+17	=	(6 * 3) - 1	
+<br>
+23	=	(6 * 4) - 1
+<br>
+29	=	(6 * 5) - 1	
+<br>
+Name this as the 'left' or 'L'
+
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+   </p>
+
+
+   <p class="step" id="step-6" style="display: none;">
+                    <!--   "step-6"<br><br> -->
+This chart shows by arrows and color the pairs to make 30.
+<br><br>
+The mid point of the group (g) is 15 ; the symbol (g) means a group of thirty one numbers.
+<br><br>
+The (g) is bracketed by two numbers ending in zero ; and in the series: 
+<br>
+{ 0 , 30 , 60 , 90 , . . . }
+<br><br>
+The prime suspect numbers are balanced and make pairs equal distance from 15 for any (g).
+<br><br>
+The following is the distance from 15.
+<br>15 +/- 14 = 1 or 29
+<br>15 +/- 8 = 7 or 23
+<br>15 +/- 4 = 11 or 19
+<br>15 +/- 2 = 13 or 17
+<br>Each pair adds up to 30	
+<br><br>
+The distance between each next pair is:					
+<br>	6 = 14 - 8
+<br>	4 = 8 - 4
+<br>	2 = 4 - 2
+<br><br>
+<br><br>
+<br><br>
+   </p>
+
+
+   <p class="step" id="step-7" style="display: none;">
+                  <!--     "step-7" <br><br> -->
+The balance is also between R & L and between the two planes.
+<br><br>
+The midpoint of 15 is the center point from left to right and top to bottom.
+<br><br>
+Look at *fam11 (L) on the bottom plane and *fam19 (R) on the top plane ; they are balanced to the middle (15) and to the ends (0 & 30). 
+<br><br>
+<br><br>
+   </p>
+
+
+   <p class="step" id="step-8" style="display: none;">
+                  <!--     "step-8"<br><br> -->
+In the chart are the eight formulas to solve each of *fam.
+<br><br>
+As (g) increases from 0 to 1 the formulas will simultaneous solve all equations , this is matrix math.
+<br><br>
+(g)n:  *fam + (n)(3)(10) = ps
+<br><br>
+This can be rearranged as:
+<br>
+(g)n:  *fam + (n)(3)(2)(5)  = ps
+<br>
+or
+<br>
+(g)n:  *fam + (n)(1)(2)(3)(5)  = ps
+<br>
+the first four primes times some n plus { 1 , 7 , 13 , 19 } = R
+<br><br>
+(g)n:  *fam + (n)(1)(2)(3)(5)  = ps 
+<br>
+the first four primes times some n plus { 11, 17 , 23 , 29 } = L
+<br><br><br>
+Just looking at one *fam ; *fam07.
+<br>
+(g)0 : 7 + (0)(3)(10) = 7
+<br>
+(g)1 : 7 + (1)(3)(10) = 37
+<br>
+(g)2 : 7 + (2)(3)(10) = 97
+<br>
+(g)3 : 7 + (3)(3)(10) = 127
+<br><br>
+
+<br><br>
+<br><br>
+   </p>
+
+
+   <p class="step" id="step-9" style="display: none;">
+                      <!-- "step-9" <br><br> -->
+The reverse calculation can be applied to any ps to find what (g) it belongs to.
+<br><br>
+Pick a number ending in 1 , 3 , 7 , 9.
+<br><br>
+Example: 143
+<br><br>
+There are two possible *fam associated , either *fam13 or *fam23.
+<br><br>
+Take 143 - 13 = 130 ; divide by 30 = 4.3333 - it is not an integer
+<br><br>
+Next 143 - 23 = 120 ; divide by 30 = 4 - it is an integer.
+<br><br>
+The answer is (g)4.
+<br><br>
+If neither equation solves to an integer the number is divisible by 3 and therefore not a ps.
+<br><br>
+<br><br>
+   </p>
+
+
+   <p class="step" id="step-10" style="display: none;">
+                     <!--  "step-10" <br><br> -->
+This chart uses *fam06 to find ps.
+<br><br>
+The top half is *fam06 + 1 - moving right on the number line.
+<br><br>
+The bottom half is *fam06 - 1 - moving left on the number line.
+<br><br>
+The R has values of { 0 ,1 , 2 , 3}.
+<br><br>
+The L has values of { 2 , 3 , 4 , 5 }
+
+<br><br>
+
+<br><br>
+   </p>
+
+   <p class="step" id="step-11" style="display: none;">
+                      <!-- "step-11"<br><br> -->
+Next is looking for ps using odd numbers. The (2n + 1) in each formula is an odd number.
+<br><br>
+The (3 * 5) portion is is the midpoint of the (g).
+<br><br>
+The last portion of the equations is the value added or subtracted from the midpoint.
+<br><br>
+The values { 14 , 8 , 2 , 4 } balance from R to L.
+<br><br>
+Next , see the + and - signs flip at the midpoint. Balanced again.
+<br><br>
+<br><br>
+   </p>
+
+   <p class="step" id="step-12" style="display: none;">
+                      <!-- "step-12"<br><br> -->
+Using an odd number times 15 and a difference of 10 (-5 to +5) shows an additional set of equations.
+<br><br>
+The odd number times 15 is always the midpoint of a (g).
+<br><br>
+Since *1 (*wildcard1) is 6 away from *7 (*wildcard7) within a (g) ; the second element -9 and -3 are 6 away.
+<br><br>
+Since *3 (*wildcard3) is 6 away from *9 (*wildcard9) within a (g) ; the second element +3 and +9 are 6 away.
+<br><br>
+This is just a different view with different formulas to look for ps.
+<br><br>
+<br><br>
+<br><br>
+   </p>
+
+   <p class="step" id="step-13" style="display: none;">
+                     <!--  "step-13"<br><br> -->
+Placing the equations in *fam order , notice how the digits ( 3 , 9 ) and ( 5 ) ; and the signs ( + , - ) are balanced symmetrically.
+<br><br>
+   </p>
+
+
+   <p class="step" id="step-14" style="display: none;">
+                     <!--  "step-14"<br><br> -->
+Moving into (g)1 here is a recap of the prior formulas.
+<br><br>
+Note that 49 is Xed  out as it is not prime (np).
+<br><br>
+<br><br>
+   </p>
+
+
+   <p class="step" id="step-15" style="display: none;">
+                  <!--     "step-15"<br><br> -->
+Moving into (g)2 here is a recap of the prior formulas.
+<br><br>
+Note that 77 is Xed  out as it is not prime (np).
+<br><br>
+<br><br>
+
+
+   </p>
+
+
+   <p class="step" id="step-16" style="display: none;">
+                    <!--   "step-16"<br><br> -->
+Moving into (g)3 here is a recap of the prior formulas.
+<br><br>
+Note that 91 and 119  are Xed out as they are not prime (np).
+<br><br>
+<br><br>
+
+
+   </p>
+
+
+   <p class="step" id="step-17" style="display: none;">
+                    <!--   "step-17" -->
+ This is a screen print of an attached HTML document. 
+ <br> <br>
+The four pages that follow show data from an XLSM file for (g)0 , (g)1 , (g)2 , (g)3.
+At the bottom of each text column is a link to fire up this web page where you can enter your own (g)n value and calculate the entire (g). Size might be an issue and you might have to do resize on the web page. 
+<br><br>
+The key is this is where the labels R and L come from.
+<br><br> 
+The original difficult was the over lap between *fam11 and *fam19 and being able to present the sign + and - properly. Also , clarity in the data presentation.
+<br><br> 
+The solution was to split the equations into R and L ( meaning right or left of the equal sign ) ; the the two separate planes are separated by 10. Also , R +1 on the number line ; and L -1 on the number line compared to *fam06. 
+<br><br>
+The center column is *fam06 ; and +1 for R ; and -1 for L. For the sake of brevity , size , and easy of programming several columns are missing from the web page.   
+<br><br>
+If a number is a prime a "=P" flag is set ; if the number is not prime (np) a "=NP" flag is set and the flag flashes. 
+
+<br><br>
+<br><br>
+<br><br>
+  </p>
+
+   <p class="step" id="step-18" style="display: none;">
+                     <!--  "step-18"<br><br> -->
+<u>See link at the bottom to calculate your own (g).</u>
+<br><br>
+
+All of the prior formulas lead up to this chart. This is where R and L are clearly shown.
+<br><br>
+First is the input field "(g) or PSL" as data is entered the matrix recalculates and displays new data.
+<br><br>
+The colored bars are matched pairs.
+<br>
+blue: &nbsp;&nbsp;*fam01 and *fam29.
+<br>
+red: &nbsp;&nbsp;&nbsp;&nbsp;*fam07 and *fam23.
+<br>
+green: *fam11 and *fam19.
+<br>
+gold: &nbsp;&nbsp;*fam13  and *fam17.
+<br><br>
+The right is some *fam06 +1.
+<br>
+The left is some *fam06 -1.
+<br>
+Think in terms of a number line:
+<br>R (right) is plus ; L (left) is minus.
+<br><br>
+Each ps , on the R or L is separated by 6.
+<br><br>
+The midpoint 15 is color code yellow.
+<br><br>
+The center column labeled as "*fam06 == cnt6" tells what value of *fam06 and the count (cnt6) to display the value.
+<br><br>
+The two columns to the left and right of that column are just a counter , a ruler to show the (g).
+<br><br>
+Outside of those columns is the actual calculation of all the values in the (g). The title boxes are labeled "left" and "right".
+<br><br>
+There are (g)0 , (g)1 , (g)2 and (g)3 over this and the next three screens.
+<br><br>
+There is a flag field on the outer edge that prints "Prime" or "Not Prime" (in a lighter color font).
+
+<br><br>
+<br><br>
+<a href="R_L_(g).html" target="_blank" rel="noopener noreferrer">Load (g)</a>
+<br><br>
+<br><br>
+
+   </p>
+
+   <p class="step" id="step-19" style="display: none;">
+                      <!-- "step-19"<br><br> -->
+<u>See link at the bottom to calculate your own (g).</u>
+<br><br>
+
+<br><br>
+This is (g)1 ; the calculated values run from 30 to 60.
+<br><br>
+Look for the bottom right green bar - 49 - and the flag is "Not prime" in a lighter font color.
+<br><br>
+<br><br>
+<a href="R_L_(g).html" target="_blank" rel="noopener noreferrer">Load (g)</a>
+<br><br>
+<br><br>
+
+   </p>
+
+
+   <p class="step" id="step-20" style="display: none;">
+                     <!--  "step-20"<br><br> -->
+<u>See link at the bottom to calculate your own (g).</u>
+<br><br>
+
+<br><br>
+This is (g)2 ; the calculated values run from 60 to 90.
+<br><br>
+Look for the left gold bar - 77 - and the flag is "Not prime" in a lighter font color.
+ <br><br>
+<br><br>
+<a href="R_L_(g).html" target="_blank" rel="noopener noreferrer">Load (g)</a>
+<br><br>
+<br><br>
+
+  </p>
+
+
+   <p class="step" id="step-21" style="display: none;">
+                     <!--  "step-21"<br><br> -->
+<u>See link at the bottom to calculate your own (g).</u>
+<br><br>
+
+<br><br>
+This is (g)3 ; the calculated values run from 90 to 120.
+<br><br>
+Look at the two R and L blue bars.
+<br>R = 91 and L = 119 , both are "Not prime"
+ <br><br>
+<br><br>
+<a href="R_L_(g).html" target="_blank" rel="noopener noreferrer">Load (g)</a>
+<br><br>
+<br><br>
+   </p>
+
+   <p class="step" id="step-22" style="display: none;">
+                    <!--   "step-22"<br><br> -->
+This is a map of a (g). The top black line is just a counter , a ruler.
+<br><br>
+The next line - "(g)" - is a list of numbers with the *fam06 numbers color coded.
+<br><br>
+The next line - "offset - key" - color codes in gray are the offset from the midpoint where the ps numbers are located.
+These line up with the edges of the next four boxes.
+<br><br>
+The next four lines show the range of ten for each *wildcard number:
+<br> 
+{ *1 , *7 , *3  *9 } 
+<br>
+The middle of the box has the *wildcard number.  Note how these *wildcard numbers line up with -9 , -3 , 3 , and 9 on the "offset - key" line.
+<br><br>
+The edges of the box are the *fam numbers , with the middle marked with the gray hash below.
+<br><br>
+<br><br>
+<br><br>
+   </p>
+   <p class="step" id="step-23" style="display: none;">
+                     <!--  "step-23"<br><br> -->
+This is a very wide document follow these steps to view this image in a new tab.
+<br>
+1) Left click one time on the image.
+<br>
+2) Right click to show a sub menu.
+<br>
+3) Left click on "Open image in a new tab".
+<br>
+4) Use ctrl-shift-+ (control and shift and plus sign) or ctrl-shift-- (control and shift and minus sign) to adjust the size. Or use the mouse wheel and the ctrl key.
+<br><br>
+This is a map of all the prior formulas joined together to show the interrelation from one to the next.
+<br><br>
+The next six charts show this chart broken into smaller pieces.
+<br><br>
+   </p>
+
+
+   <p class="step" id="step-24" style="display: none;">
+                     <!--  "step-24"<br><br> -->
+This is the 1st portion of the prior chart.
+<br><br>
+<br><br>
+<br><br>
+   </p>
+
+
+   <p class="step" id="step-25" style="display: none;">
+                    <!--   "step-25" <br><br> -->
+This is the 2nd portion of the main chart.
+<br><br>
+<br><br>
+<br><br>
+   </p>
+   <p class="step" id="step-26" style="display: none;">
+                     <!--  "step-26" <br><br> -->
+This is the 3rd portion of the main chart.
+<br><br>
+<br><br>
+<br><br>
+   </p>
+
+
+   <p class="step" id="step-27" style="display: none;">
+                   <!--    "step-27" <br><br> -->
+This is the 4th portion of the main chart.
+<br><br>
+<br><br>
+<br><br>
+
+   </p>
+
+
+   <p class="step" id="step-28" style="display: none;">
+                     <!--  "step-28" <br><br> -->
+This is the 5th and final portion of the main chart.
+<br><br>
+<br><br>
+<br><br>
+
+   </p>
+
+
+   <p class="step" id="step-29" style="display: none;">
+                  <!--     "step-29" <br><br> --> 
+Looking at several (g)s values for R and L , a simple series appears.
+<br><br>
+The differences between the numbers are: { +6 , +6 , +6 , +6 , +12 }.
+<br><br>
+The 12 is the gap between ps from one (g) to the next.
+<br><br>
+Later on it will be discovered that the missing numbers are *5 (*wildcard5).
+<br><br>
+<br><br>
+
+   </p>
+
+
+   <p class="step" id="step-30" style="display: none;">
+                    <!--   "step-30" -->
+This is where it all began , I was looking for prime numbers ; but I wanted to teach myself EXCEL. I figured it was a good model to train on and look for numbers.
+<br><br>
+I knew all kinds of commands from the BASIC programming language. Did they apply to EXCEL ?
+<br><br>
+Yes , and more  . . .
+<br><br>
+Next , there were added features like mod() function and conditional formatting. The cells in yellow are conditional colored if mod() = 0 from the top row and the second column.
+<br><br>
+It was a quick visual to help look for primes. The second column is also color coded when the number is a ps (prime suspect)  
+<br><br>
+Most of the work done here was done with EXCEL ; quick , easy , fast. 
+<br><br>
+<br><br>
+
+   </p>
+   <p class="step" id="step-31" style="display: none;">
+                    <!--   "step-31" -->
+This chart is similar to the prior , except all the even numbers are filtered out.
+<br><br>
+The gray colored cells are the integer value of the square root of the row times the column.
+<br><br>
+Another quick marker to limit how far to look for a non zero mod(). Meaning factors and therefor not prime. 
+<br><br>
+   </p>
+   <p class="step" id="step-32" style="display: none;">
+                      <!-- "step-32" -->
+This chart is the calculation of the (g) values , and to assign the colors in the second column on the prior charts. 
+<br><br>
+This was a first pass attempt at highlighting and coloring values.
+<br><br>
+<br><br>
+<br><br>
+
+
+   </p>
+   <p class="step" id="step-33" style="display: none;">
+                      <!-- "step-33" -->
+Here is a simple chart of the ten digits { 0 -9 }
+<br><br>
+This is the *wildcard representation of numbers. 
+<br><br>
+The even digits { 0 , 2 , 4 , 6 , 8 } are painted in yellow. The odds in green.
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+
+
+
+   </p>
+   <p class="step" id="step-34" style="display: none;">
+                  <!--     "step-34" -->
+A simple sort by color , yellow first ; group the evens , and the odds
+<br><br>
+
+<br><br>
+<br><br>
+<br><br>
+
+   </p>
+
+   <p class="step" id="step-35" style="display: none;">
+                    <!--   "step-35" -->
+Next , move the five (*5) next to the evens.
+<br><br>
+<br><br>
+<br><br>
+   </p>
+   <p class="step" id="step-36" style="display: none;">
+                      <!-- "step-36" -->
+Paint the *5 yellow to eliminate it.
+<br><br>
+<br><br>
+<br><br>
+   </p>
+   <p class="step" id="step-37" style="display: none;">
+<!--                       "step-37"  -->
+This leaves the *wildcard numbers { *1 , *3 , *7 , *9 }
+<br><br>
+<br><br>
+<br><br>
+   </p>
+   <p class="step" id="step-38" style="display: none;">
+                     <!--  "step-38" -->
+Paint the *wildcard with a two tone color. 
+<br><br>
+<br><br>
+<br><br>
+   </p>
+   <p class="step" id="step-39" style="display: none;">
+                     <!--  "step-39" -->
+Paint the bottom third yellow , since 1/3 of the *wildcard are divisible by three (3).  
+<br><br>
+   </p>
+   <p class="step" id="step-40" style="display: none;">
+                      <!-- "step-40" -->
+Some quick math.
+<br><br>
+There are ten digits 0-9 ; each digit is 10% or .10.
+<br><br>
+All the even digits count as 5 things.  So , 5 * .10 = .50.
+<br><br>
+Count 5 as one digit , 1 * .10 = .1.
+<br><br>
+What is left , 4 digits , 4 * .10 = .4. 
+<br><br>
+But , 1/3 are going to be eliminated , so .3333 * .4 = .13332.
+<br><br>
+Next , summing the np (non prime) .5 + .1 + .13332 = 0.73332. 
+<br><br>
+So , 1 - 0.73332 = 0.26668. 
+<br><br>
+Therefore ,  26.668% of the *wildcard numbers are ps (prime suspects). 
+<br><br>
+Finally , looking at the chart on screen page 46 and 48 ; 8 / 30 = 0.2666666.
+<br><br>
+Roughly 26.66% of all numbers <span style="background-color: lightgrey;">
+<u><strong>could</strong></u></span> be a ps (prime suspect).
+<br><br>
+To a classically trained mathematician this probably math heresy. But in the real world it is close enough. 
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+   </p>
+   <p class="step" id="step-41" style="display: none;">
+                      <!-- "step-41" -->
+The focus will turn to the 2/3's of the *wildcard numbers.
+<br><br>
+<br><br>
+<br><br>
+   </p>
+
+   <p class="step" id="step-42" style="display: none;">
+                     <!--  "step-42" -->
+Placing the *wildcard numbers in a colored matrix , shows the divison by 3 numbers.
+<br><br>
+<br><br>
+<br><br>
+   </p>
+   <p class="step" id="step-43" style="display: none;">
+                     <!--  "step-43" -->
+This will lead to the creation of *fam &nbsp; ( *family ) numbers,
+<br><br>
+<br><br>
+<br><br>
+   </p>
+   <p class="step" id="step-44" style="display: none;">
+                      <!-- "step-44" -->
+Eliminating the yellow leaves the target we are looking for.
+<br><br>
+<br><br>
+<br><br>
+   </p>
+   <p class="step" id="step-45" style="display: none;">
+                      <!-- "step-45" -->
+Remove me
+<br><br>
+<br><br>
+<br><br>
+   </p>
+   <p class="step" id="step-46" style="display: none;">
+                      <!-- "step-46" -->
+Bringing it all together ; the green colored boxes are our target to look for ps (prime suspects) and the prime numbers.
+<br><br>
+First , this is a (g).
+<br><br>
+It is from 0 to 29 , thirty things ; there are eight *fam's that are in green.
+<br><br>
+There are 8 green cells out of 30 total. 8 / 30 = 0.266666666/
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+   </p>
+
+   <p class="step" id="step-47" style="display: none;">
+                      <!-- "step-47" -->
+This is the same data except in a column view instead of a row view.
+<br><br>
+<br><br>
+<br><br>
+   </p>
+
+   <p class="step" id="step-48" style="display: none;">
+                    <!--   "step-48" -->
+Here is a chart that shows multiple dimensions of (g). 
+<br><br>
+The 'n = ?' value is really some (g). The green cells are the *fam's we are looking for. 
+<br><br>
+The diagram shows how some (g) leads to another. It also shows how to count into (g)-1 (negative).
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+   </p>
+   <p class="step" id="step-49" style="display: none;">
+                      <!-- "step-49" -->
+Here is *wildcard1 all numbers that end with a 1. 
+<br><br>
+There are three *fam's ; *fam01 , *fam11 , *fam21.
+<br><br>
+The yellow painted formulas are divisible by three.
+<br><br>
+<br><br>
+<br><br>   
+</p>
+   <p class="step" id="step-50" style="display: none;">
+                      <!-- "step-50" -->
+Next , are several boxes with 
+<br>
+ n = { 0 , 1 , 2 , 3 , 4 }. 
+<br><br>
+Each box solves all three equations simultaneously for the same n value.
+<br><br>
+<br><br>
+<br><br>   
+
+   </p>
+   <p class="step" id="step-51" style="display: none;">
+                      <!-- "step-51" -->
+Finally , a double sort by *fam and the n value.
+<br><br>
+The solutions have been aggregated toghter by *fam01 , then *fam11 and *fam21.
+<br><br>
+<br><br> 
+<br><br> 
+
+   </p>
+   <p class="step" id="step-52" style="display: none;">
+                      <!-- "step-52" -->
+Here is *wildcard3 all numbers that end with a 3. 
+<br><br>
+There are three *fam's ; *fam03 , *fam13 , *fam23.
+<br><br>
+The yellow painted formulas are divisible by three.
+<br><br
+<br><br> 
+<br><br> 
+
+   </p>
+   <p class="step" id="step-53" style="display: none;">
+                      <!-- "step-53" -->
+Next , are several boxes with 
+<br>
+ n = { 0 , 1 , 2 , 3 , 4 }. 
+<br><br>
+Each box solves all three equations simultaneously for the same n value.
+<br><br>
+<br><br>
+<br><br>    
+
+   </p>
+   <p class="step" id="step-54" style="display: none;">
+                      <!-- "step-54" -->
+Finally , a double sort by *fam and the n value.
+<br><br>
+The solutions have been aggregated toghter by *fam03 , then *fam13 and *fam23.
+<br><br>
+<br><br> 
+<br><br> 
+   </p>
+   <p class="step" id="step-55" style="display: none;">
+                      <!-- "step-55" -->
+Here is *wildcard7 all numbers that end with a 7. 
+<br><br>
+There are three *fam's ; *fam07 , *fam17 , *fam27.
+<br><br>
+The yellow painted formulas are divisible by three.
+<br><br
+<br><br> 
+<br><br> 
+   </p>
+   <p class="step" id="step-56" style="display: none;">
+                      <!-- "step-56" -->
+Next , are several boxes with 
+<br>
+ n = { 0 , 1 , 2 , 3 , 4 }. 
+<br><br>
+Each box solves all three equations simultaneously for the same n value.
+<br><br>
+<br><br>
+<br><br>    
+
+   </p>
+   <p class="step" id="step-57" style="display: none;">
+                      <!-- "step-57" -->
+Finally , a double sort by *fam and the n value.
+<br><br>
+The solutions have been aggregated toghter by *fam07 , then *fam17 and *fam27.
+<br><br>
+<br><br> 
+<br><br> 
+   </p>
+   <p class="step" id="step-58" style="display: none;">
+                      <!-- "step-58" -->
+Here is *wildcard9 all numbers that end with a 9. 
+<br><br>
+There are three *fam's ; *fam09 , *fam19 , *fam29.
+<br><br>
+The yellow painted formulas are divisible by three.
+<br><br
+<br><br> 
+<br><br> 
+   </p>
+   <p class="step" id="step-59" style="display: none;">
+                      <!-- "step-59" -->
+Next , are several boxes with 
+<br>
+ n = { 0 , 1 , 2 , 3 , 4 }. 
+<br><br>
+Each box solves all three equations simultaneously for the same n value.
+<br><br>
+<br><br>
+<br><br>    
+   </p>
+   <p class="step" id="step-60" style="display: none;">
+                      <!-- "step-60" -->
+Finally , a double sort by *fam and the n value.
+<br><br>
+The solutions have been aggregated toghter by *fam09 , then *fam19 and *fam29.
+<br><br>
+<br><br> 
+<br><br> 
+   </p>
+   <p class="step" id="step-61" style="display: none;">
+                      <!-- "step-61" -->
+*fam01 and larger dataset and a bigger sort. The limitation is the readability on one screen. 
+<br><br>
+The first column is *fam01 this value is the first factor and equal to one (1).
+<br><br> 
+The next column 'factor2' is the list by known ps by (g). Look at the second to last column "PSL or MN" - this is the (g).
+<br><br>
+The 'PS' (prime suspect) column is the result of the first column (*fam) times the 'factor2'.
+<br><br>
+The key here is the *fam column , third from the right. This is going to be the sort column on the next screen. It will sort by *fam and then the second factor.  
+<br><br> 
+<br><br>
+<br><br> 
+<br><br>
+   </p>
+   <p class="step" id="step-62" style="display: none;">
+                      <!-- "step-62" -->
+The lines are drawn to make divisions by *fam ; with an internal sort by the "factor2" column. 
+<br><br> 
+<br><br>
+<br><br> 
+<br><br>
+<br><br> 
+<br><br>
+   </p>
+   <p class="step" id="step-63" style="display: none;">
+                      <!-- "step-63" -->
+This is a colorized version of the prior screen.  
+<br><br>		
+Follow the painted arrow lines. This shows the symmetry of the "factor2" to add up to 30. It will be clearer  as we move forward to *fam07.
+<br><br>
+<br><br> 
+<br><br>
+   </p>
+   <p class="step" id="step-64" style="display: none;">
+                      <!-- "step-64" -->
+Here is the unsorted data of *fam07 times "factor2".
+<br><br>
+<br><br> 
+<br><br>
+
+   </p>
+   <p class="step" id="step-65" style="display: none;">
+                      <!-- "step-65" -->
+Now the data is grouped (first sort) by *fam , then "factor2".
+<br><br>
+<br><br> 
+<br><br>
+   </p>
+   <p class="step" id="step-66" style="display: none;">
+                      <!-- "step-66" -->
+The arrows still add up to 30 for the pairs. But the "factor2" have moved positions.
+<br><br>
+<br><br> 
+<br><br>
+
+   </p>
+   <p class="step" id="step-67" style="display: none;">
+                      <!-- "step-67" -->
+Here is the unsorted data of *fam11 times "factor2".
+<br><br>
+<br><br> 
+<br><br>
+   </p>
+   <p class="step" id="step-68" style="display: none;">
+                      <!-- "step-68" -->
+Now the data is grouped (first sort) by *fam , then "factor2".
+<br><br>
+<br><br> 
+<br><br>
+
+   </p>
+   <p class="step" id="step-69" style="display: none;">
+                      <!-- "step-69" -->
+The arrows still add up to 30 for the pairs. But the "factor2" have moved positions.
+<br><br>
+<br><br> 
+<br><br>
+   </p>
+   <p class="step" id="step-70" style="display: none;">
+                      <!-- "step-70" -->
+Here is the unsorted data of *fam13 times "factor2".
+<br><br>
+<br><br> 
+<br><br>
+   </p>
+   <p class="step" id="step-71" style="display: none;">
+                      <!-- "step-71" -->
+Now the data is grouped (first sort) by *fam , then "factor2".
+<br><br>
+<br><br> 
+<br><br>
+   </p>
+   <p class="step" id="step-72" style="display: none;">
+                      <!-- "step-72" -->
+The arrows still add up to 30 for the pairs. But the "factor2" have moved positions.
+<br><br>
+<br><br> 
+<br><br>
+   </p>
+
+   <!-- ####################################################################-->
+   <!-- ####################################################################-->
+   <p class="step" id="step-73" style="display: none;">
+                      <!-- "step-73" -->
+Here is the unsorted data of *fam17 times "factor2".
+<br><br>
+<br><br> 
+<br><br>
+   </p>
+   <p class="step" id="step-74" style="display: none;">
+                      <!-- "step-74" -->
+Now the data is grouped (first sort) by *fam , then "factor2".
+<br><br>
+<br><br> 
+<br><br>
+   </p>
+   <p class="step" id="step-75" style="display: none;">
+                      <!-- "step-75" -->
+The arrows still add up to 30 for the pairs. But the "factor2" have moved positions.
+<br><br>
+<br><br> 
+<br><br>
+   </p>
+   <p class="step" id="step-76" style="display: none;">
+                      <!-- "step-76" -->
+Here is the unsorted data of *fam19 times "factor2".
+<br><br>
+<br><br> 
+<br><br>
+   </p>
+   <p class="step" id="step-77" style="display: none;">
+                      <!-- "step-77" -->
+Now the data is grouped (first sort) by *fam , then "factor2".
+<br><br>
+<br><br> 
+<br><br>
+   </p>
+   <p class="step" id="step-78" style="display: none;">
+                      <!-- "step-78" -->
+The arrows still add up to 30 for the pairs. But the "factor2" have moved positions.
+<br><br>
+<br><br> 
+<br><br>
+   </p>
+   <p class="step" id="step-79" style="display: none;">
+                      <!-- "step-79" -->
+
+<br><br>
+<br><br> 
+<br><br>
+   </p>
+   <p class="step" id="step-80" style="display: none;">
+                      <!-- "step-80" -->
+   </p>
+   <p class="step" id="step-81" style="display: none;">
+                      "step-81"
+   </p>
+   <p class="step" id="step-82" style="display: none;">
+                      "step-82"
+   </p>
+
+   <p class="step" id="step-83" style="display: none;">
+                      "step-83"
+   </p>
+   <p class="step" id="step-84" style="display: none;">
+                      "step-84"
+   </p>
+   <p class="step" id="step-85" style="display: none;">
+                      "step-85"
+   </p>
+
+   <p class="step" id="step-86" style="display: none;">
+                      "step-86"
+   </p>
+   <p class="step" id="step-87" style="display: none;">
+                      "step-87"
+   </p>
+   <p class="step" id="step-88" style="display: none;">
+                      "step-88"
+   </p>
+   <p class="step" id="step-89" style="display: none;">
+                      "step-89"
+   </p>
+   <p class="step" id="step-90" style="display: none;">
+                      "step-90"
+<br><br>
+<!-- <a href="file:///J:/VS_2015_WorkSpace/Projects/xyz/Intro.html">Intro</a> -->
+<a href="file:///J:/convert/threecontainers.html" target="_blank" rel="noopener noreferrer">Load (g)</a>
+<br><br>
+   </p>
+
+
+   <!-- ####################################################################-->
+
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+</body>
+
+
+
+
+
+</html>
