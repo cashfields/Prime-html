@@ -138,26 +138,24 @@ function decrement() {
 "./images0/a0000 b.png",       // 002    02
 "./images0/a0000 c.png",       // 003    03
 "./images0/a0000 d.png",       // 004    04
-"./images0/a0000 e.png",       // 005    05
+"./images0/a0002.png",       // 005      05 from screen 11 a0002.png 
 "./images0/a0000 f.png",       // 006    06
 "./images0/a0000 g.png",       // 007    07
 "./images0/a0000 h.png",       // 008    08
 "./images0/a0000 i.png",       // 009    09
-"./images0/a0001.png",         // 010    10
-"./images0/a0002.png",         // 011    11
-"./images0/a0003.png",         // 012    12
-"./images0/a0004.png",         // 013    13
-"./images0/a0005.png",         // 014    14
-"./images0/a0006.png",         // 015    15
-"./images0/a0007.png",         // 016    16
-"./images0/a0008.png",         // 017    17
-"./images0/a0009.png",         // 018    17
-"./images0/a0010.png",         // 019    17
-"./images0/a0011.png",         // 020    17
-"./images0/a0012.png",         // 021    17
-"./images0/a0013.png",         // 022    17
-"./images0/a0014.png",         // 023    17
-"./images0/a0015.png",         // 024    17
+"./images0/a0003.png",         // 012    12 10
+"./images0/a0004.png",         // 013    13 11
+"./images0/a0005.png",         // 014    14 12 
+"./images0/a0006.png",         // 015    15 13
+"./images0/a0007.png",         // 016    16 14
+"./images0/a0008.png",         // 017    17 15
+"./images0/a0009.png",         // 018    17 16
+"./images0/a0010.png",         // 019    17 17
+"./images0/a0011.png",         // 020    17 18
+"./images0/a0012.png",         // 021    17 19
+"./images0/a0013.png",         // 022    17 20
+"./images0/a0014.png",         // 023    17 21
+"./images0/a0015.png",         // 024    17 22
 
 
 
