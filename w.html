@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>2x9 CSS Grid</title>
+  <style>
+    .grid-container {
+      display: grid;
+      /* Defines 9 columns of equal width */
+      grid-template-columns: repeat(9, 1fr); 
+      /* Defines 2 rows of equal height (adjust as needed, e.g., 100px or auto) */
+      grid-template-rows: repeat(2, 1fr);    
+      gap: 1px; /* Optional spacing between cells */
+      width: 40%;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .grid-cell {
+      background-color: #c4c4c4;
+      color: black;
+      padding: 2px;
+      text-align: right;
+      font-family: sans-serif;
+      border-radius: 2px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="grid-container">
+    <!-- Row 1 -->
+    <div class="grid-cell">Top Row</div>
+    <div class="grid-cell">1</div>
+    <div class="grid-cell">7</div>
+    <div class="grid-cell">11</div>
+    <div class="grid-cell"><div style="color: white; background-color: #03A9F4;">13</div></div>
+
+    <div class="grid-cell">17</div>
+    <div class="grid-cell">19</div>
+    <div class="grid-cell">23</div>
+    <div class="grid-cell">29</div>
+
+    <!-- Row 2 -->
+    <div class="grid-cell">13 Col</div>
+    <div class="grid-cell">0</div>
+    <div class="grid-cell">6</div>
+    <div class="grid-cell">2</div>
+    <div class="grid-cell"><div style="color: white; background-color: #03A9F4;">10</div></div>
+    <div class="grid-cell">13</div>
+    <div class="grid-cell">13</div>
+    <div class="grid-cell">13</div>
+    <div class="grid-cell">13</div>
+
+
+
+  </div>
+
+</body>
+</html>

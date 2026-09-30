@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Grid Table</title>
+    <style>
+        /* The container sets up the table structure */
+        .grid-table {
+           display: grid;
+           grid-template-columns: repeat(9, 11fr);
+/* Creates 3 columns of equal width */
+            border-top: 1px solid #ffffff;
+            border-left: 1px solid #ccc;
+            max-width: 50px;
+            gap: 5px;
+        }
+
+        /* Cells inside the grid */
+        .grid-cell {
+            padding: 8px;
+            border-right: 1px solid #ccc;
+            border-bottom: 1px solid #ccc;
+            background-color: #fff;
+        }
+
+        /* Styling for the header row cells */
+        .grid-header {
+            font-weight: bold;
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="grid-table">
+        <!-- Header Row -->
+        <div class="grid-cell grid-header">Row</div>
+        <div class="grid-cell grid-header">01</div>
+        <div class="grid-cell grid-header">07</div>
+        <div class="grid-cell grid-header">11</div>
+        <div class="grid-cell grid-header">13</div>
+        <div class="grid-cell grid-header">17</div>
+        <div class="grid-cell grid-header">19</div>
+        <div class="grid-cell grid-header">23</div>
+        <div class="grid-cell grid-header">29</div>
+
+        <!-- Data Row 1 -->
+        <div class="grid-cell">COL 13</div>
+        <div class="grid-cell">0</div>
+        <div class="grid-cell">6</div>
+        <div class="grid-cell">2</div>
+        <div class="grid-cell">13</div>
+        <div class="grid-cell">13</div>
+        <div class="grid-cell">13</div>
+        <div class="grid-cell">13</div>
+        <div class="grid-cell">13</div>
+
+
+
+
+
+
+
+    </div>
+
+</body>
+</html>
+

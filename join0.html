@@ -8,9 +8,21 @@
     <link rel="stylesheet" href="./css0/style.css">
     <title>join0 The first ps - long</title>
 
-<style>
 
-</style>
+
+  <style>
+/* Target a specific class */
+.tabletext {
+  font-size: 12px;
+}
+.makecolor{
+color: black; 
+background-color: #03A9F4;
+}
+
+  </style>
+
+
 
 
 
@@ -47,7 +59,7 @@
 <input type="text" id="goto" name="goto" placeholder="Goto">
  -->
  <!--- <label for="goto" style="max-height: 20px; height: 100%;">Goto</label> -->
-<input type="text"  style="max-height: 20px; height: 100%;"   placeholder="Goto" id="goto" name="goto"  inputmode="numeric" pattern="[0-9]{3}"  maxlength="3"   size="1">
+<input type="text"  style="max-height: 20px; height: 100%;"   placeholder="Goto" id="goto" name="goto"  inputmode="numeric" pattern="[0-9]{3}"  maxlength="3"   size="1" autofocus >
 
 <!--- <input type="text" id="goto" placeholder="goto"> -->
 <button id="submitBtn" class="fullscreen-btn" >goto</button>
@@ -169,64 +181,101 @@ The box highlights the area around the wave.
    </p>
 
    <p class="step" id="step-10" style="display: none;">
-                      <!-- "step-12"   -->
-Additional patterns. 
+                      <!-- "step-10"   -->
+Additional patterns.
 <br><br>
 <br><br>
    </p>
    <p class="step" id="step-11" style="display: none;">
-                      <!-- "step-13"   -->
+                      <!-- "step-11"   -->
 A close up of the wave.
 <br><br>
 <br><br>
    </p>
    <p class="step" id="step-12" style="display: none;">
-                      <!-- "step-14"   -->
-Additional patterns. 
+                      <!-- "step-12"   -->
+Additional patterns.
 <br><br>
 <br><br>
    </p>
    <p class="step" id="step-13" style="display: none;">
-                      <!-- "step-15"   -->
-Additional patterns. 
+                      <!-- "step-13"   -->
+Additional patterns.
 <br><br>
 <br><br>
    </p>
 
    <p class="step" id="step-14" style="display: none;">
-                      <!-- "step-16"   -->
-   </p>
+
+                      <!-- "step-14"   -->
+The attached chart shows the results of the mod() function:
+<br>
+=mod(left col,top row)
+<br><br>
+Both the top row and the left side column are:
+<br>
+<span  style="font-size: 12px;">
+{ 1 , 7 , 11 , 13 , 17 , 19 , 23 , 29 , . . . }. 
+</span>
+<br>
+And each next (g) is designated by the red box.
+<br><br>
+Each red box is thirty away from the prior box.
+<br><br>
+The painted cells inside the diagonal are factors. If the mod() function is 0 (zero) then there are factors.
+<br><br>
+The diagonal line is the square of the ps row and column when the two values are equal.
+<br><br>
+In the attached look for the value of 13 under the ps column.
+<br><br>
+Testing against the top row for 1 , 7 , 11 , 13 with the mod function shows there are no factors except 1 and 13.
+<br><br>
+The actual formula for one cell is: =MOD($C$8,E7)
+<br><br>
+<span class="tabletext">
+TOP ROW&nbsp;&nbsp;01&nbsp;&nbsp;07&nbsp;&nbsp;11&nbsp;&nbsp;<span class="makecolor">13</span>&nbsp;&nbsp;17&nbsp;&nbsp;19&nbsp;&nbsp;23&nbsp;&nbsp;29
+</span>
+<br>
+<span class="tabletext">
+&nbsp;&nbsp;&nbsp; 13 COL&nbsp;&nbsp;&nbsp;00&nbsp;&nbsp;06&nbsp;&nbsp;02&nbsp;&nbsp;<span class="makecolor">00</span>&nbsp;&nbsp;13&nbsp;&nbsp;13&nbsp;&nbsp;13&nbsp;&nbsp;13
+</span>
+
+<br><br>
+<br><br>
+<br><br>
+
+</p>
 
    <p class="step" id="step-15" style="display: none;">
-                      <!-- "step-17"   -->
+                      <!-- "step-15"   -->
    </p>
 
    <p class="step" id="step-16" style="display: none;">
-                      <!-- "step-18"   -->
+                      <!-- "step-16"   -->
    </p>
 
    <p class="step" id="step-17" style="display: none;">
-                      <!-- "step-19"   -->
+                      <!-- "step-17"   -->
    </p>
 
    <p class="step" id="step-18" style="display: none;">
-                      <!-- "step-20"   -->
+                      <!-- "step-18"   -->
    </p>
 
    <p class="step" id="step-19" style="display: none;">
-                      <!-- "step-21"   -->
+                      <!-- "step-19"   -->
    </p>
 
    <p class="step" id="step-20" style="display: none;">
-                      <!-- "step-22"   -->
+                      <!-- "step-20"   -->
    </p>
 
    <p class="step" id="step-21" style="display: none;">
-                      <!-- "step-23"   -->
+                      <!-- "step-21"   -->
    </p>
 
    <p class="step" id="step-22" style="display: none;">
-                      <!-- "step-24"   -->
+                      <!-- "step-22"   -->
    </p>
 
    <!--- ####################################################################-->
