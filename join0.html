@@ -16,7 +16,7 @@
   font-size: 10px;
 }
 .makecolor{
-color: black; 
+color: black;
 background-color: #03A9F4;
 }
 
@@ -215,7 +215,7 @@ The attached chart shows the results of the mod() function:
 Both the top row and the left side column are:
 <br>
 <span  style="font-size: 12px;">
-{ 1 , 7 , 11 , 13 , 17 , 19 , 23 , 29 , . . . }. 
+{ 1 , 7 , 11 , 13 , 17 , 19 , 23 , 29 , . . . }.
 </span>
 <br>
 And each next (g) is designated by the red box.
@@ -250,7 +250,7 @@ TOP ROW&nbsp;&nbsp;01&nbsp;&nbsp;07&nbsp;&nbsp;11&nbsp;&nbsp;<span class="makeco
                       <!-- "step-15"   -->
 Let's look closely at three consecutive (g)s that are painted gray ; (g)2 , (g)3 and (g)4.
 <br><br>
-Look inside the red boxes ; below the diagonal line is a repeating sequence of values. 
+Look inside the red boxes ; below the diagonal line is a repeating sequence of values.
 <br><br>
 <img src="./images0/lowtriangle.png"  style="height: 7em; vertical-align: middle;">
 <br><br>
@@ -266,7 +266,7 @@ On the next screen will be a closer view.
                       <!-- "step-16"   -->
 The painted cells are the next focus.
 <br><br>
-The gray box and the gray triangle are highlighted , this is the push to create the next (g).  
+The gray box and the gray triangle are highlighted , this is the push to create the next (g).
 <br><br>
 <br><br>
 <br><br>
@@ -276,9 +276,9 @@ The gray box and the gray triangle are highlighted , this is the push to create 
 
    <p class="step" id="step-17" style="display: none;">
                       <!-- "step-17"   -->
-In the large upper box , the area below the diagonal ; the difference between each cell is thirty. Hence the note "subtract 30 below the boxes" - the boxed cells.  
+In the large upper box , the area below the diagonal ; the difference between each cell is thirty. Hence the note "subtract 30 below the boxes" - the boxed cells.
 <br><br>
-In the large lower box . the area above the diagonal ; the difference between each cell is thirty. Hence the note "add 30 above the boxes to make the next down" - the boxed cells.  
+In the large lower box . the area above the diagonal ; the difference between each cell is thirty. Hence the note "add 30 above the boxes to make the next down" - the boxed cells.
 <br><br>
 <br><br>
 <br><br>
@@ -289,36 +289,33 @@ In the large lower box . the area above the diagonal ; the difference between ea
                       <!-- "step-18"   -->
 This is a close up of the transation from (g)2 to (g)3. There are several key pieces of information.
 <br><br>
-In first column of each red box , the values are one less than the *fam. 
+In first column of each red box , the values are one less than the *fam.
 <br><br>
 Zero (0) is one less than *fam01 ; six (6) is one less than *fam07 , and on . . .
-<br><br>
-<!-- The first digit below the boxed diagonal zeros is subtracted from the row below it.
-6 is in the second row first column ; below it is 10 ; 10 - 6 makes 4 - the value in the third row second column.  -->
 <br><br>
 Look at the colored key on the right side ; there are the two groups of R and L.
 <br><br>
 In the R is { 0 , 6 , 12 , 18 } ; each six away from the prior.
 <br><br>
-In the L is { 10 , 16 , 22 , 28 } ; again six away.
+The L is { 10 , 16 , 22 , 28 } ; again six away.
 <br><br>
-In first column the difference is: 
+In first column the difference is:
 <br>
 { 6 , 4 , 2 , 4 , 2 , 4 , 6 }
 <br><br>
 In the second column the difference is:
 <br>
-{ 4 , 2 , 4 , 2 , 4 ,6  } 
+{ 4 , 2 , 4 , 2 , 4 ,6  }
 <br><br>
 The third column the difference is:
 <br>
-{ 2 , 4 , 2 , 4 , 6  } 
+{ 2 , 4 , 2 , 4 , 6  }
 <br><br>
 The fourth column the difference is:
 <br>
 { 4 , 2 , 4 , 6 }
 <br><br>
-The fifth is: 
+The fifth is:
 <br>
 { 2 , 4 , 6 }
 <br><br>
@@ -330,38 +327,29 @@ The seventh is:
 <br>
 { 6 }
 <br><br>
+-------------------------------------
 <br><br>
 Taking the bottom row of
 <br>
 { 28 , 22 , 18 , 16 , 12 , 10 , 6 , 0 }
 <br><br>
-The bottom row difference from left to right is: 
+The bottom row difference from left to right is:
 <br>
 { 6 , 4 , 2 , 4 , 2 , 4 , 6 }
 <br><br>
-<!-- Index up one row , second from bottom is { 22 , 18 , 16 , 12 , 10 , 6 , 0 }  -->
-<!-- <br><br> -->
 Difference second row from bottom is:
 <br>
 { 6 , 4 , 2 , 4 , 2 , 4 }
 <br><br>
-
-<!-- Up two rows is { 18 , 12 , 8 , 6 , 2 , 0	} -->
-<!-- <br><br> -->
 Difference third row from bottom is:
 <br>
 { 6 , 4 , 2 , 4 , 2}
 <br><br>
-
-<!-- Up three rows is { 16 , 12 , 10 , 6 , 0	} -->
-<!-- <br><br> -->
 Difference four from bottom is:
 <br>
 { 6 , 4 , 2 , 4 }
 <br><br>
-<!-- Up four rows is { 12 , 6 , 2 } -->
-<!-- <br><br> -->
-Difference , five rows from bottom is:
+Difference , five from bottom is:
 <br>
 { 6 , 4 , 2  }
 <br><br>
@@ -372,18 +360,42 @@ Difference six rows from bottom is:
 Difference seven rows from bottom is:
 <br>
 { 6  }
+<br><br> 	
+The key is the symmetry both differences are the same values up-down or left-right.
+One digit disappears , the same digit value for both.
 <br><br>
+-------------------------------------
 <br><br>
-key symmetry and one digit disappears each level 
+The column starts as a difference:
+<br>
+{ 6 , 4 , 2 , 4 , 2 , 4 , 6 }
+<br>
+chop off one digit from the left.
 <br><br>
+The start of the bottom row is:
+<br>
+{ 6 , 4 , 2 , 4 , 2 , 4 , 6 }
+<br>
+chop off one digit from the right.
 <br><br>
-start column { 6 , 4 , 2 , 4 , 2 , 4 , 6 } chop Left off
+-------------------------------------
 <br><br>
-start row bottom { 6 , 4 , 2 , 4 , 2 , 4 , 6 } chop the right off
+The gray painted cells in the diagonal makes a running sum for each row with a total of 28 at the bottom.
 <br><br>
-gray cell in diagonal make a running sum of 28 ; same as first column on left 
+The running sum column on each level equals first column values going down from top to bottom.
 <br><br>
-running sum equals first column
+-------------------------------------
+<br><br>
+Next , the value of blue cell (10) minus the cell above (6) makes the gray cell (4) to its right.
+<br><br>
+<img src="./images0/bottopmath.png"  alt="math description of the image">
+-------------------------------------
+<br><br>
+<b>Balance and symmetry</b>  
+<br><br>
+Scroll the left hand image side , look at each diagonal. Only one diagonal in each view is highlighted.   
+<br><br>
+Each shows balance and symmetry across the diagonal.
 <br><br>
 <br><br>
 
@@ -391,19 +403,72 @@ running sum equals first column
 
    <p class="step" id="step-19" style="display: none;">
                       <!-- "step-19"   -->
-   </p>
+The final math view for columns , the blue cell is the result of the left column minus the right column for any row.  
+<br><br>
+<br><br>
+<br><br>
+<br><br>
 
+   </p>
    <p class="step" id="step-20" style="display: none;">
                       <!-- "step-20"   -->
-   </p>
+The final math view for rows , the blue cell is the result of the lower row minus the upper row for any column. 
+<br><br>
+<br><br>
+<br><br>
+<br><br>
 
+   </p>
    <p class="step" id="step-21" style="display: none;">
                       <!-- "step-21"   -->
+Going back a few screens to where the diagonals were isolate by a darker font color , leads to the following.
+<br><br>
+Summing the diagonal leads to another balanced and symmetric diagonal. The colors are there just for convenience.
+<br><br>
+Notice the first and last diagonal both sum to 28. 
+<br><br>
+The second and second to last both sum to 44.
+<br><br>
+Third and third to last both sum to 52.
+<br><br>
+Finally , the middle blue is 56.
+<br><br>
+One more test , the halves ; 
+<br>
+28 to 44 is 16 ;
+<br>
+44 to 52 is 8 ;
+<br>
+52 to 56 is 4.
+<br><br>
+Half of 16 is 8 ; half of 8 is 4. 
+<br>
+Why ?
+<br><br>
+<br><br>
+<br><br>
+<br><br>
    </p>
 
    <p class="step" id="step-22" style="display: none;">
                       <!-- "step-22"   -->
+Just a quick view of the triangle with R & L and *fam.
+<br><br>
+<br><br>
+<br><br
    </p>
+
+   <p class="step" id="step-23" style="display: none;">
+                      <!-- "step-23"   -->
+   </p>
+
+   <p class="step" id="step-24" style="display: none;">
+                      <!-- "step-24"   -->
+   </p>
+   <p class="step" id="step-25" style="display: none;">
+                      <!-- "step-25"   -->
+   </p>
+
 
    <!--- ####################################################################-->
 

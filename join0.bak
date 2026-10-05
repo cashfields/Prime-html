@@ -9,28 +9,19 @@
     <title>join0 The first ps - long</title>
 
 
-<style>
-        /* Modern, clean table styling */
-        table {
-            width: 80%;
-            border-collapse: collapse; /* Prevents double borders */
-            margin: 1px 0;
-            font-family: sans-serif;
-            font-size: 12px;
-        }
-        th, td {
-            border: 1px solid #dddddd; /* Light gray borders */
-            padding: 2px;             /* Padding inside cells */
-            text-align: right;          /* Aligns text to the left */
-        }
-        th {
-            background-color: #f2f2f2; /* Light gray background for headers */
-            font-weight: bold;
-        }
-        tr:nth-child(even) {
-            background-color: #f9f9f9; /* Zebra striping for rows */
-        }
-    </style>
+
+  <style>
+/* Target a specific class */
+.tabletext {
+  font-size: 10px;
+}
+.makecolor{
+color: black; 
+background-color: #03A9F4;
+}
+
+  </style>
+
 
 
 
@@ -68,7 +59,7 @@
 <input type="text" id="goto" name="goto" placeholder="Goto">
  -->
  <!--- <label for="goto" style="max-height: 20px; height: 100%;">Goto</label> -->
-<input type="text"  style="max-height: 20px; height: 100%;"   placeholder="Goto" id="goto" name="goto"  inputmode="numeric" pattern="[0-9]{3}"  maxlength="3"   size="1">
+<input type="text"  style="max-height: 20px; height: 100%;"   placeholder="Goto" id="goto" name="goto"  inputmode="numeric" pattern="[0-9]{3}"  maxlength="3"   size="1" autofocus >
 
 <!--- <input type="text" id="goto" placeholder="goto"> -->
 <button id="submitBtn" class="fullscreen-btn" >goto</button>
@@ -190,96 +181,237 @@ The box highlights the area around the wave.
    </p>
 
    <p class="step" id="step-10" style="display: none;">
-                      <!-- "step-12"   -->
-Additional patterns. 
+                      <!-- "step-10"   -->
+Additional patterns.
 <br><br>
 <br><br>
    </p>
    <p class="step" id="step-11" style="display: none;">
-                      <!-- "step-13"   -->
+                      <!-- "step-11"   -->
 A close up of the wave.
 <br><br>
 <br><br>
    </p>
    <p class="step" id="step-12" style="display: none;">
-                      <!-- "step-14"   -->
-Additional patterns. 
+                      <!-- "step-12"   -->
+Additional patterns.
 <br><br>
 <br><br>
    </p>
    <p class="step" id="step-13" style="display: none;">
-                      <!-- "step-15"   -->
-Additional patterns. 
+                      <!-- "step-13"   -->
+Additional patterns.
 <br><br>
 <br><br>
    </p>
 
    <p class="step" id="step-14" style="display: none;">
-                      <!-- "step-16"   -->
-br><br>
-<table>
-        <caption>&nbsp;&nbsp;&nbsp;=mod(col,top row)<br>=mod($C$8,E7)</caption>
-        <thead>
-            <tr>
-                <th>TOP ROW</th>
-                <th>01</th>
-                <th>07</th>
-				<th>11</th>
-				<th><div style= "color: white; background-color: #03A9F4;">13</div></th>
-                <th>17</th>
-                <th>19</th>
-                <th>23</th>
-				<th>29</th>
-				
 
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><b>13 COL</b></td>
-<td>&nbsp;&nbsp;0</td>
-<td>&nbsp;6</td>
-<td>&nbsp;&nbsp;2</td>&nbsp;
-<td><div style="color: white; background-color: #03A9F4;">&nbsp;&nbsp;0</div></td>
-<td>13</td>
-<td>13</td>
-<td>13</td>
-<td>13</td>
-            </tr>
+                      <!-- "step-14"   -->
+The attached chart shows the results of the mod() function:
+<br>
+=mod(left col,top row)
+<br><br>
+Both the top row and the left side column are:
+<br>
+<span  style="font-size: 12px;">
+{ 1 , 7 , 11 , 13 , 17 , 19 , 23 , 29 , . . . }. 
+</span>
+<br>
+And each next (g) is designated by the red box.
+<br><br>
+Each red box is thirty away from the prior box.
+<br><br>
+The painted cells inside the diagonal are factors. If the mod() function is 0 (zero) then there are factors.
+<br><br>
+The diagonal line is the square of the ps row and column when the two values are equal.
+<br><br>
+In the attached look for the value of 13 under the ps column.
+<br><br>
+Testing against the top row for 1 , 7 , 11 , 13 with the mod function shows there are no factors except 1 and 13.
+<br><br>
+The actual formula for one cell is: =MOD($C$8,E7)
+<br><br>
+<span class="tabletext">
+TOP ROW&nbsp;&nbsp;01&nbsp;&nbsp;07&nbsp;&nbsp;11&nbsp;&nbsp;<span class="makecolor">13</span>&nbsp;&nbsp;17&nbsp;&nbsp;19&nbsp;&nbsp;23&nbsp;&nbsp;29
+</span>
+<br>
+<span class="tabletext">
+&nbsp;&nbsp;&nbsp; 13 COL&nbsp;&nbsp;&nbsp;00&nbsp;&nbsp;06&nbsp;&nbsp;02&nbsp;&nbsp;<span class="makecolor">00</span>&nbsp;&nbsp;13&nbsp;&nbsp;13&nbsp;&nbsp;13&nbsp;&nbsp;13
+</span>
 
+<br><br>
+<br><br>
+<br><br>
 
-   </p>
+</p>
 
    <p class="step" id="step-15" style="display: none;">
-                      <!-- "step-17"   -->
+                      <!-- "step-15"   -->
+Let's look closely at three consecutive (g)s that are painted gray ; (g)2 , (g)3 and (g)4.
+<br><br>
+Look inside the red boxes ; below the diagonal line is a repeating sequence of values. 
+<br><br>
+<img src="./images0/lowtriangle.png"  style="height: 7em; vertical-align: middle;">
+<br><br>
+As the (g) increases , this repeating array of values forms a wave to push the next (g).
+<br><br>
+On the next screen will be a closer view.
+<br><br>
+<br><br>
+<br><br>
    </p>
 
    <p class="step" id="step-16" style="display: none;">
-                      <!-- "step-18"   -->
+                      <!-- "step-16"   -->
+The painted cells are the next focus.
+<br><br>
+The gray box and the gray triangle are highlighted , this is the push to create the next (g).  
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
    </p>
 
    <p class="step" id="step-17" style="display: none;">
-                      <!-- "step-19"   -->
+                      <!-- "step-17"   -->
+In the large upper box , the area below the diagonal ; the difference between each cell is thirty. Hence the note "subtract 30 below the boxes" - the boxed cells.  
+<br><br>
+In the large lower box . the area above the diagonal ; the difference between each cell is thirty. Hence the note "add 30 above the boxes to make the next down" - the boxed cells.  
+<br><br>
+<br><br>
+<br><br>
+<br><br>
    </p>
 
    <p class="step" id="step-18" style="display: none;">
-                      <!-- "step-20"   -->
+                      <!-- "step-18"   -->
+This is a close up of the transation from (g)2 to (g)3. There are several key pieces of information.
+<br><br>
+In first column of each red box , the values are one less than the *fam. 
+<br><br>
+Zero (0) is one less than *fam01 ; six (6) is one less than *fam07 , and on . . .
+<br><br>
+<!-- The first digit below the boxed diagonal zeros is subtracted from the row below it.
+6 is in the second row first column ; below it is 10 ; 10 - 6 makes 4 - the value in the third row second column.  -->
+<br><br>
+Look at the colored key on the right side ; there are the two groups of R and L.
+<br><br>
+In the R is { 0 , 6 , 12 , 18 } ; each six away from the prior.
+<br><br>
+The L is { 10 , 16 , 22 , 28 } ; again six away.
+<br><br>
+In first column the difference is: 
+<br>
+{ 6 , 4 , 2 , 4 , 2 , 4 , 6 }
+<br><br>
+In the second column the difference is:
+<br>
+{ 4 , 2 , 4 , 2 , 4 ,6  } 
+<br><br>
+The third column the difference is:
+<br>
+{ 2 , 4 , 2 , 4 , 6  } 
+<br><br>
+The fourth column the difference is:
+<br>
+{ 4 , 2 , 4 , 6 }
+<br><br>
+The fifth is: 
+<br>
+{ 2 , 4 , 6 }
+<br><br>
+The sixth is:
+<br>
+{ 4 , 6}
+<br><br>
+The seventh is:
+<br>
+{ 6 }
+<br><br>
+<br><br>
+Taking the bottom row of
+<br>
+{ 28 , 22 , 18 , 16 , 12 , 10 , 6 , 0 }
+<br><br>
+The bottom row difference from left to right is: 
+<br>
+{ 6 , 4 , 2 , 4 , 2 , 4 , 6 }
+<br><br>
+<!-- Index up one row , second from bottom is { 22 , 18 , 16 , 12 , 10 , 6 , 0 }  -->
+<!-- <br><br> -->
+Difference second row from bottom is:
+<br>
+{ 6 , 4 , 2 , 4 , 2 , 4 }
+<br><br>
+
+<!-- Up two rows is { 18 , 12 , 8 , 6 , 2 , 0	} -->
+<!-- <br><br> -->
+Difference third row from bottom is:
+<br>
+{ 6 , 4 , 2 , 4 , 2}
+<br><br>
+
+<!-- Up three rows is { 16 , 12 , 10 , 6 , 0	} -->
+<!-- <br><br> -->
+Difference four from bottom is:
+<br>
+{ 6 , 4 , 2 , 4 }
+<br><br>
+<!-- Up four rows is { 12 , 6 , 2 } -->
+<!-- <br><br> -->
+Difference , five from bottom is:
+<br>
+{ 6 , 4 , 2  }
+<br><br>
+Difference six rows from bottom is:
+<br>
+{ 6 , 4  }
+<br><br>
+Difference seven rows from bottom is:
+<br>
+{ 6  }
+<br><br>
+<br><br>
+The key is the symmetry both differences are the same values up-down or left-right.
+One digit disappears , the same digit value for both.
+<br><br>
+<br><br>
+The column starts as a difference:
+<br>
+{ 6 , 4 , 2 , 4 , 2 , 4 , 6 }
+<br>
+chop off one digit from the left.
+<br><br>
+The start of the bottom row is:
+<br>
+{ 6 , 4 , 2 , 4 , 2 , 4 , 6 }
+<br>
+chop off one digit from the right.
+<br><br>
+The gray painted cells in diagonal make a running sum of 28. 
+<br><br>
+The running sum on each level equals first column values going down.  
+<br><br>
+<br><br>
+
    </p>
 
    <p class="step" id="step-19" style="display: none;">
-                      <!-- "step-21"   -->
+                      <!-- "step-19"   -->
    </p>
 
    <p class="step" id="step-20" style="display: none;">
-                      <!-- "step-22"   -->
+                      <!-- "step-20"   -->
    </p>
 
    <p class="step" id="step-21" style="display: none;">
-                      <!-- "step-23"   -->
+                      <!-- "step-21"   -->
    </p>
 
    <p class="step" id="step-22" style="display: none;">
-                      <!-- "step-24"   -->
+                      <!-- "step-22"   -->
    </p>
 
    <!--- ####################################################################-->

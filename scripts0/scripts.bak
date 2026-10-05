@@ -154,11 +154,10 @@ function decrement() {
 "./images0/a0011.png",                  // 020  18     17 18
 "./images0/a0011leftright.png",         // 020  19     17 18
 "./images0/a0011updown.png",            // 020  20     17 18
-"./images0/a0011diagonal.png",          // 020  21     17 18
-"./images0/a0012.png",                  // 021  22     17 19
-"./images0/a0013.png",                  // 022  23     17 20
-"./images0/a0014.png",                  // 023  24     17 21
-"./images0/a0015.png",                  // 024  25     17 22
+"./images0/a0012.png",                  // 021  21     17 19
+"./images0/a0013.png",                  // 022  22     17 20
+"./images0/a0014.png",                  // 023  23     17 21
+"./images0/a0015.png",                  // 024  24     17 22
 
 
 
