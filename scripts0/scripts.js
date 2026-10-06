@@ -157,8 +157,9 @@ function decrement() {
 "./images0/a0011diagonal.png",          // 020  21     17 18
 "./images0/a0012.png",                  // 021  22     17 19
 "./images0/a0013.png",                  // 022  23     17 20
-"./images0/a0014.png",                  // 023  24     17 21
-"./images0/a0015.png",                  // 024  25     17 22
+"./images0/a0013a.png",                 // 023  24     17 21
+"./images0/a0014.png",                  // 023  25     17 21
+"./images0/a0015.png",                  // 024  26     17 22
 
 
 
