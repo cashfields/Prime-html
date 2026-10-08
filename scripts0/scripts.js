@@ -160,6 +160,10 @@ function decrement() {
 "./images0/a0013a.png",                 // 023  24     17 21
 "./images0/a0014.png",                  // 023  25     17 21
 "./images0/a0015.png",                  // 024  26     17 22
+"./images0/snap0129.png",               //      27 
+"./images0/snap0723.png",               //      28 
+"./images0/snap1119.png",               //      29 
+"./images0/snap1317.png",               //      30 
 
 
 
