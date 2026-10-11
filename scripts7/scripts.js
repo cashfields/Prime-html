@@ -169,6 +169,7 @@ function decrement() {
 "./images7/22 where are the others 08.png",                       //41
 "./images7/22 where are the others 09.png",                       //42
 "./images7/22 where are the others 10.png",                       //43
+"./images7/22 where are the others 10 A.png",                     //42 A
 "./images7/22 where are the others 11.png",                       //44
 "./images7/22 where are the others 12 last.png",                  //45
 "./images7/skip.png",                                             //46
