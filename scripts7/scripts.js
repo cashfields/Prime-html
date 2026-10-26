@@ -168,15 +168,16 @@ function decrement() {
 "./images7/22 where are the others 07.png",                       //40
 "./images7/22 where are the others 08.png",                       //41
 "./images7/22 where are the others 09.png",                       //42   
-"./images7/22 where are the others 10.png",                       //43    43
-"./images7/22 where are the others 10 A.png",                     //42 A  44
-"./images7/22 where are the others 11.png",                       //44    45
-"./images7/22 where are the others 12 last.png",                  //45    46
-"./images7/skip.png",                                             //46    47
-"./images7/skip2.png",                                            //47    48
-"./images7/Blue Thatch.bmp",                                      //48    49
-"./images7/Black Thatch.bmp",                                     //49    50
-"./images7/I0217.png",                                            //50    51
+"./images7/22 where are the others 10.png",                       //43
+"./images7/22 where are the others 10 A.png",                     //44
+"./images7/22 where are the others 11.png",                       //45
+"./images7/22 where are the others 12 last.png",                  //46
+"./images7/skip.png",                                             //47
+"./images7/skip2.png",                                            //48
+"./images7/Blue Thatch.bmp",                                      //49
+"./images7/Black Thatch.bmp",                                     //50
+"./images7/I0217.png",                                            //51
+"./images7/I0217.png",                                            //52
 
         ];
 

@@ -126,32 +126,33 @@ function decrement() {
     /* <script> */
         // REPLACE THESE WITH YOUR EXACT PNG FILE NAMES
         const images = [
-"./images11/b0001.png",                                            //01
-"./images11/b0002.png",                                            //01
-"./images11/b0003.png",                                            //01
-"./images11/b0004.png",                                            //01
-"./images11/b0005.png",                                            //01
-"./images11/b0006.png",                                            //01
-"./images11/b0007.png",                                            //01
-"./images11/b0008.png",                                            //01
-"./images11/b0009.png",                                            //01
-"./images11/b0010.png",                                            //01
-"./images11/b0011.png",                                            //01
-"./images11/b0012.png",                                            //01
-"./images11/b0013.png",                                            //01
-"./images11/b0014.png",                                            //01
-"./images11/b0015.png",                                            //01
-"./images11/b0016.png",                                            //01
-"./images11/b0017.png",                                            //01
-"./images11/b0018.png",                                            //01
-"./images11/b0019.png",                                            //01
-"./images11/b0020.png",                                            //01
-"./images11/b0021.png",                                            //01
-"./images11/b0022.png",                                            //01
-"./images11/b0023.png",                                            //01
-"./images11/Blue Thatch.bmp",                                      //48    49
-"./images11/Black Thatch.bmp",                                     //49    50
-"./images11/I0217.png",                                            //50    51
+"./images11/b0001.png",                                            // 01
+"./images11/b0002.png",                                            // 02
+"./images11/b0003.png",                                            // 03
+"./images11/b0004.png",                                            // 04
+"./images11/b0005.png",                                            // 05
+"./images11/b0006.png",                                            // 06
+"./images11/b0007.png",                                            // 07
+"./images11/b0008.png",                                            // 08
+"./images11/b0009.png",                                            // 09
+"./images11/b0010.png",                                            // 10
+"./images11/b0011.png",                                            // 11
+"./images11/b0012.png",                                            // 12
+"./images11/b0013.png",                                            // 13
+"./images11/b0014.png",                                            // 14
+"./images11/b0015.png",                                            // 15
+"./images11/b0016.png",                                            // 16
+"./images11/b0017.png",                                            // 17
+"./images11/b0018.png",                                            // 18
+"./images11/b0019.png",                                            // 19
+"./images11/b0020.png",                                            // 20
+"./images11/b0021.png",                                            // 21
+"./images11/b0022.png",                                            // 22
+"./images11/b0023.png",                                            // 23
+"./images11/Blue Thatch.bmp",                                      // 24
+"./images11/Black Thatch.bmp",                                     // 25
+"./images11/I0217.png",                                            // 26
+"./images11/I0217.png",                                            // 27
 
         ];
 
