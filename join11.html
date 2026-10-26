@@ -52,65 +52,130 @@
    <!-- ####################################################################-->
    <p class="step" id="step-1">
 <!-- "./images11/01 .png", -->
-one
+Start with a blank XLS file.
    </p>
 
    <!-- ####################################################################-->
    <p class="step" id="step-2" style="display: none;">
 <!-- "./images11/02 .png", -->
-2
+Add numbers in the first row and the left column,
    </p>
 
    <!-- ####################################################################-->
    <p class="step" id="step-3" style="display: none;">
 <!-- "./images11/03 .png", -->
-3
+Color and format the numbers , so they stand out.
    </p>
 
 
    <!-- ####################################################################-->
    <p class="step" id="step-4" style="display: none;">
 <!-- "./images11/04 .png" -->
-4
+Insert a formula to calculate the mod() function of the top row and the left column. 
+<br>
+Column A and row 1.
+<br><br>
+Below is a close up of the mod() formula.
+<br><br>
+The cell H8 is highlighted , look at the row and the column values both are seven.
+<br><br>
+Note in the row only two cells , under column values of { 1 , 7 } have a zero result.
+<br><br>
+The rest have a integer value , this signifies no factor. 
+<br><br>
+ <img src="./images11/modfunction.png"" alt="mod() function" style="width: 200px; height: auto;">
+<br><br>
    </p>
 
    <!-- ####################################################################-->
    <p class="step" id="step-5" style="display: none;">
 <!-- "./images11/05 .png", -->
-5
+Using conditional formatting , if the value is of a cell is zero , paint the cell blue.
+<br><br>
+This is a easy flag to find and the see value locations that are factors. 
+<br><br>
+There are several patterns that can be seen.
+<br><br>
+First , is the diagonal , this is the square of two numbers.
+<br><br>
+Second , and most important by color , there are two secondary patterns.
+<br><br>  
+An odd pattern.
+<img src="./images11/patternodd.png"" alt="mod() function" style="width: 150px; height: auto;">
+<br><br>  
+An even pattern.
+<img src="./images11/patterneven.png"" alt="mod() function" style="width: 150px; height: auto;">
+<br><br>
+
    </p>
 
 
    <!-- ####################################################################-->
    <p class="step" id="step-6" style="display: none;">
 <!-- "./images11/06 .png", -->
-
-6
+Here are the two patterns highlighted by the red boxes.
+<br><br>
+Call one box 'odd' and the other 'even' because of the number of colored cells.
+<br><br>
    </p>
 
    <!-- ####################################################################-->
    <p class="step" id="step-7" style="display: none;">
 <!-- "./images11/07 .png", -->
-7
+Some additional clean up of values to the right of the diagonal.
+<br><br>
    </p>
 
    <!-- ####################################################################-->
    <p class="step" id="step-8" style="display: none;">
 <!-- "./images11/08 .png", -->
-8
+Bring back the 'odd' and 'even' red boxes.
+<br><br>
    </p>
 
    <!-- ####################################################################-->
    <p class="step" id="step-9" style="display: none;">
 <!-- "./images11/09 .png", -->
-9
+Here is the crux of the argument , eliminate the values in the cells and keep just the formats to create a clearer view.  
+<br><br>
+The blue cells are factors of the row and column. The red boxes delineate 'odd' or 'even' patterns.
+<br><br>
+The patterns become clearer.
+<br><br>
    </p>
 
 
    <!-- ####################################################################-->
    <p class="step" id="step-10" style="display: none;">
 <!-- "./images11/10 .png", -->
-10
+This chart shows additional coloring to trace how the diagonal is crossed by each 'odd' box.
+<br><br>
+There is a lot going on here , lets trace one grouping.
+<br><br>
+<img src="./images11/odd4.png"" alt="odd4" style="width: 150px; height: auto;">
+<br><br>
+The cell E17 is the focus. First , it is column E and a value of four (4).
+<br><br>
+Second , the row is 17 and a value of sixteen (16). 
+<br>
+16 is the square of 4. 
+<br><br>
+Follow the red line as it travels up and to the right.
+<br>
+a) (+1,-1)
+<br>
+b) (+1,-3)
+<br>
+c) (+1,-5) , where it intersects the diagonal , the squared line.
+<br>
+The intersection is at (7,7) another square.
+<br><br>
+Opposite is the mirror image of similar colored cells. Making a parabola. 
+<br><br>
+Each cell ends as an odd number ; (x,odd).
+<br><br>
+
+THe next question is: where other = 2x -1 = sq2 (double - 1)^2
    </p>
 
    <!-- ####################################################################-->
