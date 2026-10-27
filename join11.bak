@@ -10,6 +10,7 @@
     <title>join11 The next</title>
 
 
+
 </head>
 <body>
 
@@ -32,20 +33,12 @@
 
    <button class="fullscreen-btn" id="toggleScript">Full</button>
  <!--   <button class="fullscreen-btn" onclick="window.close()">Close</button> -->
-
-
 <input type="text"  style="max-height: 20px; height: 100%;"   placeholder="Goto" id="goto" name="goto"  inputmode="numeric" pattern="[0-9]{2}"  maxlength="2"   size="1" autofocus >
 <button id="submitBtn" class="fullscreen-btn" >goto</button>
-
-
 <button onclick="viewbig()" class="fullscreen-btn" id="toggleScript">View big</button>
 
 
-
         </div>
-
-
-
 
 
 
@@ -59,288 +52,264 @@
 
    <!-- ####################################################################-->
    <p class="step" id="step-1">
-<!--    "./images/01 ps.png", -->
+<!-- "./images11/01 .png", -->
+Start with a blank XLS file.
    </p>
 
    <!-- ####################################################################-->
    <p class="step" id="step-2" style="display: none;">
-<!-- "./images/02 ps by 4.png", -->
+<!-- "./images11/02 .png", -->
+Add numbers in the first row and the left column,
    </p>
-
 
    <!-- ####################################################################-->
    <p class="step" id="step-3" style="display: none;">
-<!-- "./images/03 ps by 4 with 5 00.png", -->
-
+<!-- "./images11/03 .png", -->
+Color and format the numbers , so they stand out.
    </p>
 
-
-
-
-   <!-- ####################################################################-->
 
    <!-- ####################################################################-->
    <p class="step" id="step-4" style="display: none;">
-<!-- "./images/04 ps next 30 00.png" -->
-
+<!-- "./images11/04 .png" -->
+Insert a formula to calculate the mod() function of the top row and the left column. 
+<br>
+Column A and row 1.
+<br><br>
+Below is a close up of the mod() formula.
+<br><br>
+The cell H8 is highlighted , look at the row and the column values both are seven.
+<br><br>
+Note in the row only two cells , under column values of { 1 , 7 } have a zero result.
+<br><br>
+The rest have a integer value , this signifies no factor. 
+<br><br>
+ <img src="./images11/modfunction.png"" alt="mod() function" style="width: 200px; height: auto;">
+<br><br>
    </p>
-
 
    <!-- ####################################################################-->
    <p class="step" id="step-5" style="display: none;">
-<!-- "./images/05 ps next 30 formulas 00.png", -->
-
+<!-- "./images11/05 .png", -->
+Using conditional formatting , if the value is of a cell is zero , paint the cell blue.
+<br><br>
+This is a easy flag to find and the see value locations that are factors. 
+<br><br>
+There are several patterns that can be seen.
+<br><br>
+First , is the diagonal , this is the square of two numbers.
+<br><br>
+Second , and most important by color , there are two secondary patterns.
+<br><br>  
+An odd pattern.
+<img src="./images11/patternodd.png"" alt="mod() function" style="width: 150px; height: auto;">
+<br><br>  
+An even pattern.
+<img src="./images11/patterneven.png"" alt="mod() function" style="width: 150px; height: auto;">
+<br><br>
 
    </p>
-
 
 
    <!-- ####################################################################-->
    <p class="step" id="step-6" style="display: none;">
-<!-- "./images/06 ps pattern 00.png", -->
+<!-- "./images11/06 .png", -->
+Here are the two patterns highlighted by the red boxes.
+<br><br>
+Call one box 'odd' and the other 'even' because of the number of colored cells.
+<br><br>
    </p>
-
 
    <!-- ####################################################################-->
    <p class="step" id="step-7" style="display: none;">
-<!-- "./images/06 ps pattern 01.png", -->
-   Row 9 and row 17 (2nd factor) only the numbers divisible by 3 repeat , all other numbers are only present once.
-   The values { 9 , 12 , 15 , . . . }  divisible by 3 repeat twice.
-
+<!-- "./images11/07 .png", -->
+Some additional clean up of values to the right of the diagonal.
+<br><br>
    </p>
-
-
-
 
    <!-- ####################################################################-->
    <p class="step" id="step-8" style="display: none;">
-<!-- "./images/08 ps pattern delta 01.png", -->
-
+<!-- "./images11/08 .png", -->
+Bring back the 'odd' and 'even' red boxes.
+<br><br>
    </p>
-
-
-
-
 
    <!-- ####################################################################-->
    <p class="step" id="step-9" style="display: none;">
-<!-- "./images/08 ps pattern delta 00.png", -->
-
+<!-- "./images11/09 .png", -->
+Here is the crux of the argument , eliminate the values in the cells and keep just the formats to create a clearer view.  
+<br><br>
+The blue cells are factors of the row and column. The red boxes delineate 'odd' or 'even' patterns.
+<br><br>
+The patterns become clearer.
+<br><br>
    </p>
 
 
    <!-- ####################################################################-->
    <p class="step" id="step-10" style="display: none;">
-<!-- "./images/09 what is missing 00.png", -->
+<!-- "./images11/10 .png", -->
+This chart shows additional coloring to trace how the diagonal is crossed by each 'odd' box.
+<br><br>
+There is a lot going on here , lets trace one grouping.
+<br><br>
+<img src="./images11/odd4.png"" alt="odd4" style="width: 150px; height: auto;">
+<br><br>
+The cell E17 is the focus. First , it is column E and a value of four (4).
+<br><br>
+Second , the row is 17 and a value of sixteen (16). 
+<br>
+16 is the square of 4. 
+<br><br>
+Follow the red line as it travels up and to the right.
+<br>
+a) (+1,-1)
+<br>
+b) (+1,-3)
+<br>
+c) (+1,-5) , where it intersects the diagonal , the squared line.
+<br>
+The intersection is at (7,7) another square.
+<br><br>
+Opposite is the mirror image of similar colored cells. Making a parabola. 
+<br><br>
+Each cell ends as an odd number ; (x,odd).
+<br><br>
+The next question is: where are all of the numbers ? 
+<br><br>
+The vertex is (4,16) ; x = 4 , y = x^2.  
+<br><br>
+The intersection with the diagonal is (7,7)  ; 2x - 1 = 7 
+<br>
+Take x , double it ; subtract 1 is always the diagonal intersection. 
+<br><br>
+Also , the value of the last rise is 5. The last rise is two less than the intersection values. Here , 7 and then 5   
+<br><br>
+The total rises are 9 ( 1 + 3 + 5 )
+<br><br>
+
+
+other = 2x -1 = sq2 (double - 1)^2
    </p>
-
-
-
 
    <!-- ####################################################################-->
    <p class="step" id="step-11" style="display: none;">
-<!-- "./images/10 longer 00.png", -->
-
-
+<!-- "./images11/11 .png", -->
+11
+   </p>
 
    <!-- ####################################################################-->
    <p class="step" id="step-12" style="display: none;">
-<!-- "./images/10 longer 01.png", -->
+<!-- "./images11/12 .png", -->
+12
    </p>
 
    <!-- ####################################################################-->
    <p class="step" id="step-13" style="display: none;">
-<!-- "./images/10 longer 02.png", -->
-
+<!-- "./images11/13 .png", -->
+13
    </p>
+
 
    <!-- ####################################################################-->
    <p class="step" id="step-14" style="display: none;">
-<!-- "./images/10 longer 03.png", -->
+<!-- "./images11/14 .png", -->
+14
    </p>
+
+
 
    <!-- ####################################################################-->
    <p class="step" id="step-15" style="display: none;">
-<!-- "./images/10 longer 04.png", -->
+<!-- "./images11/15 .png", -->
+15
    </p>
+
 
    <!-- ####################################################################-->
    <p class="step" id="step-16" style="display: none;">
-<!-- "./images/10 longer 05.png", -->
+<!-- "./images11/16 .png", -->
+16
    </p>
+
 
    <!-- ####################################################################-->
    <p class="step" id="step-17" style="display: none;">
-<!--    "./images/10 longer 06.png", -->
+<!-- "./images11/17 .png", -->
+17
    </p>
+
 
    <!-- ####################################################################-->
    <p class="step" id="step-18" style="display: none;">
-<!-- "./images/10 longer 07.png", -->
+<!-- "./images11/18 .png", -->
+18
    </p>
 
    <!-- ####################################################################-->
    <p class="step" id="step-19" style="display: none;">
-<!-- "./images/11 detail diff delta next box 00.png", -->
+<!-- "./images11/19 .png", -->
+19
    </p>
-
-
 
    <!-- ####################################################################-->
    <p class="step" id="step-20" style="display: none;">
-<!-- "./images/12 what is missing 1 00.png", -->
-
+<!-- "./images11/20 .png", -->
+20
    </p>
-
-
 
    <!-- ####################################################################-->
    <p class="step" id="step-21" style="display: none;">
-<!-- "./images/13 what is missing 1a 00.png", -->
-
+<!-- "./images11/21 .png", -->
+21
    </p>
 
 
    <!-- ####################################################################-->
    <p class="step" id="step-22" style="display: none;">
-<!-- "./images/14 what is missing 2 00.png", -->
-
+<!-- "./images11/22 .png", -->
+22
    </p>
-
 
    <!-- ####################################################################-->
    <p class="step" id="step-23" style="display: none;">
-<!-- "./images/15 what is missing 2a 00.png", -->
-   The unique element is a factor divisible by 3 will not be in a white column.
-
+<!-- "./images11/23 .png", -->
+23
    </p>
-
 
    <!-- ####################################################################-->
    <p class="step" id="step-24" style="display: none;">
-<!-- "./images/16 what is missing delta 3 00.png", -->
-
+<!-- "./images11/24 .png", -->
+24
    </p>
-
 
    <p class="step" id="step-25" style="display: none;">
-<!-- "./images/17 what is missing delta 3a 00.png", -->
-   The 5's are still part of the display, note the numbers divisible by 3 still repeat.
+<!-- "./images11/25 .png", -->
+25
    </p>
-
-
-
 
    <p class="step" id="step-26" style="display: none;">
-<!-- "./images/17 what is missing delta 3a 01.png", -->
-
+<!-- "./images11/26 .png", -->
+26
    </p>
-
 
 
 
    <p class="step" id="step-27" style="display: none;">
-<!-- "./images/17 what is missing delta 3a 02.png", -->
-   </p>
+                      <!-- "step-27"   -->
 
-
-
-
-   <p class="step" id="step-28" style="display: none;">
-<!-- "./images/17 what is missing delta 3a 03.png", -->
-   </p>
-   <p class="step" id="step-29" style="display: none;">
-<!-- "./images/18 what about the +1 -1 00.png", -->
-This line is 29 - need more words</p>
-   <p class="step" id="step-30" style="display: none;">
-<!-- "./images/19 +1 -1 even odd1 00.png", -->
-This line is 30 - need more words</p>
-   <p class="step" id="step-31" style="display: none;">
-<!-- "./images/20 where are the others 00.png", -->
-This line is 31 - need more words</p>
-   <p class="step" id="step-32" style="display: none;">
-<!-- "./images/20 where are the others 01.png", -->
-This line is 32 - need more words</p>
-   <p class="step" id="step-33" style="display: none;">
-<!-- "./images/21 where are the others 01.png", -->
-This line is 33 - need more words </p>
-   <p class="step" id="step-34" style="display: none;">
-<!-- "./images/21 where are the others 02.png", -->
-This line is 34 - need more words </p>
-   <p class="step" id="step-35" style="display: none;">
-<!-- "./images/22 where are the others 02.png", -->
-   </p>
-   <p class="step" id="step-36" style="display: none;">
-<!-- "./images/22 where are the others 03.png", -->
-   </p>
-   <p class="step" id="step-37" style="display: none;">
-<!-- "./images/22 where are the others 04.png", -->
-   </p>
-   <p class="step" id="step-38" style="display: none;">
-<!-- "./images/22 where are the others 05.png", -->
-   </p>
-   <p class="step" id="step-39" style="display: none;">
-<!-- "./images/22 where are the others 06.png", -->
-   </p>
-   <p class="step" id="step-40" style="display: none;">
-<!-- "./images/22 where are the others 07.png", -->
-   </p>
-
-   <p class="step" id="step-41" style="display: none;">
-<!-- "./images/22 where are the others 08.png", -->
-   </p>
-
-   <p class="step" id="step-42" style="display: none;">
-<!-- "./images/22 where are the others 09.png", -->
-   </p>
-
-   <p class="step" id="step-43" style="display: none;">
-<!-- "./images/22 where are the others 10.png", -->
-   </p>
-
-   <p class="step" id="step-44" style="display: none;">
-<!-- "./images/22 where are the others 11.png", -->
-   </p>
-
-   <p class="step" id="step-45" style="display: none;">
-<!-- "./images/22 where are the others 12 last.png", -->
-   </p>
-
-
-   <p class="step" id="step-46" style="display: none;">
-<!-- "./images/22 where are the others 10.png", -->
-
-   </p>
-
-
-   <p class="step" id="step-47" style="display: none;">
-<!-- "./images/22 where are the others 10.png", -->
-   </p>
-
-
-
-
-
-   <p class="step" id="step-48" style="display: none;">
-<!-- "./images/22 where are the others 10.png", -->
-   </p>
-
-   <p class="step" id="step-49" style="display: none;">
-<!-- "./images/22 where are the others 11.png", -->
-This line is 49 </p>
-
-   <p class="step" id="step-50" style="display: none;">
-<!-- "./images/22 where are the others 12 last.png", -->
-This line is 50 </p>
-
-
-   <p class="step" id="step-51" style="display: none;">
-<!-- "./images/i00217.png", -->
-
-   <br>
-
-   </p>
-
+<br><br>
+<a href="index.html" class="button-link">Go To Index</a>
+<br><br>
+<a href="join0.html" class="button-link">Go To 0</a>
+<br><br>
+<a href="join5.html" class="button-link">Go To 5</a>
+<br><br>
+<a href="join7.html" class="button-link">Go To 7</a>
+<br><br>
+<a href="join11.html" class="button-link">Go To 11</a>
+<br><br>
+  </p>
 
 
 </div>
@@ -348,15 +317,9 @@ This line is 50 </p>
 </div>
 
 </div>
-
-
-
 
 
 </body>
-
-
-
 
 
 </html>
