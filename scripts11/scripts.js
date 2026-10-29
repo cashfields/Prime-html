@@ -136,14 +136,12 @@ function decrement() {
 "./images11/b0008.png",                                            // 08
 "./images11/b0009.png",                                            // 09
 "./images11/b0010.png",                                            // 10
-"./images11/riseodd3.png",                                         // 10a
-"./images11/riseodd4.png",                                          // 10b
-"./images11/b0011.png",                                            // 11
-"./images11/b0012.png",                                            // 12
-"./images11/b0013.png",                                            // 13
-"./images11/b0014.png",                                            // 14
-"./images11/b0015.png",                                            // 15
-"./images11/b0016.png",                                            // 16
+"./images11/riseodd3.png",                                         // 10a 11
+"./images11/riseodd4.png",                                         // 10b 12
+"./images11/b0011.png",                                            // 11  13
+"./images11/b0014.png",                                            // 14  14
+"./images11/b0014a.png",                                           // 14  15
+"./images11/b0016.png",                                            // 16  16
 "./images11/b0017.png",                                            // 17
 "./images11/b0018.png",                                            // 18
 "./images11/b0019.png",                                            // 19
