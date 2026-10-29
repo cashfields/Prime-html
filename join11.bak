@@ -72,7 +72,7 @@ Color and format the numbers , so they stand out.
    <!-- ####################################################################-->
    <p class="step" id="step-4" style="display: none;">
 <!-- "./images11/04 .png" -->
-Insert a formula to calculate the mod() function of the top row and the left column. 
+Insert a formula to calculate the mod() function of the top row and the left column.
 <br>
 Column A and row 1.
 <br><br>
@@ -82,7 +82,7 @@ The cell H8 is highlighted , look at the row and the column values both are seve
 <br><br>
 Note in the row only two cells , under column values of { 1 , 7 } have a zero result.
 <br><br>
-The rest have a integer value , this signifies no factor. 
+The rest have a integer value , this signifies no factor.
 <br><br>
  <img src="./images11/modfunction.png"" alt="mod() function" style="width: 200px; height: auto;">
 <br><br>
@@ -93,17 +93,17 @@ The rest have a integer value , this signifies no factor.
 <!-- "./images11/05 .png", -->
 Using conditional formatting , if the value is of a cell is zero , paint the cell blue.
 <br><br>
-This is a easy flag to find and the see value locations that are factors. 
+This is a easy flag to find and the see value locations that are factors.
 <br><br>
 There are several patterns that can be seen.
 <br><br>
 First , is the diagonal , this is the square of two numbers.
 <br><br>
 Second , and most important by color , there are two secondary patterns.
-<br><br>  
+<br><br>
 An odd pattern.
 <img src="./images11/patternodd.png"" alt="mod() function" style="width: 150px; height: auto;">
-<br><br>  
+<br><br>
 An even pattern.
 <img src="./images11/patterneven.png"" alt="mod() function" style="width: 150px; height: auto;">
 <br><br>
@@ -137,7 +137,7 @@ Bring back the 'odd' and 'even' red boxes.
    <!-- ####################################################################-->
    <p class="step" id="step-9" style="display: none;">
 <!-- "./images11/09 .png", -->
-Here is the crux of the argument , eliminate the values in the cells and keep just the formats to create a clearer view.  
+Here is the crux of the argument , eliminate the values in the cells and keep just the formats to create a clearer view.
 <br><br>
 The blue cells are factors of the row and column. The red boxes delineate 'odd' or 'even' patterns.
 <br><br>
@@ -157,9 +157,9 @@ There is a lot going on here , lets trace one grouping.
 <br><br>
 The cell E17 is the focus. First , it is column E and a value of four (4).
 <br><br>
-Second , the row is 17 and a value of sixteen (16). 
+Second , the row is 17 and a value of sixteen (16).
 <br>
-16 is the square of 4. 
+16 is the square of 4.
 <br><br>
 Follow the red line as it travels up and to the right.
 <br>
@@ -171,31 +171,75 @@ c) (+1,-5) , where it intersects the diagonal , the squared line.
 <br>
 The intersection is at (7,7) another square.
 <br><br>
-Opposite is the mirror image of similar colored cells. Making a parabola. 
+Opposite is the mirror image of similar colored cells. Making a parabola.
 <br><br>
 Each cell ends as an odd number ; (x,odd).
 <br><br>
-The next question is: where are all of the numbers ? 
+The next question is: where are all of the numbers ?
 <br><br>
-The vertex is (4,16) ; x = 4 , y = x^2.  
+The vertex is (4,16) ; x = 4 , y = x^2.
 <br><br>
-The intersection with the diagonal is (7,7)  ; 2x - 1 = 7 
+The intersection with the diagonal is (7,7)  ; 2x - 1 = 7
 <br>
-Take x , double it ; subtract 1 is always the diagonal intersection. 
+Take x , double it ; subtract 1 is always the diagonal intersection.
 <br><br>
-Also , the value of the last rise is 5. The last rise is two less than the intersection values. Here , 7 and then 5   
+Also , the value of the last rise is 5. The last rise is two less than the intersection values. Here , 7 and then 5
 <br><br>
 The total rises are 9 ( 1 + 3 + 5 )
 <br><br>
-
-
-other = 2x -1 = sq2 (double - 1)^2
+<br><br>
    </p>
 
    <!-- ####################################################################-->
    <p class="step" id="step-11" style="display: none;">
 <!-- "./images11/11 .png", -->
-11
+Looking manually at several of the data points , several formulas can be derived. All of these are for the 'odd' block. A single cell at the vertex.
+<br><br>
+The observed values lead to the formulas , note the color change in the headings.
+<br><br>
+The x value moves one column to the right.
+<br><br>
+The y value is x^2.
+<br><br>
+The key is: where does the diagonal get crossed ?
+<br>
+Call this cross.
+<br>
+Take x , double it and subtract one.
+<br>
+The formula is: = 2x - 1.
+<br>
+In (x,y) coordinates: (2x-1 , 2x-1)
+<br><br>
+Next , what is the total rise to get from the vertex to the diagonal ?
+<br>
+Take x , subtract 1 and square that result.
+<br>
+The formula is: = (x - 1)^2.
+<br><br>
+Finally , how to calculate the last rise ?
+<br>
+Take x , double it and subtract three.
+<br>
+The formula is: = 2x - 3.
+<br><br>
+The last rise is the value assigned as a label to the crossing point. All the labels are separated by two. The rise label matches the value of the odd count down the diagonal. The last rise is x plus 1.
+<br><br>
+It is the formula: cross x value - 2.
+<br>
+or , = 2x -3.
+<br>
+All values are separated by 2 ; the cross value label = the last rise value.
+<br><br>
+The final count is: What is the total number of rises ?
+<br><br>
+The total number of rises is one less than x. Call it 'count rises'.
+<br><br>
+It is the formula: = x - 1.
+<br><br>
+<br><br>
+<br><br>
+<br><br>
    </p>
 
    <!-- ####################################################################-->
@@ -293,10 +337,20 @@ other = 2x -1 = sq2 (double - 1)^2
 26
    </p>
 
-
-
    <p class="step" id="step-27" style="display: none;">
-                      <!-- "step-27"   -->
+<!-- "./images11/27 .png", -->
+27
+   </p>
+
+   <p class="step" id="step-28" style="display: none;">
+<!-- "./images11/28 .png", -->
+28
+   </p>
+
+
+
+   <p class="step" id="step-29" style="display: none;">
+                      <!-- "step-29"   -->
 
 <br><br>
 <a href="index.html" class="button-link">Go To Index</a>
