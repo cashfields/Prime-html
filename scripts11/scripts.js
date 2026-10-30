@@ -141,7 +141,7 @@ function decrement() {
 "./images11/b0011.png",                                            // 11  13
 "./images11/b0014.png",                                            // 14  14
 "./images11/b0014a.png",                                           // 14  15
-"./images11/b0016.png",                                            // 16  16
+"./images11/riseeven2.png",                                        // 16  16
 "./images11/b0017.png",                                            // 17
 "./images11/b0018.png",                                            // 18
 "./images11/b0019.png",                                            // 19
