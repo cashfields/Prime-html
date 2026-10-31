@@ -193,7 +193,7 @@ The total rises are 9 ( 1 + 3 + 5 )
    <!-- ####################################################################-->
    <p class="step" id="step-11" style="display: none;">
 <!-- "./images11/11 .png", -->
-Looking manually at several of the data points , several formulas can be derived. All of these are for the 'odd' block. A single cell at the vertex.
+Looking manually at several of the 'odd' data points , several formulas can be derived. All of these are for the 'odd' block. A single cell at the vertex.
 <br><br>
 The observed values lead to the formulas , note the color change in the headings.
 <br><br>
@@ -223,7 +223,7 @@ Take x , double it and subtract three.
 <br>
 The formula is: = 2x - 3.
 <br><br>
-The last rise is the value assigned as a label to the crossing point. All the labels are separated by two. The rise label matches the value of the odd count down the diagonal. The last rise is x plus 1.
+The last rise is the value assigned as a label on the crossing point. All the labels are separated by two. The rise label matches the value of the odd count down the diagonal. The last rise is x plus 1.
 <br><br>
 It is the formula: cross x value - 2.
 <br>
@@ -283,7 +283,7 @@ Next , on to the 'even' parabola ; where two cells are shared near the vertex.
 <br><br>
 The red box is now drawn around the area where two cells are joined. This is 'even'.
 <br><br>
-Similar to 'odd' the same methods will be executed against 'even' data.
+Similar to 'odd' the same methods will be executed against the 'even' data.
 <br><br>
 <br><br>
 <br><br>
@@ -310,7 +310,7 @@ The red lines have been added to show the track of the parabolas.
    <!-- ####################################################################-->
    <p class="step" id="step-16" style="display: none;">
 <!-- "./images11/16 .png", -->
-Looking manually at several of the data points , several formulas can be
+Looking manually at several of the 'even' data points , several formulas can be
 derived. All of these are for the 'even' block. A pair of cells near the vertex.
 <br><br>
 The observed values lead to the formulas , note the color change in the headings.
@@ -361,7 +361,7 @@ The formula is: = 2x.
 <br>
 In (x,y) coordinates: (2x , 2x)
 <br><br>
-Next , what is the total rise to get from the vertex to the diagonal ?
+Next , what is the total rise to get from the pair , just above the vertex , to the diagonal ?
 Take x , square it and subtract x.
 <br>
 The formula is: = x^2 - x.
@@ -371,7 +371,7 @@ Take x , double it and subtract two.
 <br>
 The formula is: = 2x - 2.
 <br><br>
-The last rise is the value assigned as a label to the crossing point.
+The last rise is the value assigned as a label on the crossing point.
 All the labels are separated by two.
 The rise label matches the value of the even count down the diagonal minus two.
 The last rise is is double x and subtract two.
@@ -382,9 +382,9 @@ All values are separated by 2 ; the cross value label = the last rise value.
 <br><br>
 The final count is: What is the total number of rises ?
 <br><br>
-The total number of rises is x squared - x. Call it 'count rises'.
+The total number of rises is one less than x. Call it 'count rises'.
 <br><br>
-It is the formula: = x^2 - x.
+It is the formula: = x - 1.
 <br><br>
 <br><br>
 <br><br>
@@ -450,7 +450,7 @@ This is a quick recap of the 'even'.
 <!-- "./images11/20 .png", -->
 Each set of 'odd' and 'even' by (x,y) coordinates sets up an area.
 <br><br>
-There are four areas ; the left two are 'odd' , the right two are 'even'. All are based on x = 4.
+There are four areas painted ; the left two are 'odd' , the right two are 'even'. All are based on x = 4.
 <br><br>
 The first area (odd) is the (x,y) of (4,16) area = 64 ; and the cross of (7,7) area = 49.
 <br><br>
@@ -466,7 +466,7 @@ What is the relationship between these areas and the next x , or previous x ?
    <!-- ####################################################################-->
    <p class="step" id="step-21" style="display: none;">
 <!-- "./images11/21 .png", -->
-This is the 'odd' data , the area of the original (x,y) and the cross point are in the gray columns. The data points are in white background , and multiplied to make sum of the areas. 
+This is the 'odd' data , the area of the original (x,y) and the cross point are in the gray columns. The data points are in the white background , and multiplied to make the total value of the areas. 
 <br><br>
 In column K , subtract (original - cross) (area1 - area2) areas. This is he first difference (diff).
 <br><br>
@@ -477,7 +477,7 @@ Recursive type math.
 <br><br>
 'diff last' the answer is six (6). I believe the non six numbers are because we are not going negative on x {0 , -1 , -2 , ...}
 <br><br>
-I truly do not know how this works , someone else can figure out the f(x) for it.  
+I truly do not know how this works , someone else can figure out the <i>f(x) </i> for it.  
 <br><br>
 <br><br>
    </p>
@@ -507,15 +507,21 @@ L = { 11 , 17 , 23 , 29 }
    <!-- ####################################################################-->
    <p class="step" id="step-23" style="display: none;">
 <!-- "./images11/23 .png", -->
-23
+This is the calculation step by step to get the 'diff last'. The math moves to the right in each next box.
+<br><br>
+Box 1 , calculate the two areas.
+<br><br>
+Box 2 , make first 'diff' subtract area2 from area1. 
+<br><br>
+Box 3 , make 'diff2' subtract the current row from the previous row. 
+<br><br>
+Box 4 , make 'diff3' subtract the current row from the previous row. 
+<br><br>
+Box 5 , make 'diff last' subtract the current row from the previous row. 
 <br><br>
 <br><br>
 <br><br>
-23
 <br><br>
-<br><br>
-<br><br>
-
    </p>
 
    <!-- ####################################################################-->
