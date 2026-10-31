@@ -23,13 +23,6 @@
 
 
 
-
-
-
-
-
-
-
 /* <script> */
 
 // Initialize the counter and find total paragraphs

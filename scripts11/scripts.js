@@ -1,5 +1,4 @@
 
-
 /* <script> */
   // JavaScript
   const button = document.getElementById("submitBtn");
@@ -145,7 +144,10 @@ function decrement() {
 "./images11/riseeven4.png",                                        // 17        17
 "./images11/b0017.png",                                            // 17        18
 "./images11/b0018.png",                                            // 18        19
-"./images11/b0019.png",                                            // 19        19
+"./images11/area.png",                                            // 19        19
+"./images11/area1.png",                                            // 19        19
+"./images11/area2.png",                                            // 19        19
+"./images11/area3.png",                                            // 19        19
 "./images11/b0020.png",                                            // 20        20
 "./images11/b0021.png",                                            // 21        21
 "./images11/b0022.png",                                            // 22        22

@@ -77,7 +77,7 @@ html,  {
             gap: 15px;
         }
         button {
-               /*  background-image: url('./images2/R.png');  Paths your PNG file */
+        /*  background-image: url('./images2/R.png');  Paths your PNG file */
             padding: 10px 20px;
             font-size: 16px;
             cursor: pointer;
@@ -173,8 +173,8 @@ html, body {
             color: white;
             border: none;
             border-radius: 5px;
-                        /* shrink the button */
-                         transform: scale(.8);
+            /* shrink the button */
+            transform: scale(.8);
         }
         .fullscreen-btn:hover {
             background-color: #0056b3;
