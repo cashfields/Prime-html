@@ -148,10 +148,10 @@ function decrement() {
 "./images11/area1.png",                                            // 19        19
 "./images11/area2.png",                                            // 19        19
 "./images11/area3.png",                                            // 19        19
-"./images11/b0020.png",                                            // 20        20
-"./images11/b0021.png",                                            // 21        21
-"./images11/b0022.png",                                            // 22        22
-"./images11/b0023.png",                                            // 23        23
+"./images11/b0021.png",                                            // 20        20
+"./images11/b0023.png",                                            // 21        21
+"./images11/Blue Thatch.bmp",                                            // 22        22
+"./images11/Black Thatch.bmp",                                            // 23        23
 "./images11/Blue Thatch.bmp",                                      // 24        24
 "./images11/Black Thatch.bmp",                                     // 25        25
 "./images11/I0217.png",                                            // 26        26
