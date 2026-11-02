@@ -1,0 +1,215 @@
+
+
+
+1 + n(3)(10)
+7 + n(3)(10)
+11 + n(3)(10)
+13 + n(3)(10)
+17 + n(3)(10)
+19 + n(3)(10)
+23 + n(3)(10)
+29 + n(3)(10)
+
+mod() function:
+=mod(left col,top row)
+
+
+In first column of each red box , the values are one less than the *fam.
+
+Zero (0) is one less than *fam01 ; six (6) is one less than *fam07 , and on . . .
+
+
+R & L and *fam.
+
+
+*pairs symmetry 
+
+
+the wave
+
+*wildcard
+*fam
+
+R = {6 , 6 , 6 , 12}
+L = {12 , 6 , 6 , 6}
+
+
+test
+*fam01 = (ps - 01)/30 is an integer.
+
+*fam07 = (ps - 07)/30 is an integer.
+
+*fam11 = (ps - 11)/30 is an integer.
+
+*fam13 = (ps - 13)/30 is an integer.
+
+*fam17 = (ps - 17)/30 is an integer.
+
+*fam19 = (ps - 19)/30 is an integer.
+
+*fam23 = (ps - 23)/30 is an integer.
+
+*fam29 = (ps - 29)/30 is an integer.
+
+
+example
+Take 143 - 13 = 130 ; divide by 30 = 4.3333 - it is not an integer
+
+Next 143 - 23 = 120 ; divide by 30 = 4 - it is an integer.
+
+
+
+
+
+
+The following is the distance from 15.
+15 +/- 14 = 1 or 29
+15 +/- 8 = 7 or 23
+15 +/- 4 = 11 or 19
+15 +/- 2 = 13 or 17
+Each pair adds up to 30
+
+
+
+01 + 29 =30
+
+07 + 23=30
+
+11 + 19=30
+
+13 + 17=30
+
+
+
+
+
+Top row is the following formula:
+(6 * ?) + 1 for ? = { 0 , 1 , 2 , 3 }
+The difference in the signs R is: + 1
+1 = (6 * 0) + 1
+7 = (6 * 1) + 1
+13 = (6 * 2) + 1
+19 = (6 * 3) + 1
+Name this as the 'right' or 'R'
+
+Bottom row is the following formula:
+(6 * ?) - 1 for ? = { 2 , 3 , 4 , 5 }
+The difference in the signs L is: - 1
+11 = (6 * 2) - 1
+17 = (6 * 3) - 1
+23 = (6 * 4) - 1
+29 = (6 * 5) - 1
+Name this as the 'left' or 'L'
+
+
+
+
+
+
+
+(g) end in 0 , surrounded by 0
+
+
+The following is the distance from 15.
+15 +/- 14 = 1 or 29
+15 +/- 8 = 7 or 23
+15 +/- 4 = 11 or 19
+15 +/- 2 = 13 or 17
+Each pair adds up to 30
+
+
+======================
+This chart uses *fam06 to find ps.
+
+The top half is *fam06 + 1 - moving right on the number line.
+
+The bottom half is *fam06 - 1 - moving left on the number line.
+
+The R has values of { 0 ,1 , 2 , 3}.
+
+The L has values of { 2 , 3 , 4 , 5 }
+======================
+
+
+
+
+
+
+The values { 14 , 8 , 2 , 4 } balance from R to L.
+
+Next , see the + and - signs flip at the midpoint. Balanced again.
+
+
+
+
+
+
+
+calc (g) flag p and np
+
+
+This is a map of a (g). The top black line is just a counter , a ruler.
+intertwine offset an *fam in one (g)
+
+Roughly 26.66% of all numbers could be a ps (prime suspect).
+
+There are 8 green cells out of 30 total. 8 / 30 = 0.266666666/
+
+
+
+sort cosmos
+
+arrow charts and 2nd factor
+ 
+
+
+
+
+join7
+
+
+
+The series of both R & L ps less the 5 & 25 is a repeating { 6 , 6 , 6 , 12}.
+
+R = { 1 , 7 , 13 , 19 , 31 ,37 , 43 , 49 , 61 , . . .}
+
+L = { 11 , 17 , 23 , 29 , 41 , 47 , 53 , 59 , 71 , . . .}
+
+
+
+
+missing factors
+7 & 8 flip
++ / - signs flip
+
+factors and offset
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
