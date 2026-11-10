@@ -125,37 +125,37 @@ function decrement() {
     /* <script> */
         // REPLACE THESE WITH YOUR EXACT PNG FILE NAMES
         const images = [
-"./images11/b0001.png",                                            // 01        01
-"./images11/b0002.png",                                            // 02        02
-"./images11/b0003.png",                                            // 03        03
-"./images11/b0004.png",                                            // 04        04
-"./images11/b0005.png",                                            // 05        05
-"./images11/b0006.png",                                            // 06        06
-"./images11/b0007.png",                                            // 07        07
-"./images11/b0008.png",                                            // 08        08
-"./images11/b0009.png",                                            // 09        09
-"./images11/b0010.png",                                            // 10        10
-"./images11/riseodd3.png",                                         // 10a 11    11
-"./images11/riseodd4.png",                                         // 10b 12    12
-"./images11/b0011.png",                                            // 11  13    13
-"./images11/b0014.png",                                            // 14  14    14
-"./images11/b0014a.png",                                           // 14  15    15
-"./images11/riseeven2.png",                                        // 16  16    16
-"./images11/riseeven4.png",                                        // 17        17
-"./images11/b0017.png",                                            // 17        18
-"./images11/b0018.png",                                            // 18        19
-"./images11/area.png",                                            // 19        19
-"./images11/area1.png",                                            // 19        19
-"./images11/area2.png",                                            // 19        19
-"./images11/area3.png",                                            // 19        19
-"./images11/b0021.png",                                            // 20        20
-"./images11/b0023.png",                                            // 21        21
-"./images11/Blue Thatch.bmp",                                            // 22        22
-"./images11/cubecount.png",                                            // 23        23
-"./images11/Blue Thatch.bmp",                                      // 24        24
-"./images11/Black Thatch.bmp",                                     // 25        25
-"./images11/I0217.png",                                            // 26        26
-"./images11/I0217.png",                                            // 27        27
+"./images11/b0001.png",                                            // 01           1
+"./images11/b0002.png",                                            // 02           2
+"./images11/b0003.png",                                            // 03           3
+"./images11/b0004.png",                                            // 04           4
+"./images11/b0005.png",                                            // 05           5
+"./images11/b0006.png",                                            // 06           6
+"./images11/b0007.png",                                            // 07           7
+"./images11/b0008.png",                                            // 08           8
+"./images11/b0009.png",                                            // 09           9
+"./images11/b0010.png",                                            // 10          10
+"./images11/riseodd3.png",                                         // 10a 11      11
+"./images11/riseodd4.png",                                         // 10b 12      12
+"./images11/b0011.png",                                            // 11  13      13
+"./images11/b0014.png",                                            // 14  14      14
+"./images11/b0014a.png",                                           // 14  15      15
+"./images11/riseeven2.png",                                        // 16  16      16
+"./images11/riseeven4.png",                                        // 17          17
+"./images11/b0017.png",                                            // 17          18
+"./images11/b0018.png",                                            // 18          19
+"./images11/b0021.png",                                            // 20          25
+"./images11/b0023.png",                                            // 21          26
+"./images11/a0004.png",                                            // 22          27
+"./images11/area.png",                                             // 19          20
+"./images11/area1.png",                                            // 19          21
+"./images11/area2.png",                                            // 19          22
+"./images11/area3.png",                                            // 19          23
+"./images11/cubecount.png",                                        // 23          24
+"./images11/Blue Thatch.bmp",                                      // 24          28
+"./images11/Black Thatch.bmp",                                     // 25          29
+"./images11/I0217.png",                                            // 26          30
+"./images11/I0217.png",                                            // 27          31
 
         ];
 

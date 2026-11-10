@@ -80,7 +80,7 @@ Below is a close up of the mod() formula.
 <br><br>
 The cell H8 is highlighted , look at the row and the column values both are seven.
 <br><br>
-Note in the row only two cells , under column values of { 1 , 7 } have a zero result.
+Note in the row only two cells , under column values of { 1 and 7 } have a zero result. Cells B8 and H8.
 <br><br>
 The rest have a integer value , this signifies no factor.
 <br><br>
@@ -316,7 +316,7 @@ derived. All of these are for the 'even' block. A pair of cells near the vertex.
 The observed values lead to the formulas , note the color change in the headings.
 <br><br>
 The x value moves one column to the right each time ,
- but always focuses on the left hand colored cell.
+ but always focuses on the left hand colored cell. The right hand of the pair will never be then focus of x.
 <br><br>
 The y value of the vertex is below the pair of cells , and is located at the
  midpoint of the two cells. It is an invisible point below the pair.
@@ -353,7 +353,7 @@ It is the series:
 {+4, +6, +8, +10, +12, +14, +16, . . . }
 </span>
 <br><br>
-Ignoring the vertex and using the right hand cell to stay even ; 
+Ignoring the vertex and using the right hand cell to stay even ;
 where does the diagonal get crossed ?
 Call this cross.
 Take x , double it.
@@ -446,9 +446,77 @@ This is a quick recap of the 'odd'.
 This is a quick recap of the 'even'.
    </p>
 
+
+
+
+
    <!-- ####################################################################-->
    <p class="step" id="step-20" style="display: none;">
 <!-- "./images11/20 .png", -->
+Here is a plot of several parabolas for the 'odd'
+<br><br>
+This is created on a web page called desmos.  Thanks to them.
+<br><br>
+https://www.desmos.com/
+<br><br>
+The red line is the square line.
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+   </p>
+
+
+   <!-- ####################################################################-->
+   <p class="step" id="step-21" style="display: none;">
+<!-- "./images11/21 .png", -->
+Here is a plot of several parabolas for the 'even'.
+<br><br>
+The red line is the square line.
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+   </p>
+
+   <!-- ####################################################################-->
+   <p class="step" id="step-22" style="display: none;">
+<!-- "./images11/22 .png", -->
+All the prior work to look for formulas was based on the observations from the beginning.
+<br><br>
+The attached image shows rudimentary parabolas within the blue boxes.
+<br><br>
+This image is from 'join0.html' , the 'wave'.
+<br><br>
+
+   </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   <!-- ####################################################################-->
+   <p class="step" id="step-23" style="display: none;">
+<!-- "./images11/23 .png", -->
 Each set of 'odd' and 'even' by (x,y) coordinates sets up an area.
 <br><br>
 There are four areas painted ; the left two are 'odd' , the right two are 'even'. All are based on x = 4.
@@ -459,15 +527,16 @@ The right two the area (even) of (4,20) area = 80 ; and the cross of (8,8) area 
 <br><br>
 What is the relationship between these areas and the next x , or previous x ?
 <br><br>
+Look at each pair as a 'flag'. A staff and a flag.
 <br><br>
 <br><br>
 <br><br>
    </p>
 
    <!-- ####################################################################-->
-   <p class="step" id="step-21" style="display: none;">
-<!-- "./images11/21 .png", -->
-This is the 'odd' data , the area of the original (x,y) and the cross point are in the gray columns. The data points are in the white background , and multiplied to make the total value of the areas. 
+   <p class="step" id="step-24" style="display: none;">
+<!-- "./images11/24 .png", -->
+This is the 'odd' data , the area of the original (x,y) (the staff) and the cross point (the flag) are in the gray columns. The data points are in the white background , and multiplied together to make the total value of the areas.
 <br><br>
 In column K , subtract (original - cross) (area1 - area2) areas. This is he first difference (diff).
 <br><br>
@@ -478,15 +547,15 @@ Recursive type math.
 <br><br>
 'diff last' the answer is six (6). I believe the non six numbers are because we are not going negative on x {0 , -1 , -2 , ...}
 <br><br>
-I truly do not know how this works , someone else can figure out the <i>f(x) </i> for it.  
+I think I know how this works , I will show the <i>f(x) </i> for it.
 <br><br>
 <br><br>
    </p>
 
    <!-- ####################################################################-->
-   <p class="step" id="step-22" style="display: none;">
-<!-- "./images11/22 .png", -->
-This is the 'even' data , the area of the original (x,y) and the cross point are in the gray columns. The data points are in white background , and multiplied to make sum of the areas. 
+   <p class="step" id="step-25" style="display: none;">
+<!-- "./images11/25 .png", -->
+This is the 'even' data , the area of the original (x,y) and the cross point are in the gray columns. The data points are in white background , and multiplied to make sum of the areas.
 <br><br>
 It is all the same ; the answer is six.
 <br><br>
@@ -506,80 +575,64 @@ L = { 11 , 17 , 23 , 29 }
    </p>
 
    <!-- ####################################################################-->
-   <p class="step" id="step-23" style="display: none;">
-<!-- "./images11/23 .png", -->
-This is the calculation step by step to get the 'diff last'. The math moves to the right in each next box.
-<br><br>
-Box 1 , calculate the two areas.
-<br><br>
-Box 2 , make first 'diff' subtract area2 from area1. 
-<br><br>
-Box 3 , make 'diff2' subtract the current row from the previous row. 
-<br><br>
-Box 4 , make 'diff3' subtract the current row from the previous row. 
-<br><br>
-Box 5 , make 'diff last' subtract the current row from the previous row. 
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-   </p>
-
-   <!-- ####################################################################-->
-   <p class="step" id="step-24" style="display: none;">
-<!-- "./images11/24 .png", -->
-Here is a plot of several parabolas for the 'odd'
-<br><br>
-This is created on a web page called desmos.  Thanks to them.
-<br><br>
-https://www.desmos.com/
-<br><br>
-The red line is the square line.
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-   </p>
-
-
-   <!-- ####################################################################-->
-   <p class="step" id="step-25" style="display: none;">
-<!-- "./images11/25 .png", -->
-Here is a plot of several parabolas for the 'even'.
-<br><br>
-The red line is the square line.
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-   </p>
-
-   <!-- ####################################################################-->
    <p class="step" id="step-26" style="display: none;">
 <!-- "./images11/26 .png", -->
-26
+This is the calculation step by step to get the 'diff last'. The math moves to the right in each next box.
+<br><br>
+Box 1 , calculate the two areas. The staff and the flag.
+<br><br>
+Box 2 , make first 'diff' subtract area2 from area1.
+<br><br>
+Box 3 , make 'diff2' subtract the current row from the previous row.
+<br><br>
+Box 4 , make 'diff3' subtract the current row from the previous row.
+<br><br>
+Box 5 , make 'diff last' subtract the current row from the previous row.
+<br><br>
+The value of 'diff last' will always be six (6).
+<br><br>
+<br><br>
+<br><br>
    </p>
+
 
    <!-- ####################################################################-->
    <p class="step" id="step-27" style="display: none;">
 <!-- "./images11/27 .png", -->
 <!-- =(x)^3 - ((2*(x))-1)*((2*(x))-1) - ((x-1)^3 - ((2*(x-1))-1)*((2*(x-1))-1)) - ((x-1)^3 - ((2*(x-1))-1)*((2*(x-1))-1) - ((x-2)^3 - ((2*(x-2))-1)*((2*(x-2))-1))) - ((x-1)^3 - ((2*(x-1))-1)*((2*(x-1))-1) - ((x-2)^3 - ((2*(x-2))-1)*((2*(x-2))-1)) - ((x-2)^3 - ((2*(x-2))-1)*((2*(x-2))-1) - ((x-3)^3 - ((2*(x-3))-1)*((2*(x-3))-1))))     -->
+This is a step by step view of how to calculate the differences between the areas , and then current and previous.
+<br><br>
+This is the <i>f(x)</i>.
+<br>
 <span style="font-size: 12px;">
-= (x)^3 - ((2*(x))-1)*((2*(x))-1) 
+= (x)^3 - ((2*(x))-1)*((2*(x))-1)
 <br> - ((x-1)^3 - ((2*(x-1))-1)*((2*(x-1))-1))
-<br> - ((x-1)^3 - ((2*(x-1))-1)*((2*(x-1))-1) 
-<br> - ((x-2)^3 - ((2*(x-2))-1)*((2*(x-2))-1))) 
-<br> - ((x-1)^3 - ((2*(x-1))-1)*((2*(x-1))-1) 
-<br> - ((x-2)^3 - ((2*(x-2))-1)*((2*(x-2))-1)) 
-<br> - ((x-2)^3 - ((2*(x-2))-1)*((2*(x-2))-1) 
+<br> - ((x-1)^3 - ((2*(x-1))-1)*((2*(x-1))-1)
+<br> - ((x-2)^3 - ((2*(x-2))-1)*((2*(x-2))-1)))
+<br> - ((x-1)^3 - ((2*(x-1))-1)*((2*(x-1))-1)
+<br> - ((x-2)^3 - ((2*(x-2))-1)*((2*(x-2))-1))
+<br> - ((x-2)^3 - ((2*(x-2))-1)*((2*(x-2))-1)
 <br> - ((x-3)^3 - ((2*(x-3))-1)*((2*(x-3))-1))))
 </span>
-<br>
+<br><br>
+<br><br>
+It is a four step process <b>visually</b> to get the final formula.
 <br>
 <br>
 <br>
    </p>
+
+
+
+
+
+
+
+
+
+
+
+
 
    <p class="step" id="step-28" style="display: none;">
 <!-- "./images11/28 .png", -->

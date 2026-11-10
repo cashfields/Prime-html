@@ -44,7 +44,7 @@
 
 
 <div class="container">
-   <div id="image-container">
+   <div id="image-container" style="overflow: auto">
    <img id="walkthrough-img" src="" alt="Walkthrough Step">
     </div>
 
@@ -80,7 +80,7 @@ Below is a close up of the mod() formula.
 <br><br>
 The cell H8 is highlighted , look at the row and the column values both are seven.
 <br><br>
-Note in the row only two cells , under column values of { 1 , 7 } have a zero result.
+Note in the row only two cells , under column values of { 1 and 7 } have a zero result. Cells B8 and H8.
 <br><br>
 The rest have a integer value , this signifies no factor.
 <br><br>
@@ -91,7 +91,7 @@ The rest have a integer value , this signifies no factor.
    <!-- ####################################################################-->
    <p class="step" id="step-5" style="display: none;">
 <!-- "./images11/05 .png", -->
-With conditional formatting , if the value is of a cell is zero , paint the cell blue.
+With conditional formatting paint the cell blue if the value is of a cell is zero.
 <br><br>
 This is a easy flag to find and the see value locations that are factors.
 <br><br>
@@ -139,7 +139,7 @@ Bring back the 'odd' and 'even' red boxes.
 <!-- "./images11/09 .png", -->
 Here is the crux of the argument , eliminate the values in the cells and keep just the formats to create a clearer view.
 <br><br>
-The blue cells are factors of the row and column. The red boxes delineate 'odd' or 'even' patterns.
+The blue cells are integer factors of the row and column. The red boxes delineate 'odd' or 'even' patterns.
 <br><br>
 The patterns become clearer.
 <br><br>
@@ -173,7 +173,7 @@ The intersection is at (7,7) another square.
 <br><br>
 Opposite is the mirror image of similar colored cells. Making a parabola.
 <br><br>
-Each cell ends as an odd number ; (x,odd).
+Each cell that crosses the diagonal ends as an odd number ; (x,odd).
 <br><br>
 The next question is: where are all of the numbers ?
 <br><br>
@@ -193,7 +193,7 @@ The total rises are 9 ( 1 + 3 + 5 )
    <!-- ####################################################################-->
    <p class="step" id="step-11" style="display: none;">
 <!-- "./images11/11 .png", -->
-Looking manually at several of the data points , several formulas can be derived. All of these are for the 'odd' block. A single cell at the vertex.
+Looking manually at several of the 'odd' data points , several formulas can be derived. All of these are for the 'odd' block. A single cell at the vertex.
 <br><br>
 The observed values lead to the formulas , note the color change in the headings.
 <br><br>
@@ -223,7 +223,7 @@ Take x , double it and subtract three.
 <br>
 The formula is: = 2x - 3.
 <br><br>
-The last rise is the value assigned as a label to the crossing point. All the labels are separated by two. The rise label matches the value of the odd count down the diagonal. The last rise is x plus 1.
+The last rise is the value assigned as a label on the crossing point. All the labels are separated by two. The rise label matches the value of the odd count down the diagonal. The last rise is x plus 1.
 <br><br>
 It is the formula: cross x value - 2.
 <br>
@@ -283,7 +283,7 @@ Next , on to the 'even' parabola ; where two cells are shared near the vertex.
 <br><br>
 The red box is now drawn around the area where two cells are joined. This is 'even'.
 <br><br>
-Similar to 'odd' the same methods will be executed against 'even' data.
+Similar to 'odd' the same methods will be executed against the 'even' data.
 <br><br>
 <br><br>
 <br><br>
@@ -310,40 +310,40 @@ The red lines have been added to show the track of the parabolas.
    <!-- ####################################################################-->
    <p class="step" id="step-16" style="display: none;">
 <!-- "./images11/16 .png", -->
-Looking manually at several of the data points , several formulas can be
+Looking manually at several of the 'even' data points , several formulas can be
 derived. All of these are for the 'even' block. A pair of cells near the vertex.
 <br><br>
 The observed values lead to the formulas , note the color change in the headings.
 <br><br>
 The x value moves one column to the right each time ,
- but always focuses on the left hand colored cell.
+ but always focuses on the left hand colored cell. The right hand of the pair will never be then focus of x.   
 <br><br>
-The y value is below the pair of cells , and is located at the
- midpoint of the two cells. It is an invisable point below the pair.
-It's point is:
+The y value of the vertex is below the pair of cells , and is located at the
+ midpoint of the two cells. It is an invisible point below the pair.
+The vertex  point is:
 <br>
-((x + .5) , (x^2 + x) +1 ).
+((x + .5) , (x^2 + x +1).
 <br><br>
-<span style="font-size: 12px;">
-let x = 1 , y = 1 + 1 + 1 = 3
+<span style="font-size: 11px;">
+let x = 1 , y = 1 + 1 + 1 = 3 &mdash; point (1.5,3)
 <br>
-let x = 2 , y = 4 + 2 + 1 = 7
+let x = 2 , y = 4 + 2 + 1 = 7 &mdash; point (2.5,7)
 <br>
-let x = 3 , y = 9 + 3 + 1 = 13
+let x = 3 , y = 9 + 3 + 1 = 13 &mdash; point (3.5,13)
 <br>
-let x = 4 , y = 16 + 4 + 1 = 21
+let x = 4 , y = 16 + 4 + 1 = 21 &mdash; point (4.5,21)
 <br>
-let x = 5 , y = 25 + 5 + 1 = 31
+let x = 5 , y = 25 + 5 + 1 = 31 &mdash; point (5.5,31)
 <br>
-let x = 6 , Y = 36 + 6 + 1 = 43
+let x = 6 , y = 36 + 6 + 1 = 43 &mdash; point (6.5,43)
 <br>
-let x = 7 , Y = 49 + 7 + 1 = 57
+let x = 7 , y = 49 + 7 + 1 = 57 &mdash; point (7.5,57)
 <br>
-let x = 8 , Y = 64 + 8 + 1 = 73
+let x = 8 , y = 64 + 8 + 1 = 73 &mdash; point (8.5,73)
 <br>
-let x = 9 , Y = 81 + 9 + 1 = 91
+let x = 9 , y = 81 + 9 + 1 = 91 &mdash; point (9.5,91)
 <br>
-let x = 10 , Y = 100 + 10 + 1 = 111
+let x = 10 , y = 100 + 10 + 1 = 111 &mdash; point (10.5,111)
 </span>
 <br><br>
 Notice the pattern between the totals.
@@ -353,7 +353,8 @@ It is the series:
 {+4, +6, +8, +10, +12, +14, +16, . . . }
 </span>
 <br><br>
-The key is: where does the diagonal get crossed ?
+Ignoring the vertex and using the right hand cell to stay even ; 
+where does the diagonal get crossed ?
 Call this cross.
 Take x , double it.
 <br>
@@ -361,7 +362,7 @@ The formula is: = 2x.
 <br>
 In (x,y) coordinates: (2x , 2x)
 <br><br>
-Next , what is the total rise to get from the vertex to the diagonal ?
+Next , what is the total rise to get from the pair , just above the vertex , to the diagonal ?
 Take x , square it and subtract x.
 <br>
 The formula is: = x^2 - x.
@@ -371,7 +372,7 @@ Take x , double it and subtract two.
 <br>
 The formula is: = 2x - 2.
 <br><br>
-The last rise is the value assigned as a label to the crossing point.
+The last rise is the value assigned as a label on the crossing point.
 All the labels are separated by two.
 The rise label matches the value of the even count down the diagonal minus two.
 The last rise is is double x and subtract two.
@@ -382,9 +383,9 @@ All values are separated by 2 ; the cross value label = the last rise value.
 <br><br>
 The final count is: What is the total number of rises ?
 <br><br>
-The total number of rises is x squared - x. Call it 'count rises'.
+The total number of rises is one less than x. Call it 'count rises'.
 <br><br>
-It is the formula: = x^2 - x.
+It is the formula: = x - 1.
 <br><br>
 <br><br>
 <br><br>
@@ -396,11 +397,11 @@ It is the formula: = x^2 - x.
    <!-- ####################################################################-->
    <p class="step" id="step-17" style="display: none;">
 <!-- "./images11/17 .png", -->
-Here is the focus on one x value. 
+Here is the focus on one x value.
 <br>
 ____________________
 <br><br>
-This is an important point: picking any x ; and that x generates both the 'odd' and 'even' parabola data simultaneously. 
+This is an important point: picking any x ; and that x generates both the 'odd' and 'even' parabola data simultaneously.
 <br>
 ____________________
 <br><br>
@@ -436,66 +437,223 @@ The vertex is hidden because it is a decimal number for the x.
    <!-- ####################################################################-->
    <p class="step" id="step-18" style="display: none;">
 <!-- "./images11/18 .png", -->
-18
+This is a quick recap of the 'odd'.
    </p>
 
    <!-- ####################################################################-->
    <p class="step" id="step-19" style="display: none;">
 <!-- "./images11/19 .png", -->
-19
+This is a quick recap of the 'even'.
    </p>
+
+
+
+
+
+   <!-- ####################################################################-->
+   <p class="step" id="step-25" style="display: none;">
+<!-- "./images11/25 .png", -->
+Here is a plot of several parabolas for the 'odd'
+<br><br>
+This is created on a web page called desmos.  Thanks to them.
+<br><br>
+https://www.desmos.com/
+<br><br>
+The red line is the square line.
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+   </p>
+
+
+   <!-- ####################################################################-->
+   <p class="step" id="step-26" style="display: none;">
+<!-- "./images11/26 .png", -->
+Here is a plot of several parabolas for the 'even'.
+<br><br>
+The red line is the square line.
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+   </p>
+
+   <!-- ####################################################################-->
+   <p class="step" id="step-27" style="display: none;">
+<!-- "./images11/27 .png", -->
+All the prior work to look for formulas was based on the observations from the beginning.   
+<br><br>
+The attached image shows rudimentary parabolas within the blue boxes.
+<br><br>
+This image is from 'join0.html' , the 'wave'.
+<br><br>
+
+   </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
    <!-- ####################################################################-->
    <p class="step" id="step-20" style="display: none;">
 <!-- "./images11/20 .png", -->
-20
+Each set of 'odd' and 'even' by (x,y) coordinates sets up an area.
+<br><br>
+There are four areas painted ; the left two are 'odd' , the right two are 'even'. All are based on x = 4.
+<br><br>
+The first area (odd) is the (x,y) of (4,16) area = 64 ; and the cross of (7,7) area = 49.
+<br><br>
+The right two the area (even) of (4,20) area = 80 ; and the cross of (8,8) area = 64
+<br><br>
+What is the relationship between these areas and the next x , or previous x ?
+<br><br>
+Look at each pair as a 'flag'. A staff and a flag.
+<br><br>
+<br><br>
+<br><br>
    </p>
 
    <!-- ####################################################################-->
    <p class="step" id="step-21" style="display: none;">
 <!-- "./images11/21 .png", -->
-21
+This is the 'odd' data , the area of the original (x,y) (the staff) and the cross point (the flag) are in the gray columns. The data points are in the white background , and multiplied together to make the total value of the areas. 
+<br><br>
+In column K , subtract (original - cross) (area1 - area2) areas. This is he first difference (diff).
+<br><br>
+Next is the fun math.
+<br><br>
+Take the current row value and subtract the previous row value. Do this for diff2 and diff3.
+Recursive type math.
+<br><br>
+'diff last' the answer is six (6). I believe the non six numbers are because we are not going negative on x {0 , -1 , -2 , ...}
+<br><br>
+I think I know how this works , I will show the <i>f(x) </i> for it.  
+<br><br>
+<br><br>
    </p>
-
 
    <!-- ####################################################################-->
    <p class="step" id="step-22" style="display: none;">
 <!-- "./images11/22 .png", -->
-22
+This is the 'even' data , the area of the original (x,y) and the cross point are in the gray columns. The data points are in white background , and multiplied to make sum of the areas. 
+<br><br>
+It is all the same ; the answer is six.
+<br><br>
+My belief is all the prime numbers are separated by six. And , this drives these answers . . .
+<br><br>
+R = { 1 , 7 , 13 , 19 }
+<br><br>
+L = { 11 , 17 , 23 , 29 }
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+
+
    </p>
 
    <!-- ####################################################################-->
    <p class="step" id="step-23" style="display: none;">
 <!-- "./images11/23 .png", -->
-23
+This is the calculation step by step to get the 'diff last'. The math moves to the right in each next box.
+<br><br>
+Box 1 , calculate the two areas. The staff and the flag.
+<br><br>
+Box 2 , make first 'diff' subtract area2 from area1. 
+<br><br>
+Box 3 , make 'diff2' subtract the current row from the previous row. 
+<br><br>
+Box 4 , make 'diff3' subtract the current row from the previous row. 
+<br><br>
+Box 5 , make 'diff last' subtract the current row from the previous row. 
+<br><br>
+The value of 'diff last' will always be six (6).  
+<br><br>
+<br><br>
+<br><br>
    </p>
+
 
    <!-- ####################################################################-->
    <p class="step" id="step-24" style="display: none;">
 <!-- "./images11/24 .png", -->
-24
+<!-- =(x)^3 - ((2*(x))-1)*((2*(x))-1) - ((x-1)^3 - ((2*(x-1))-1)*((2*(x-1))-1)) - ((x-1)^3 - ((2*(x-1))-1)*((2*(x-1))-1) - ((x-2)^3 - ((2*(x-2))-1)*((2*(x-2))-1))) - ((x-1)^3 - ((2*(x-1))-1)*((2*(x-1))-1) - ((x-2)^3 - ((2*(x-2))-1)*((2*(x-2))-1)) - ((x-2)^3 - ((2*(x-2))-1)*((2*(x-2))-1) - ((x-3)^3 - ((2*(x-3))-1)*((2*(x-3))-1))))     -->
+This is a step by step view of how to calculate the differences between the areas , and then current and previous.
+<br><br>
+This is the <i>f(x)</i>.
+<br>
+<span style="font-size: 12px;">
+= (x)^3 - ((2*(x))-1)*((2*(x))-1) 
+<br> - ((x-1)^3 - ((2*(x-1))-1)*((2*(x-1))-1))
+<br> - ((x-1)^3 - ((2*(x-1))-1)*((2*(x-1))-1) 
+<br> - ((x-2)^3 - ((2*(x-2))-1)*((2*(x-2))-1))) 
+<br> - ((x-1)^3 - ((2*(x-1))-1)*((2*(x-1))-1) 
+<br> - ((x-2)^3 - ((2*(x-2))-1)*((2*(x-2))-1)) 
+<br> - ((x-2)^3 - ((2*(x-2))-1)*((2*(x-2))-1) 
+<br> - ((x-3)^3 - ((2*(x-3))-1)*((2*(x-3))-1))))
+</span>
+<br><br>
+<br><br>
+It is a four step process <b>visually</b> to get the final formula.
+<br>
+<br>
+<br>
    </p>
 
-   <p class="step" id="step-25" style="display: none;">
-<!-- "./images11/25 .png", -->
-25
-   </p>
 
-   <p class="step" id="step-26" style="display: none;">
-<!-- "./images11/26 .png", -->
-26
-   </p>
 
-   <p class="step" id="step-27" style="display: none;">
-<!-- "./images11/27 .png", -->
-27
-   </p>
+
+
+
+
+
+
 
 
 
 
    <p class="step" id="step-28" style="display: none;">
-                      <!-- "step-28"   -->
+<!-- "./images11/28 .png", -->
+28
+   </p>
+
+   <p class="step" id="step-29" style="display: none;">
+<!-- "./images11/29 .png", -->
+29
+   </p>
+
+   <p class="step" id="step-30" style="display: none;">
+<!-- "./images11/30 .png", -->
+30
+   </p>
+
+
+
+
+   <p class="step" id="step-31" style="display: none;">
+                      <!-- "step-31"   -->
 
 <br><br>
 <a href="index.html" class="button-link">Go To Index</a>
@@ -508,6 +666,9 @@ The vertex is hidden because it is a decimal number for the x.
 <br><br>
 <a href="join11.html" class="button-link">Go To 11</a>
 <br><br>
+<a href="summary.html" class="button-link">Summary</a>
+<br><br>
+
   </p>
 
 
