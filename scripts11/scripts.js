@@ -152,7 +152,7 @@ function decrement() {
 "./images11/area2.png",                                            // 19          22
 "./images11/area3.png",                                            // 19          23
 "./images11/cubecount.png",                                        // 23          24
-"./images11/Blue Thatch.bmp",                                      // 24          28
+"./images11/formulaexcel.png",                                      // 24          28
 "./images11/Black Thatch.bmp",                                     // 25          29
 "./images11/I0217.png",                                            // 26          30
 "./images11/I0217.png",                                            // 27          31
