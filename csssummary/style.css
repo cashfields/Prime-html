@@ -1,32 +1,3 @@
-/* Style the image dimensions directly */
-.button-img {
-  width: 40px;
-  height: 40px;
-  vertical-align: middle; /* Aligns the image nicely with the text */
- /* margin-right: 8px;       Adds space between the PNG and the text */
-
-}
-
-/* Ensure the button wraps the image cleanly */
-.icon-buttonL {
-  display: inline-flex;
-  align-items: center;
-  padding: 2px 2px;
-  cursor: pointer;
-  border: none;
-  background: none;
-}
-
-
-/* Ensure the button wraps the image cleanly */
-.icon-buttonR {
-  display: inline-flex;
-  align-items: center;
-  padding: 2px 2px;
-  cursor: pointer;
-  border: none;
-  background: none;
-}
 
 /* Remove default spacing and lock the canvas size */
 html,  {
@@ -41,103 +12,20 @@ html,  {
             font-family: Arial, sans-serif;
             display: flex;
             flex-direction: column;
-                        /* move the screen to the left */
+            /* move the screen to the left */
             align-items: left;
             background-color: #f4f4f9;
             margin: 0;
             padding: 10px;
-                  // padding: 0;
+            // padding: 0;
   width: 100vw;  /* 100% of viewport width */
   height: 100vh; /* 100% of viewport height */
 //  overflow: hidden; /* Prevents accidental scrollbars */
 
         }
 
-        h1 {
-            color: #333;
-        }
-        #image-container {
-			overflow: auto
-            max-width: 800px;
-            width: 70%;
-            text-align: center;
-            background: white;
-            padding: 15px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-        img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 4px;
-        }
-        .controls {
-            margin-top: 20px;
-            display: flex;
-            gap: 15px;
-        }
-        button {
-                 background-image: url('J:\WEBSHOW\images2\R.png'); /* Paths your PNG file */
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-            border: none;
-            background-color: #007bff;
-            color: white;
-            border-radius: 5px;
-            transition: background-color 0.2s;
-        }
-        button:hover {
-            background-color: #0056b3;
-        }
-        button:disabled {
-            background-color: #ccc;
-            cursor: not-allowed;
-        }
-        #counter {
-            margin-top: 10px;
-            font-size: 16px;
-            color: #666;
-        }
 
 
-
-
-
-
-.container {
-  display: flex;
-  width: 100%;
-  overflow: auto;
-}
-
-.image-section {
-  flex: 70%; /* Takes 70% of the space */
-  padding: 1px;
-  overflow-y: auto;
-}
-
-.text-section {
-  flex: 30%; /* Takes 30% of the space */
-  padding: 1px 20px;
-  font-size: 16px;
-/* make text area so it can scroll while the image is stationary */
-   /* 1. Set a fixed height or max-height to force containment */
-  height: 100%;
-    /* 2. Enable vertical scrolling */
-  overflow-y: auto;
-    /* 3. Disable horizontal scrolling (optional but recommended) */
-  overflow-x: hidden;
-    /* 4. Optional: Add breathing room between text and the scrollbar */
-  padding-right: 15px;
-}
-
-/* Ensure images don't overflow the container */
-./image-section img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
 
 /* make the area top and bottom smaller around h5 - tighten up the top */
 h5 {
@@ -147,38 +35,6 @@ h5 {
 
 /* show the scroll bar clearly */
 body { scrollbar-gutter: stable; /* Keeps space reserved for the scrollbar */}
-
-/* freeze the body so it does not scroll */
-html, body {
-  overflow: hidden;
-  height 100%
-  ;
-
-
-/* Target element  - set the scroolbar width*/
-.scroll-container {
-  /* 1. Standard Property (Firefox, Chrome, Edge, Safari) */
-  scrollbar-width: auto; /* Options: auto | thin | none */
- }
-
-
-
-/* full scree button */
-        /* Optional basic styling for the button */
-        .fullscreen-btn {
-            padding: 2px 2px;
-            font-size: 11px;
-            cursor: pointer;
-            background-color: #007BFF;
-            color: white;
-            border: none;
-            border-radius: 5px;
-                        /* shrink the button */
-                         transform: scale(.8);
-        }
-        .fullscreen-btn:hover {
-            background-color: #0056b3;
-        }
 
 
 
