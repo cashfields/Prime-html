@@ -135,7 +135,9 @@ function decrement() {
 "./images13/s0008.png",                                            // 08
 "./images13/s0009.png",                                            // 09
 "./images13/s0010.png",                                            // 10
+"./images11/Blue Thatch.bmp",                                            // 11
 "./images11/I0217.png",                                            // 11
+
 
         ];
 

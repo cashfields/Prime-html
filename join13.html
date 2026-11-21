@@ -54,26 +54,50 @@
    <p class="step" id="step-1">
 <!-- "./images13/01 .png", -->
 Start with a blank XLS file.
+<br><br>
+In column B , place two labels of 'x'.
+<br><br>
+Fill the column with integers starting with one.
+<br><br>
+<br><br>
+<br><br>
+
    </p>
 
    <!-- ####################################################################-->
    <p class="step" id="step-2" style="display: none;">
 <!-- "./images13/02 .png", -->
-Add numbers in the first row and the left column,
+In column C square the values from column B.
+<br><br>
+<br><br>
+<br><br>
+
+
    </p>
 
    <!-- ####################################################################-->
    <p class="step" id="step-3" style="display: none;">
 <!-- "./images13/03 .png", -->
-Color and format the numbers , so they stand out.
+In column D apply the following formula ; current - previous - 1. 
+<br><br>
+For D5 ; use C5 - C4 - 1
+<br><br>
+This equals: 4 - 1 - 1 ; which is a value of 2.
+<br><br>
+
+
    </p>
 
 
    <!-- ####################################################################-->
    <p class="step" id="step-4" style="display: none;">
 <!-- "./images13/04 .png" -->
-Insert a formula to calculate the mod() function of the top row and the left column.
-<br>
+In column E this is the formula: 2x - 2 
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+
 
 <br><br>
    </p>
@@ -81,9 +105,12 @@ Insert a formula to calculate the mod() function of the top row and the left col
    <!-- ####################################################################-->
    <p class="step" id="step-5" style="display: none;">
 <!-- "./images13/05 .png", -->
-With conditional formatting paint the cell blue if the value is of a cell is zero.
+Next in column G make another 'x' starting with zero.
 <br><br>
-
+<br><br>
+<br><br>
+<br><br>
+<br><br>
 <br><br>
 
    </p>
@@ -92,31 +119,64 @@ With conditional formatting paint the cell blue if the value is of a cell is zer
    <!-- ####################################################################-->
    <p class="step" id="step-6" style="display: none;">
 <!-- "./images13/06 .png", -->
-Here are the two patterns highlighted by the red boxes.
+In column H take the square root (=sqtr(x)) of the values in column G. 
 <br><br>
-Call one box 'odd' and the other 'even' because of the number of colored cells.
+<br><br>
+<br><br>
 <br><br>
    </p>
 
    <!-- ####################################################################-->
    <p class="step" id="step-7" style="display: none;">
 <!-- "./images13/07 .png", -->
-Some additional clean up of values to the right of the diagonal.
+Nect in column I (indigo) set a 
+<br>
+flag = "F".
+<br><br>
+If the value in I is an integer value make the flag equal to the value of "F". 
+<br><br>
+So , any square root that ends a a decimal is not flagged.   
+<br><br>
+The formula is: =IF(MOD(H3,1)=0,"F","")
+<br><br>
+It uses the mod() function to make the test.
 <br><br>
    </p>
 
    <!-- ####################################################################-->
    <p class="step" id="step-8" style="display: none;">
 <!-- "./images13/08 .png", -->
-Bring back the 'odd' and 'even' red boxes.
+Finally , in column J count the distance between integer values. 
 <br><br>
+Count the empty non flags.  
+<br><br>
+So , between 1 and 2 in H are two non-flags and two decimals numbers ; non-integers .
+<br><br>
+Between 2 and 3 are four non flags. 
+<br><br>
+The counts are listed in J that follow the flag.
+<br><br>
+The formula to count from integer to integer is:
+<br><br>
+'=IF(I4="F", IFERROR(MATCH("F", I5:$I$1159, 0) - 1, 0), "")
+<br><br>
+Basically , it looks for "F" , then counts and sums the until the next "F". 
+<br><br>
+<br><br>
+<br><br>
+
+
    </p>
 
    <!-- ####################################################################-->
    <p class="step" id="step-9" style="display: none;">
 <!-- "./images13/09 .png", -->
-Here is the crux of the argument , eliminate the values in the cells and keep just the formats to create a clearer view.
+In column F , the blue column is the formula: x - 2. 
+<br><br>
 
+<br><br>
+<br><br>
+<br><br>
 <br><br>
    </p>
 
@@ -124,6 +184,18 @@ Here is the crux of the argument , eliminate the values in the cells and keep ju
    <!-- ####################################################################-->
    <p class="step" id="step-10" style="display: none;">
 <!-- "./images13/10 .png", -->
+The values in column E map to the values in column J. 
+<br><br>
+Follow the red arrows. 
+<br><br>
+There is a relation between the squaring of an number and the counts of integer square roots of numbers.
+<br><br>
+The decimal values count between integers is the equal to:
+<br>
+(x^2 - (x-1)^2 - 1). ?????? counts integer
+<br><br>
+<br><br>
+<br><br>
 
    </p>
 
