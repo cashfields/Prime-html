@@ -129,32 +129,34 @@ In column H take the square root (=sqtr(x)) of the values in column G.
    <!-- ####################################################################-->
    <p class="step" id="step-7" style="display: none;">
 <!-- "./images13/07 .png", -->
-Nect in column I (indigo) set a 
+Next , in column I (indigo) set a 
 <br>
 flag = "F".
 <br><br>
-If the value in I is an integer value make the flag equal to the value of "F". 
+If the value in H is an integer value make the flag equal to the value of "F". 
 <br><br>
 So , any square root that ends a a decimal is not flagged.   
 <br><br>
 The formula is: =IF(MOD(H3,1)=0,"F","")
 <br><br>
-It uses the mod() function to make the test.
+It uses the mod() function to make the test for an integer and assign a flag.
 <br><br>
    </p>
 
    <!-- ####################################################################-->
    <p class="step" id="step-8" style="display: none;">
 <!-- "./images13/08 .png", -->
-Finally , in column J count the distance between integer values. 
+Finally , in column J count the distance between integer values in column H. 
 <br><br>
-Count the empty non flags.  
+Count the empty non-flags.  
 <br><br>
-So , between 1 and 2 in H are two non-flags and two decimals numbers ; non-integers .
+So , between 0 and 1 are none , zero.
 <br><br>
-Between 2 and 3 are four non flags. 
+And , between 1 and 2 in H are two non-flags and two decimals numbers ; non-integers .
 <br><br>
-The counts are listed in J that follow the flag.
+Between 2 and 3 are four non-flags. 
+<br><br>
+The counts listed in J are the distance needed to get to the next flag following the current flag.
 <br><br>
 The formula to count from integer to integer is:
 <br><br>
@@ -171,9 +173,29 @@ Basically , it looks for "F" , then counts and sums the until the next "F".
    <!-- ####################################################################-->
    <p class="step" id="step-9" style="display: none;">
 <!-- "./images13/09 .png", -->
-In column F , the blue column is the formula: x - 2. 
+The values in column E map to the values in column J. 
 <br><br>
+Follow the red arrows. 
+<br><br>
+There is a relation between the squaring of an number and the count between integer square roots of numbers.
+<br><br>
+The decimal value counts 
+<br>
+between integers in column H is the equal to:
+<br>
+current - previous - 1 (column D).
+<br><br>
+or 
+<br>
+(x^2 - (x-1)^2 - 1). 
+<br><br>
+Which reduces to:
+<br>
+2x - 2 (column E).
+<br>
 
+
+<br><br>
 <br><br>
 <br><br>
 <br><br>
@@ -184,17 +206,14 @@ In column F , the blue column is the formula: x - 2.
    <!-- ####################################################################-->
    <p class="step" id="step-10" style="display: none;">
 <!-- "./images13/10 .png", -->
-The values in column E map to the values in column J. 
+The original x value column B maps to the square root integer value column H. 
 <br><br>
-Follow the red arrows. 
+Follow the blue line.
 <br><br>
-There is a relation between the squaring of an number and the counts of integer square roots of numbers.
-<br><br>
-The decimal values count between integers is the equal to:
-<br>
-(x^2 - (x-1)^2 - 1). ?????? counts integer
+The square root value (H) and the flag (I) and the count (J) tell how far to the next . . .
 <br><br>
 <br><br>
+Take any x ; apply the formula (2x - 2) the result will tell how <u><b>many</b></u> decimal square roots are between it and the next integer.
 <br><br>
 
    </p>
